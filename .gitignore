@@ -17,3 +17,24 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/Backend/UtilsDB/build/
+/Backend/UtilsReportes/build/
+/Backend/UtilsDB/dist/
+/Backend/UtilsReportes/dist/
+/Backend/UtilsCorreo/build/
+/Backend/UtilsCorreo/dist/
+/Backend/ProductosModel/build/
+/Backend/ProductosModel/dist/
+/Backend/ProductosController/build/
+/Backend/ProductosController/dist/
+/Backend/PersonasModel/build/
+/Backend/PersonasModel/dist/
+/Backend/PersonasController/build/
+/Backend/PersonasController/dist/
+/Backend/CuentasModel/build/
+/Backend/CuentasModel/dist/
+/Backend/CuentasController/build/
+/Backend/DocumentosModel/build/
+/Backend/DocumentosModel/dist/
+/Backend/DocumentosController/build/
+/Backend/DocumentosController/dist/
