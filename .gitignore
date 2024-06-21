@@ -38,3 +38,6 @@ replay_pid*
 /Backend/DocumentosModel/dist/
 /Backend/DocumentosController/build/
 /Backend/DocumentosController/dist/
+/Backend/CuentasController/dist/
+/Backend/BBBWebService/build/
+/Backend/BBBWebService/dist/
