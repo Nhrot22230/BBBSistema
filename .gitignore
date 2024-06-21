@@ -41,7 +41,7 @@ replay_pid*
 /Backend/CuentasController/dist/
 /Backend/BBBWebService/build/
 /Backend/BBBWebService/dist/
-FrontEnd/.vs/BBBSisFrontEnd/v17/.suo
+/FrontEnd/.vs/
 /FrontEnd/DxnSisventas/obj/Debug
 /FrontEnd/DxnSisventas/bin
 
