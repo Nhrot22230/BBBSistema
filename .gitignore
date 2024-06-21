@@ -42,8 +42,8 @@ replay_pid*
 /Backend/BBBWebService/build/
 /Backend/BBBWebService/dist/
 /FrontEnd/.vs/
-/FrontEnd/DxnSisventas/obj/Debug
-/FrontEnd/DxnSisventas/bin
+/FrontEnd/DxnSisventas/obj/Debug/
+/FrontEnd/DxnSisventas/bin/
 
 
 
