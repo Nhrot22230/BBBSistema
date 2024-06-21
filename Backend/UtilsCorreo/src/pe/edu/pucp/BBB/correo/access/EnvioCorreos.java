@@ -43,19 +43,65 @@ public class EnvioCorreos implements CorreoDAO{
   public EnvioCorreos() {
     mProperties = new Properties();
   }
-
+  @Override
+    public int enviarCorreo(String asunto,String contenido, String correo) {
+        
+        int resultado=0;
+        try{
+            createEmail(asunto, contenido,correo);
+            resultado=sendEmail();
+            
+        }
+        
+        catch(Exception  r){
+            return resultado;
+        }
+        return resultado;
+    }
   @Override
   public int enviarCorreo(String asunto, String contenido, String correo, String rutaArchivo) {
-    try {
+      int  resultado=0; 
+      try {
       createEmail(asunto, contenido, correo, rutaArchivo);
-      sendEmail();
+      resultado =sendEmail();
     } catch (Exception e) {
       System.err.println(e.getMessage());
-      return -1; // Indicar que hubo un error
+      return resultado; // Indicar que hubo un error
     }
-    return 0;
+    return resultado;
   }
-
+  private void createEmail(String asunto,String contenido, String correo) {
+        emailTo = correo;
+        subject = asunto;
+        content = contenido;
+        
+         // Simple mail transfer protocol
+        mProperties.put("mail.smtp.host", "smtp.gmail.com");
+        mProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        mProperties.setProperty("mail.smtp.starttls.enable", "true");
+        mProperties.setProperty("mail.smtp.port", "587");
+        mProperties.setProperty("mail.smtp.user",emailFrom);
+        mProperties.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
+        mProperties.setProperty("mail.smtp.auth", "true");
+        
+        mSession = Session.getDefaultInstance(mProperties);
+        
+        
+        try {
+            mCorreo = new MimeMessage(mSession);
+            mCorreo.setFrom(new InternetAddress(emailFrom));
+            mCorreo.setRecipient(Message.RecipientType.TO, new InternetAddress(emailTo));
+            mCorreo.setSubject(subject);
+            mCorreo.setContent(content, "text/html; charset=utf-8"); // Establecer el tipo de contenido como HTML
+                     
+            
+        } catch (AddressException ex) {
+            Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException ex) {
+            Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+ 
   private void createEmail(String asunto, String contenido, String correo, String rutaArchivo) {
     emailTo = correo;
     subject = asunto;
@@ -103,17 +149,20 @@ public class EnvioCorreos implements CorreoDAO{
     }
   }
 
-  private void sendEmail() {
+  private int sendEmail() {
     try {
       Transport mTransport = mSession.getTransport("smtp");
       mTransport.connect(emailFrom, passwordFrom);
       mTransport.sendMessage(mCorreo, mCorreo.getRecipients(Message.RecipientType.TO));
       mTransport.close();
-      JOptionPane.showMessageDialog(null, "Correo enviado");
+      //JOptionPane.showMessageDialog(null, "Correo enviado");
+      return 1;
     } catch (NoSuchProviderException ex) {
       Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
+      return 0;
     } catch (MessagingException ex) {
-      Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
+      Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);   
+    return 0;
     }
   }
 }
