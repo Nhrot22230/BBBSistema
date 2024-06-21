@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.webservice.BBB.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CuentasAPI" targetNamespace="http://services.webservice.BBB.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/BBBWebService/CuentasAPI?xsd=1" namespace="http://services.webservice.BBB.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarCuentaEmpleado">
+    <part name="parameters" element="tns:actualizarCuentaEmpleado" />
+  </message>
+  <message name="actualizarCuentaEmpleadoResponse">
+    <part name="parameters" element="tns:actualizarCuentaEmpleadoResponse" />
+  </message>
+  <message name="listarEmpleadosMasCuentas">
+    <part name="parameters" element="tns:listarEmpleadosMasCuentas" />
+  </message>
+  <message name="listarEmpleadosMasCuentasResponse">
+    <part name="parameters" element="tns:listarEmpleadosMasCuentasResponse" />
+  </message>
+  <message name="iniciarSesionCliente">
+    <part name="parameters" element="tns:iniciarSesionCliente" />
+  </message>
+  <message name="iniciarSesionClienteResponse">
+    <part name="parameters" element="tns:iniciarSesionClienteResponse" />
+  </message>
+  <message name="listarCuentaCliente">
+    <part name="parameters" element="tns:listarCuentaCliente" />
+  </message>
+  <message name="listarCuentaClienteResponse">
+    <part name="parameters" element="tns:listarCuentaClienteResponse" />
+  </message>
+  <message name="insertarCuentaCliente">
+    <part name="parameters" element="tns:insertarCuentaCliente" />
+  </message>
+  <message name="insertarCuentaClienteResponse">
+    <part name="parameters" element="tns:insertarCuentaClienteResponse" />
+  </message>
+  <message name="eliminarCuentaEmpleado">
+    <part name="parameters" element="tns:eliminarCuentaEmpleado" />
+  </message>
+  <message name="eliminarCuentaEmpleadoResponse">
+    <part name="parameters" element="tns:eliminarCuentaEmpleadoResponse" />
+  </message>
+  <message name="eliminarCuentaCliente">
+    <part name="parameters" element="tns:eliminarCuentaCliente" />
+  </message>
+  <message name="eliminarCuentaClienteResponse">
+    <part name="parameters" element="tns:eliminarCuentaClienteResponse" />
+  </message>
+  <message name="insertarCuentaEmpleado">
+    <part name="parameters" element="tns:insertarCuentaEmpleado" />
+  </message>
+  <message name="insertarCuentaEmpleadoResponse">
+    <part name="parameters" element="tns:insertarCuentaEmpleadoResponse" />
+  </message>
+  <message name="listarClientesMasCuentas">
+    <part name="parameters" element="tns:listarClientesMasCuentas" />
+  </message>
+  <message name="listarClientesMasCuentasResponse">
+    <part name="parameters" element="tns:listarClientesMasCuentasResponse" />
+  </message>
+  <message name="iniciarSesionEmpleado">
+    <part name="parameters" element="tns:iniciarSesionEmpleado" />
+  </message>
+  <message name="iniciarSesionEmpleadoResponse">
+    <part name="parameters" element="tns:iniciarSesionEmpleadoResponse" />
+  </message>
+  <message name="listarCuentaEmpleado">
+    <part name="parameters" element="tns:listarCuentaEmpleado" />
+  </message>
+  <message name="listarCuentaEmpleadoResponse">
+    <part name="parameters" element="tns:listarCuentaEmpleadoResponse" />
+  </message>
+  <message name="actualizarCuentaCliente">
+    <part name="parameters" element="tns:actualizarCuentaCliente" />
+  </message>
+  <message name="actualizarCuentaClienteResponse">
+    <part name="parameters" element="tns:actualizarCuentaClienteResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <portType name="CuentasAPI">
+    <operation name="actualizarCuentaEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoRequest" message="tns:actualizarCuentaEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoResponse" message="tns:actualizarCuentaEmpleadoResponse" />
+    </operation>
+    <operation name="listarEmpleadosMasCuentas">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRequest" message="tns:listarEmpleadosMasCuentas" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasResponse" message="tns:listarEmpleadosMasCuentasResponse" />
+    </operation>
+    <operation name="iniciarSesionCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRequest" message="tns:iniciarSesionCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteResponse" message="tns:iniciarSesionClienteResponse" />
+    </operation>
+    <operation name="listarCuentaCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteRequest" message="tns:listarCuentaCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteResponse" message="tns:listarCuentaClienteResponse" />
+    </operation>
+    <operation name="insertarCuentaCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteRequest" message="tns:insertarCuentaCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteResponse" message="tns:insertarCuentaClienteResponse" />
+    </operation>
+    <operation name="eliminarCuentaEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoRequest" message="tns:eliminarCuentaEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoResponse" message="tns:eliminarCuentaEmpleadoResponse" />
+    </operation>
+    <operation name="eliminarCuentaCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteRequest" message="tns:eliminarCuentaCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteResponse" message="tns:eliminarCuentaClienteResponse" />
+    </operation>
+    <operation name="insertarCuentaEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoRequest" message="tns:insertarCuentaEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoResponse" message="tns:insertarCuentaEmpleadoResponse" />
+    </operation>
+    <operation name="listarClientesMasCuentas">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasRequest" message="tns:listarClientesMasCuentas" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasResponse" message="tns:listarClientesMasCuentasResponse" />
+    </operation>
+    <operation name="iniciarSesionEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoRequest" message="tns:iniciarSesionEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoResponse" message="tns:iniciarSesionEmpleadoResponse" />
+    </operation>
+    <operation name="listarCuentaEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRequest" message="tns:listarCuentaEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoResponse" message="tns:listarCuentaEmpleadoResponse" />
+    </operation>
+    <operation name="actualizarCuentaCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteRequest" message="tns:actualizarCuentaCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteResponse" message="tns:actualizarCuentaClienteResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloResponse" message="tns:helloResponse" />
+    </operation>
+  </portType>
+  <binding name="CuentasAPIPortBinding" type="tns:CuentasAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarCuentaEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEmpleadosMasCuentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="iniciarSesionCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCuentaCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCuentaCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCuentaEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCuentaCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCuentaEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClientesMasCuentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="iniciarSesionEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCuentaEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarCuentaCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CuentasAPI">
+    <port name="CuentasAPIPort" binding="tns:CuentasAPIPortBinding">
+      <soap:address location="http://localhost:8080/BBBWebService/CuentasAPI" />
+    </port>
+  </service>
+</definitions>
