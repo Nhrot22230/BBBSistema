@@ -113,6 +113,10 @@
                         <ItemTemplate>
                             <asp:LinkButton ID="BtnVisualizar" runat="server" Text="<i class='fas fa-eye ps-2'>  </i>"
                                 OnClick="BtnVisualizar_Click" />
+
+                            <asp:LinkButton ID="BtnEditar" runat="server" Text="<i class='fas fa-edit'></i>"
+                                OnClick="BtnEditar_Click">
+                            </asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
