@@ -7,23 +7,56 @@ namespace DxnSisventas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
         protected void btnGetCode_Click(object sender, EventArgs e)
         {
-            // Aquí iría el código para enviar el correo con el código de verificación.
-            // Por ahora, simplemente mostramos la sección de código.
+            // Lógica para enviar el código de verificación al correo electrónico
+            // ...
+
+            // Mostrar la sección del código
             ScriptManager.RegisterStartupScript(this, GetType(), "showCodeSection", "showCodeSection();", true);
         }
 
         protected void btnConfirmCode_Click(object sender, EventArgs e)
         {
-            // Aquí iría el código para verificar el código ingresado.
+            // Lógica para verificar el código de verificación
+            // ...
+
+            // Mostrar la sección para cambiar la contraseña y ocultar las otras
+            ScriptManager.RegisterStartupScript(this, GetType(), "showPasswordSection", "showPasswordSection();", true);
         }
 
         protected void btnChangeEmail_Click(object sender, EventArgs e)
         {
-            // Regresamos a la sección de ingreso de correo.
+            // Lógica para cambiar de correo electrónico
+            // ...
+
+            // Mostrar la sección de email
+            ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
+        }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            // Lógica para cambiar la contraseña
+            // Verificar que las contraseñas coincidan
+            if (txtNewPassword.Text == txtConfirmPassword.Text)
+            {
+                // Cambiar la contraseña en la base de datos
+                // ...
+                Response.Write("<script>alert('Contraseña cambiada exitosamente');</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Las contraseñas no coinciden');</script>");
+            }
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            // Lógica para regresar a una vista anterior
+            // Mostrar la sección de email
             ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
         }
     }

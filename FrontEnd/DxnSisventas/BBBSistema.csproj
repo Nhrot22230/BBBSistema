@@ -307,6 +307,7 @@
     <Content Include="CustomStyles\OrdenVenta.css" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Recuperar.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -396,6 +397,13 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recuperar.aspx.cs">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recuperar.aspx.designer.cs">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Comprobantes.aspx.cs">
       <DependentUpon>Comprobantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
