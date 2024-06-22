@@ -62,3 +62,5 @@ replay_pid*
 *.cache
 /FrontEnd/.vs
 *.wsdl
+FrontEnd/.vs/BBBSisFrontEnd/v17/.suo
+FrontEnd/.vs/BBBSisFrontEnd/v17/DocumentLayout.json
