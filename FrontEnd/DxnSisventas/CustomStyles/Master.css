@@ -265,4 +265,18 @@ input:checked + .slider {
   .footer {
     display: block;
   }
+  .main-view {
+    min-height: fit-content;
+  }
+
+  .main-content {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer > nav > ul > li > a > i {
+    color: #b8c7ce;
+    font-size: 25px;
+  }
 }
