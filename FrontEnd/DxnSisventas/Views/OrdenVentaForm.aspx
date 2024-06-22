@@ -4,10 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CustomStyles/OrdenVenta.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
-   
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">   
     <script src="../CustomScripts/OrdenVenta.js?v5"></script>
 
     <div class="container">
@@ -174,56 +171,62 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-3">
-                            <label for="TxtIdProducto" class="col-sm-2 col-form-label">ID Producto:</label>
-                            <div class="col-sm-2">
-                                <asp:TextBox ID="TxtIdProducto" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+
+
+                        <asp:Panel ID="panelBusquedaProducto" runat="server">
+                            <div class="row mb-3">
+                                <label for="TxtIdProducto" class="col-sm-2 col-form-label">ID Producto:</label>
+                                <div class="col-sm-2">
+                                    <asp:TextBox ID="TxtIdProducto" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                </div>
+                                <div class="col-sm-3">
+                                    <asp:Button ID="btnBuscarProducto" runat="server" Text="Buscar producto"
+                                        OnClick="btnBuscarProducto_Click"
+                                        CssClass="btn btn-primary btn-sm" />
+                                </div>
+
                             </div>
-                            <div class="col-sm-3">
-                                <asp:Button ID="btnBuscarProducto" runat="server" Text="Buscar producto"
-                                    OnClick="btnBuscarProducto_Click"
-                                    CssClass="btn btn-primary btn-sm" />
+                            <div class="row mb-3">
+                                <label for="TxtNombreProducto" class="col-sm-2 col-form-label">Nombre producto:</label>
+                                <div class="col-sm-2">
+                                    <asp:TextBox ID="TxtNombreProducto" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                </div>
+                                <label for="TxtPrecio" class="col-sm-1 col-form-label">Precio:</label>
+                                <div class="col-sm-1">
+                                    <asp:TextBox ID="TxtPrecio" runat="server" CssClass="form-control" Enabled="false" type="number"
+                                        step="1"></asp:TextBox>
+                                </div>
+                                <label for="TxtStock" class="col-sm-1 col-form-label">Stock:</label>
+                                <div class="col-sm-1">
+                                    <asp:TextBox ID="TxtStock" runat="server" CssClass="form-control" Enabled="false" type="number"
+                                        step="1"></asp:TextBox>
+                                </div>
                             </div>
 
-                        </div>
-                        <div class="row mb-3">
-                            <label for="TxtNombreProducto" class="col-sm-2 col-form-label">Nombre producto:</label>
-                            <div class="col-sm-2">
-                                <asp:TextBox ID="TxtNombreProducto" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-                            </div>
-                            <label for="TxtPrecio" class="col-sm-1 col-form-label">Precio:</label>
-                            <div class="col-sm-1">
-                                <asp:TextBox ID="TxtPrecio" runat="server" CssClass="form-control" Enabled="false" type="number"
+                            <div class="row mb-3">
+                                <label for="TxtCantidad" class="col-sm-2 col-form-label">Cantidad:</label>
+                                <div class="col-sm-2">
+                                    <asp:TextBox ID="TxtCantidad"
+                                        runat="server"
+                                        CssClass="form-control"
+                                        type="number"
+                                        oninput="verificarStock(this)"
+                                        onkeydown="return avoidEnterKey(event);">
                                     step="1"></asp:TextBox>
+                                </div>
+                                <div class="col-sm-3">
+                                    <asp:Button ID="btnAgregarProducto" runat="server" Text="Agregar producto"
+                                        CssClass="btn btn-info" OnClick="btnAgregarProducto_Click" />
+                                </div>
                             </div>
-                            <label for="TxtStock" class="col-sm-1 col-form-label">Stock:</label>
-                            <div class="col-sm-1">
-                                <asp:TextBox ID="TxtStock" runat="server" CssClass="form-control" Enabled="false" type="number"
-                                    step="1"></asp:TextBox>
-                            </div>
-                        </div>
+                        </asp:Panel>
 
-                        <div class="row mb-3">
-                            <label for="TxtCantidad" class="col-sm-2 col-form-label">Cantidad:</label>
-                            <div class="col-sm-2">
-                                <asp:TextBox ID="TxtCantidad"
-                                    runat="server" 
-                                    CssClass="form-control" 
-                                    type="number"
-                                    oninput="verificarStock(this)"
-                                    onkeydown="return avoidEnterKey(event);">
-                                    step="1"></asp:TextBox>
-                            </div>
-                            <div class="col-sm-3">
-                                <asp:Button ID="btnAgregarProducto" runat="server" Text="Agregar producto"
-                                    CssClass="btn btn-info" OnClick="btnAgregarProducto_Click" 
-                                   />
-                            </div>
-                        </div>
+
                         <div class="row">
                             <asp:GridView ID="gvLineasOrdenVenta" AllowPaging="True" PageSize="5" runat="server" 
                                 AutoGenerateColumns="False"
-                                CssClass="table table-striped table-bordered" OnRowDataBound="gvLineasOrdenVenta_RowDataBound">
+                                CssClass="table table-striped table-bordered" OnRowDataBound="gvLineasOrdenVenta_RowDataBound"
+                                OnPageIndexChanging="gvLineasOrdenVenta_PageIndexChanging">
                                 <Columns>
                                     <asp:BoundField  HeaderText="ID Producto" />
                                     <asp:BoundField HeaderText="Producto" />
