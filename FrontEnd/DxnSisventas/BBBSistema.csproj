@@ -75,19 +75,7 @@
     <Content Include="Assets\BBB.png" />
     <Content Include="Assets\LOGO.svg" />
     <Content Include="Assets\SHOP.png" />
-    <None Include="Connected Services\BBBWebService\BBBServices.disco" />
-    <None Include="Connected Services\BBBWebService\CorreosAPI.wsdl" />
-    <None Include="Connected Services\BBBWebService\CorreosAPI.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\BBBWebService\CuentasAPI1.wsdl" />
-    <None Include="Connected Services\BBBWebService\CuentasAPI1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\BBBWebService\DocumentosAPI1.wsdl" />
-    <None Include="Connected Services\BBBWebService\DocumentosAPI1.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Connected Services\BBBWebService\AmazonBBBServices.disco" />
     <Content Include="Connected Services\BBBWebService\DxnSisventas.BBBWebService.actualizarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -250,12 +238,24 @@
     <Content Include="Connected Services\BBBWebService\DxnSisventas.BBBWebService.enviarCorreoWebSinArchivoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\BBBWebService\PersonasAPI1.wsdl" />
-    <None Include="Connected Services\BBBWebService\PersonasAPI1.xsd">
+    <None Include="Connected Services\BBBWebService\CorreosAPI1.wsdl" />
+    <None Include="Connected Services\BBBWebService\CorreosAPI1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BBBWebService\ProductosAPI1.wsdl" />
-    <None Include="Connected Services\BBBWebService\ProductosAPI1.xsd">
+    <None Include="Connected Services\BBBWebService\CuentasAPI.wsdl" />
+    <None Include="Connected Services\BBBWebService\CuentasAPI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BBBWebService\DocumentosAPI.wsdl" />
+    <None Include="Connected Services\BBBWebService\DocumentosAPI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BBBWebService\PersonasAPI.wsdl" />
+    <None Include="Connected Services\BBBWebService\PersonasAPI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BBBWebService\ProductosAPI.wsdl" />
+    <None Include="Connected Services\BBBWebService\ProductosAPI.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\BBBWebService\Reference.svcmap">
@@ -313,8 +313,8 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Connected Services\BBBWebService\ReportesAPI1.wsdl" />
-    <None Include="Connected Services\BBBWebService\ReportesAPI1.xsd">
+    <None Include="Connected Services\BBBWebService\ReportesAPI.wsdl" />
+    <None Include="Connected Services\BBBWebService\ReportesAPI.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
