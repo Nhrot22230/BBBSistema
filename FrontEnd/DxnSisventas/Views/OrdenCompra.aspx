@@ -14,7 +14,7 @@
         <div class="row">
             <h1>Registro de Ordenes de Compra</h1>
         </div>
-        
+
         <!-- Filtros de búsqueda -->
         <div class="search-container">
             <div class="search-row">
@@ -94,8 +94,8 @@
 
         <!-- Gridview para mostrar los registros de la tabla -->
         <div class="container row">
-            <asp:GridView ID="GridCompras" runat="server" AutoGenerateColumns="false" 
-                AllowPaging="true" PageSize="5" OnPageIndexChanging="GridCompras_PageIndexChanging" 
+            <asp:GridView ID="GridCompras" runat="server" AutoGenerateColumns="false"
+                AllowPaging="true" PageSize="5" OnPageIndexChanging="GridCompras_PageIndexChanging"
                 CssClass="table table-hover table-responsive table-striped" OnSelectedIndexChanged="GridCompras_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="idOrdenCompraCadena" HeaderText="Id" />
@@ -105,6 +105,13 @@
                     <asp:TemplateField HeaderText="Acción">
                         <ItemTemplate>
                             <asp:LinkButton ID="BtnEditar" runat="server" Text='<%# Eval("estado").ToString() == "Entregado" ? "Ver <i class=\"fas fa-eye ps-2\"></i>" : "Editar <i class=\"fas fa-edit ps-2\"></i>" %>' OnClick="BtnEditar_Click" CommandArgument='<%# Eval("idOrdenCompraNumerico") %>' CssClass="link-button" />
+                        </ItemTemplate>
+                        <ItemStyle HorizontalAlign="Center" Width="100px" />
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Eliminar">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="BtnEliminar" runat="server" Text='<%# Eval("estado").ToString() == "Entregado" ? "" : "<i class=\"fas fa-trash ps-2\"></i>" %>' OnClick="BtnEliminar_Click" OnClientClick="return confirm('¿Esta seguro de eliminar este registro?');"  CommandArgument='<%# Eval("idOrdenCompraNumerico") %>' CssClass="link-button" />
+
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Center" Width="100px" />
                     </asp:TemplateField>

@@ -75,5 +75,10 @@ namespace DxnSisventas
       ErrorLabel.Text = mensaje;
       ScriptManager.RegisterStartupScript(this, GetType(), "showErrorPanel", "showErrorPanel();", true);
     }
-  }
+
+        protected void BtnRecuperar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Recuperar.aspx");
+        }
+    }
 }

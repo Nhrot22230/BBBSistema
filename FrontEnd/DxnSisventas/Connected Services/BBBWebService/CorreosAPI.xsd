@@ -2,6 +2,20 @@
 <xs:schema xmlns:tns="http://services.webservice.BBB.pucp.edu.pe/" targetNamespace="http://services.webservice.BBB.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="enviarCorreoWeb" type="tns:enviarCorreoWeb" />
   <xs:element name="enviarCorreoWebResponse" type="tns:enviarCorreoWebResponse" />
+  <xs:element name="enviarCorreoWebSinArchivo" type="tns:enviarCorreoWebSinArchivo" />
+  <xs:element name="enviarCorreoWebSinArchivoResponse" type="tns:enviarCorreoWebSinArchivoResponse" />
+  <xs:complexType name="enviarCorreoWebSinArchivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asunto" type="xs:string" />
+      <xs:element minOccurs="0" name="contenido" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarCorreoWebSinArchivoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="enviarCorreoWeb">
     <xs:sequence>
       <xs:element minOccurs="0" name="asunto" type="xs:string" />

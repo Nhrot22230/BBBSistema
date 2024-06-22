@@ -33,8 +33,23 @@ public class CorreosAPI {
     int resultado = 0;
 
     try {
-      daoCorreo.enviarCorreo(asunto, contenido, correo, ruta);
-      resultado = 1;
+      resultado=daoCorreo.enviarCorreo(asunto, contenido, correo, ruta);
+      return resultado;
+    } catch (Exception ex) {
+      System.err.println(ex.getMessage());
+      
+    }
+
+    return resultado;
+  }
+  @WebMethod(operationName = "enviarCorreoWebSinArchivo")
+  public int enviarCorreoWebSinArchivo(@WebParam(name = "asunto") String asunto,
+    @WebParam(name = "contenido") String contenido, @WebParam(name = "correo") String correo) {
+    int resultado = 0;
+
+    try {
+      resultado=daoCorreo.enviarCorreo(asunto, contenido, correo);
+      return resultado;
     } catch (Exception ex) {
       System.err.println(ex.getMessage());
     }

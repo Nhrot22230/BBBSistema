@@ -1,14 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\",
+  "WorkspaceRootPath": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\candi\\onedrive\\documentos\\netbeansprojects\\bbbsistema\\frontend\\dxnsisventas\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\ordenventaform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordenventaform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\dxnsisventas\\customstyles\\master.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\customstyles\\master.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\jhair\\desktop\\lp2\\proyectos\\proyectos jhairt\\bbbsistema\\frontend\\dxnsisventas\\views\\ordencompra.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordencompra.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\dxnsisventas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\ordencompra.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordencompra.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\ordencompraform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordencompraform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +54,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.Master",
-              "DocumentMoniker": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\Main.Master",
-              "RelativeDocumentMoniker": "DxnSisventas\\Main.Master",
-              "ToolTip": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\Main.Master",
-              "RelativeToolTip": "DxnSisventas\\Main.Master",
+              "DocumentIndex": 2,
+              "Title": "Productos.aspx",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Productos.aspx",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\Productos.aspx",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Productos.aspx",
+              "RelativeToolTip": "DxnSisventas\\Views\\Productos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-22T02:00:56.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T00:08:54.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Productos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Productos.aspx.cs",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\Productos.aspx.cs",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Productos.aspx.cs",
+              "RelativeToolTip": "DxnSisventas\\Views\\Productos.aspx.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAUwEcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T00:09:04.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrdenCompraForm.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
+              "RelativeToolTip": "DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJUCAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T23:59:55.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrdenCompra.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompra.aspx.cs",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenCompra.aspx.cs",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompra.aspx.cs",
+              "RelativeToolTip": "DxnSisventas\\Views\\OrdenCompra.aspx.cs",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAowBYBAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T23:54:03.049Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Master.css",
-              "DocumentMoniker": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\CustomStyles\\Master.css",
-              "RelativeDocumentMoniker": "DxnSisventas\\CustomStyles\\Master.css",
-              "ToolTip": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\CustomStyles\\Master.css",
-              "RelativeToolTip": "DxnSisventas\\CustomStyles\\Master.css",
-              "ViewState": "AQIAAAcBAAAAAAAAAAAAABQBAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-22T01:50:35.943Z"
+              "Title": "OrdenCompra.aspx",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompra.aspx",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenCompra.aspx",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompra.aspx",
+              "RelativeToolTip": "DxnSisventas\\Views\\OrdenCompra.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-21T23:48:33.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Login.aspx",
+              "RelativeDocumentMoniker": "DxnSisventas\\Login.aspx",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Login.aspx",
+              "RelativeToolTip": "DxnSisventas\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-21T23:48:46.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdenVentaForm.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
+              "RelativeToolTip": "DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAcwI0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T23:45:21.191Z",
+              "EditorCaption": ""
             }
           ]
         }

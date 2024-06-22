@@ -67,6 +67,8 @@
         </ContentTemplate>
       </asp:UpdatePanel>
 
+        <asp:LinkButton ID="BtnRecuperar" runat="server" Text='Recuperar Contraseña'   CssClass="link-button" OnClick="BtnRecuperar_Click" />
+        <br />
       <asp:Button
         ID="LoginButton"
         CssClass="login-button btn"

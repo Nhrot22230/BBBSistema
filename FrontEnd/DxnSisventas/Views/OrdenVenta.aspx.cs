@@ -365,8 +365,18 @@ namespace DxnSisventas.Views
                
                 LinkButton btnVisualizar = (LinkButton)e.Row.FindControl("BtnVisualizar");
                 btnVisualizar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
+
+                LinkButton btnEditar = (LinkButton)e.Row.FindControl("BtnEditar");
+                btnEditar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
+
             }
         }
 
+        protected void BtnEditar_Click(object sender, EventArgs e)
+        {
+            int idOrdenVenta = Int32.Parse(((LinkButton)sender).CommandArgument);
+            Session["ordenSeleccionada"] = Blordenes.Where(x => x.idOrdenVentaNumerico == idOrdenVenta).FirstOrDefault();
+            Response.Redirect("OrdenVentaForm.aspx?accion=editar");
+        }
     }
 }
