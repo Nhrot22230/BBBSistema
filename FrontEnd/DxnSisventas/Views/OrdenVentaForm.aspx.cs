@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel.Channels;
 using System.Web;
@@ -16,7 +17,6 @@ namespace DxnSisventas.Views
         private DocumentosAPIClient apiDocumentos;
         private PersonasAPIClient apiPersonas;
         private ProductosAPIClient apiProductos;
-
         // listas
         private BindingList<empleado> empleados;
         private BindingList<producto> productos;
@@ -37,40 +37,68 @@ namespace DxnSisventas.Views
             accion = Request.QueryString["accion"];
             TxtFechaCreacion.Enabled = false;
 
-            if (accion.Equals("visualizar"))
+            if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
                
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
-
-                // campos desabilitados
-                
-                btnBuscarProducto.Enabled = false;
-                btnAgregarProducto.Enabled = false;
-
-
                 mostrarDatos();
+                if(ddlTipoVenta.SelectedValue.Equals("Presencial")){
+                    panelRepartidor.Visible = false;
+                }
+                if (accion.Equals("visualizar"))
+                {
+                    desabilitarCampos();
+                }         
+                
             }
             else if(accion.Equals("new"))
             {
                 ordenVenta = new ordenVenta();
                 TxtFechaCreacion.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-                // campos desabilitados
+                // no se puede crear una orden de venta con estado cancelado
                 ddlEstado.Items.Remove(ddlEstado.Items.FindByValue("Cancelado"));
-    
-                
-
                 TxtDescuento.Text = "0";
                 if (!IsPostBack)
                 {
-                    Session["lineasDeOrden"] = null;
-                    Session["empleadoSeleccionado"] = null;
-                    Session["clienteSeleccionado"] = null;
-                    Session["productoSeleccionado"] = null;
+                    limpiarSesiones();
                 }
             }
             llenarGridLineas();
         }
+
+        void desabilitarCampos()
+        {
+
+            // Txt
+            TxtDescuento.Enabled = false;
+            TxtCantidad.Enabled = false;
+            TxtFechaEntrega.Enabled = false;
+
+            // Btn
+            btnBuscarProducto.Enabled = false;
+            btnAgregarProducto.Enabled = false;
+
+            // lb
+            lbBuscarCliente.Visible = false;
+            lbBuscarCliente.Enabled = false;
+            lbBuscarRepartidor.Visible = false;
+            lbBuscarRepartidor.Enabled = false;
+
+            // ddl
+            ddlEstado.Enabled = false;
+            ddlMetodoDePago.Enabled = false;
+            ddlTipoVenta.Enabled = false;
+
+            // panels
+            if (ddlTipoVenta.SelectedValue.ToString().Equals("Presencial"))
+            {
+                panelRepartidor.Visible = false;
+            }
+            panelBusquedaProducto.Visible = false;
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -78,17 +106,13 @@ namespace DxnSisventas.Views
 
         private void mostrarDatos()
         {
-            // campos desabilitados
-            TxtDescuento.Enabled = false;
-            TxtCantidad.Enabled = false;
+            
 
             // Información de la orden de venta
             TxtIdOrdenVenta.Text = ordenVenta.idOrdenVentaCadena;
             ddlEstado.SelectedValue = ordenVenta.estado.ToString();
             ddlMetodoDePago.SelectedValue = ordenVenta.metodoPago.ToString();
             ddlTipoVenta.SelectedValue = ordenVenta.tipoVenta.ToString();
-
-
             TxtFechaCreacion.Text = ordenVenta.fechaCreacion.ToString("yyyy-MM-dd");
             if (ordenVenta.fechaEntrega.ToString("dd/MM/yyyy") == "01/01/0001")
             {
@@ -97,18 +121,17 @@ namespace DxnSisventas.Views
             else
             {
                 TxtFechaEntrega.Text = ordenVenta.fechaEntrega.ToString("yyyy-MM-dd");
-            }
-                
+            }     
             TxtDescuento.Text = ordenVenta.porcentajeDescuento.ToString();
             
-            // información del cliente
+            // Información del cliente
             cliente cliente = ordenVenta.cliente;
             Session["clienteSeleccionado"] = cliente;
             TxtIDCliente.Text = ordenVenta.cliente.idCadena;
             TxtNombreCompletoCliente.Text = cliente.nombre + " " +
                 cliente.apellidoPaterno + " " + cliente.apellidoMaterno;
 
-            // información del repartidor en caso exista
+            // Información del repartidor en caso exista
             if(ordenVenta.repartidor != null)
             {
                 empleado empleado = ordenVenta.repartidor;
@@ -122,9 +145,13 @@ namespace DxnSisventas.Views
                 TxtIDRepartidor.Text = "";
                 TxtNombreCompletoRepartidor.Text = "";
             }
-          
-            // detalle de la orden de venta
-            Session["lineasDeOrden"] = new BindingList<lineaOrden>(ordenVenta.lineasOrden.ToList());
+
+            // Detalle de orden de compra
+            if (Session["lineasDeOrden"] == null)
+            {
+                Session["lineasDeOrden"] = new BindingList<lineaOrden>(ordenVenta.lineasOrden.ToList());
+                Session["lineasOrdenAntiguas"] = new BindingList<lineaOrden>(ordenVenta.lineasOrden.ToList());
+            }
             txtTotal.Text = ordenVenta.total.ToString("N2");
         }
 
@@ -287,13 +314,11 @@ namespace DxnSisventas.Views
             llenarGridEmpleados("");
             CallJavascript("showModalForm", "modalFormBuscarEmpleado");
         }
-
         protected void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             llenarGridProductos("");
             CallJavascript("showModalForm", "modalFormBuscarProducto");
         }
-
         protected void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             // Verificar selección de producto
@@ -336,8 +361,7 @@ namespace DxnSisventas.Views
             {
                 // Si el producto no existe, añade una nueva línea
                 lineaOrden nuevaLinea = CrearNuevaLineaOrden(productoSeleccionado, cantidad);
-                lineasOrden.Add(nuevaLinea);
-                
+                lineasOrden.Add(nuevaLinea);   
             }
             
             Session["lineasDeOrden"] = lineasOrden;
@@ -345,22 +369,16 @@ namespace DxnSisventas.Views
             llenarGridLineas();
             LimpiarCamposProducto();
         }
-
         void calcularLineasConDescuento()
         {
             double totalSinDescuento = lineasOrden.Sum(lo => lo.subtotal);
             double descuento = totalSinDescuento * (Double.Parse(TxtDescuento.Text) / 100);
             txtTotal.Text = (totalSinDescuento - descuento).ToString("N2");
         }
-
-
-        // Método para calcular subtotal
         private double CalcularSubtotal(int cantidad, double precioUnitario)
         {
             return cantidad * precioUnitario;
         }
-
-        // Método para crear una nueva línea de orden
         private lineaOrden CrearNuevaLineaOrden(producto productoSeleccionado, int cantidad)
         {
             return new lineaOrden
@@ -370,8 +388,6 @@ namespace DxnSisventas.Views
                 subtotal = CalcularSubtotal(cantidad, productoSeleccionado.precioUnitario)
             };
         }
-
-        // Método para limpiar campos del formulario
         private void LimpiarCamposProducto()
         {
             TxtIdProducto.Text = string.Empty;
@@ -395,7 +411,6 @@ namespace DxnSisventas.Views
                 }
             }
         }
-
         bool verificarFechaEntrega()
         {
             DateTime fechaEntrega = DateTime.Parse(TxtFechaEntrega.Text);
@@ -406,7 +421,6 @@ namespace DxnSisventas.Views
             }
             return true;
         }
-
         bool validarFechaDeEntrega()
         {
             if (!string.IsNullOrWhiteSpace(TxtFechaEntrega.Text))
@@ -543,8 +557,9 @@ namespace DxnSisventas.Views
                 }
 
             }
-            else if(accion.Equals("visualizar"))
+            else if(accion.Equals("editar"))
             {
+                actualizarLineasOrden();               
                 res = apiDocumentos.actualizarOrdenVenta(ordenVenta);
                 if(res <= 0) mensaje = "Error al actualizar la orden de venta";
        
@@ -555,6 +570,29 @@ namespace DxnSisventas.Views
                 return;
             }
             Response.Redirect("OrdenVenta.aspx");
+            limpiarSesiones();
+        }
+
+        private void limpiarSesiones()
+        {
+            Session["lineasDeOrden"] = null;
+            Session["empleadoSeleccionado"] = null;
+            Session["clienteSeleccionado"] = null;
+            Session["productoSeleccionado"] = null;
+        }
+        private void actualizarLineasOrden()
+        {
+            // eliminamos las lineas de orden antiguas
+            BindingList<lineaOrden> lineasOrdenAntiguas = (BindingList<lineaOrden>)Session["lineasOrdenAntiguas"];
+            foreach (lineaOrden linea in lineasOrdenAntiguas)
+            {
+                apiDocumentos.eliminarLOV(ordenVenta.idOrdenVentaNumerico, linea.producto.idProductoNumerico);
+            }
+            // actualizar las lineas de orden actuales
+            foreach (lineaOrden linea in lineasOrden)
+            {
+                apiDocumentos.insertarLOV(linea, ordenVenta.idOrdenVentaNumerico);
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -582,8 +620,6 @@ namespace DxnSisventas.Views
         {
             calcularLineasConDescuento();
         }
-
-
         protected void gvLineasOrdenVenta_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if(e.Row.RowType == DataControlRowType.DataRow)
@@ -608,6 +644,12 @@ namespace DxnSisventas.Views
                     btnEliminar.CommandArgument = linea.producto.idProductoNumerico.ToString();
                 }
             }
+        }
+
+        protected void gvLineasOrdenVenta_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvLineasOrdenVenta.PageIndex = e.NewPageIndex;
+            gvLineasOrdenVenta.DataBind();
         }
     }
 }
