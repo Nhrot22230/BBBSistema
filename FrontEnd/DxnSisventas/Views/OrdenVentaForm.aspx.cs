@@ -35,8 +35,9 @@ namespace DxnSisventas.Views
             apiPersonas = new PersonasAPIClient();
             apiProductos = new ProductosAPIClient();
             accion = Request.QueryString["accion"];
-            TxtFechaCreacion.Enabled = false;
 
+            TxtFechaCreacion.Enabled = false;
+            TxtDescuento.Enabled = false;
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
                
