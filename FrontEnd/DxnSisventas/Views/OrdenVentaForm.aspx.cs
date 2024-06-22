@@ -190,6 +190,11 @@ namespace DxnSisventas.Views
         private void llenarGridProductos(String busqueda)
         {
             producto[] productosAxu = apiProductos.listarProductos(busqueda);
+            if(productosAxu != null)
+            {
+                productosAxu = productosAxu.Where(p => p.stock > 0).ToArray();
+            }
+
             if (productosAxu == null)
             {
                 productos = new BindingList<producto>();
@@ -547,21 +552,20 @@ namespace DxnSisventas.Views
                 if(res <= 0) mensaje = "Error al registrar la orden de venta";
                 if(res > 0)
                 {
-                    // debemos actualizar el stock de los productos
-                    foreach (lineaOrden linea in lineasOrden)
-                    {
-                        producto producto = linea.producto;
-                        producto.stock -= linea.cantidad;
-                        apiProductos.actualizarProducto(producto);
-                    }
+                    actualizarStockProductos();
                 }
 
             }
             else if(accion.Equals("editar"))
             {
-                actualizarLineasOrden();               
+                              
                 res = apiDocumentos.actualizarOrdenVenta(ordenVenta);
                 if(res <= 0) mensaje = "Error al actualizar la orden de venta";
+                if(res > 0)
+                {
+                    actualizarLineasOrden();
+                    actualizarStockProductos();
+                }
        
             }
             if (res <= 0)
@@ -571,6 +575,17 @@ namespace DxnSisventas.Views
             }
             Response.Redirect("OrdenVenta.aspx");
             limpiarSesiones();
+        }
+
+        private void actualizarStockProductos()
+        {
+         
+            foreach (lineaOrden linea in lineasOrden)
+            {
+                producto producto = linea.producto;
+                producto.stock -= linea.cantidad;
+                apiProductos.actualizarProducto(producto);
+            }
         }
 
         private void limpiarSesiones()
