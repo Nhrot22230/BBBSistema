@@ -73,7 +73,7 @@ namespace DxnSisventas.Views
             {
                 return;
             }
-
+                BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.Where(x => x.estado.ToString() != estadoOrden.Cancelado.ToString()).ToList());
             if (TxtBuscar.Text.ToString() != "")
             {
                 BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.Where(x => x.idOrdenCompraNumerico == (int.Parse(TxtBuscar.Text))).ToList());
@@ -278,7 +278,17 @@ namespace DxnSisventas.Views
 
         protected void BtnEliminar_Click(object sender, EventArgs e)
         {
-            MostrarMensaje("Las ordenes de compra y venta solo pueden ser editadas", false);
+            int idOrdenVenta = int.Parse(((LinkButton)sender).CommandArgument);
+            ordenCompra orden = Blordenes.Where(x => x.idOrdenCompraNumerico == idOrdenVenta).FirstOrDefault();
+            orden.estadoSpecified = true;
+            orden.fechaCreacionSpecified = true;
+            orden.fechaRecepcionSpecified = true;
+            orden.estado = estadoOrden.Cancelado;
+            documentosAPIClient.actualizarOrdenCompra(orden);
+            GridCompras.PageIndex = 0;
+            AplicarFiltro();
+            GridBind();
+            MostrarMensaje("Orden de Compra eliminada",true);
         }
 
         protected void Estado_SelectedIndexChanged(object sender, EventArgs e)
