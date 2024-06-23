@@ -15,6 +15,7 @@ namespace DxnSisventas.Views
         private DocumentosAPIClient documentosAPIClient;
         private BindingList<ordenCompra> Blordenes;
         private BindingList<ordenCompra> BlordenesFiltradas;
+        private BindingList<comprobante> comprobantes;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -284,6 +285,8 @@ namespace DxnSisventas.Views
             orden.fechaCreacionSpecified = true;
             orden.fechaRecepcionSpecified = true;
             orden.estado = estadoOrden.Cancelado;
+            bool flag = comprobarComprobanteAsociado(orden);
+            if (!flag) return;
             documentosAPIClient.actualizarOrdenCompra(orden);
             GridCompras.PageIndex = 0;
             AplicarFiltro();
@@ -399,6 +402,28 @@ namespace DxnSisventas.Views
             GridCompras.PageIndex = 0;
             GridBind();
             MostrarMensaje("Ordenes ordenada por monto", true);
+        }
+        private void listarComprobatentes()
+        {
+            comprobante[] listaAux = documentosAPIClient.listarComprobante("");
+            if (listaAux == null)
+            {
+                return;
+            }
+            comprobantes = new BindingList<comprobante>(listaAux.ToList());
+        }
+        private bool comprobarComprobanteAsociado(ordenCompra orden)
+        {
+            listarComprobatentes();
+            foreach (comprobante comp in comprobantes)
+            {
+                if (comp.ordenAsociada.idOrden == orden.idOrden)
+                {
+                    MostrarMensaje("No se puede eliminar la orden de venta porque tiene un comprobante asociado", false);
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
