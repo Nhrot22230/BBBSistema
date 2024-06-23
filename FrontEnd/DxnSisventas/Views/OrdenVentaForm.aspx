@@ -86,18 +86,18 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="TxtDescuento" class="col-sm-2 col-form-label">Descuento:</label>
+                                <label for="TxtDescuento" class="col-sm-2 col-form-label">Descuento (S/.) :</label>
                                 <div class="col-sm-3">
                                     <asp:TextBox ID="TxtDescuento" runat="server"
                                         type="number"
                                         step="0.01"
                                         CssClass="form-control"
-                                        value="0.00"
-                                        oninput="autoUpdate(this)"
+                                        value="0.00"   
                                         onkeydown="return avoidEnterKey(event);">
                                     </asp:TextBox>
 
                                 </div>
+                                    </div>
                             </div>
                         </div>
                     </div>

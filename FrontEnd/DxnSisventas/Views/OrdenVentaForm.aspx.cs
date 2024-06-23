@@ -277,6 +277,8 @@ namespace DxnSisventas.Views
             TxtIDCliente.Text = cliente.idCadena.ToString();
             TxtNombreCompletoCliente.Text = cliente.nombre + " " +
                 cliente.apellidoPaterno + " " + cliente.apellidoMaterno;
+            TxtPuntos.Text = cliente.puntos.ToString();
+            TxtDescuento.Text = cliente.puntos * 0.1 + "";
             ScriptManager.RegisterStartupScript(this, GetType(), "", "__doPostBack('','');", true);
         }
         protected void lbBuscarClienteModal_Click(object sender, EventArgs e)
@@ -300,6 +302,7 @@ namespace DxnSisventas.Views
             TxtNombreProducto.Text = producto.nombre;
             TxtPrecio.Text = producto.precioUnitario.ToString("N2");
             TxtStock.Text = producto.stock.ToString();
+      
             ScriptManager.RegisterStartupScript(this, GetType(), "", "__doPostBack('','');", true);
         }
 
@@ -371,15 +374,16 @@ namespace DxnSisventas.Views
             }
             
             Session["lineasDeOrden"] = lineasOrden;
-            calcularLineasConDescuento();
+            calcularLineasSinDEscuento();
             llenarGridLineas();
             LimpiarCamposProducto();
         }
-        void calcularLineasConDescuento()
+        void calcularLineasSinDEscuento()
         {
             double totalSinDescuento = lineasOrden.Sum(lo => lo.subtotal);
-            double descuento = totalSinDescuento * (Double.Parse(TxtDescuento.Text) / 100);
-            txtTotal.Text = (totalSinDescuento - descuento).ToString("N2");
+            //double descuento = totalSinDescuento * (Double.Parse(TxtDescuento.Text) / 100);
+            //txtTotal.Text = (totalSinDescuento - descuento).ToString("N2");
+            txtTotal.Text = totalSinDescuento.ToString("N2");
         }
         private double CalcularSubtotal(int cantidad, double precioUnitario)
         {
@@ -630,11 +634,6 @@ namespace DxnSisventas.Views
                 TxtNombreCompletoRepartidor.Text = "";
 
             }
-        }
-
-        protected void TxtDescuento_TextChanged(object sender, EventArgs e)
-        {
-            calcularLineasConDescuento();
         }
         protected void gvLineasOrdenVenta_RowDataBound(object sender, GridViewRowEventArgs e)
         {

@@ -9,23 +9,22 @@ function validarFormulario() {
 
 
 function autoUpdate(input) {
-    const min = 0;
-    const max = 100;
-    if (input.value < min) input.value = min;
-    if (input.value > max) input.value = max;
-    porcentajeDescuento = document.getElementById('ContentPlaceHolder1_TxtDescuento').value;
-    var total = 0;
-    var gv = document.getElementById('ContentPlaceHolder1_gvLineasOrdenVenta');
-       
-    if (gv) {
-        for (var i = 1; i < gv.rows.length; i++){
-            var subtotalCell = gv.rows[i].cells[4];
-            var subtotal = parseFloat(subtotalCell.innerText) || 0;
-            total += subtotal;
-        }
-    }
-    total -= (total * porcentajeDescuento / 100);
-    document.getElementById('ContentPlaceHolder1_txtTotal').value = total.toFixed(2);
+    //const min = 0;
+    //const max = 100;
+    //if (input.value < min) input.value = min;
+    //if (input.value > max) input.value = max;
+    //porcentajeDescuento = document.getElementById('ContentPlaceHolder1_TxtDescuento').value;
+    //var total = 0;
+    //var gv = document.getElementById('ContentPlaceHolder1_gvLineasOrdenVenta'); 
+    //if (gv) {
+    //    for (var i = 1; i < gv.rows.length; i++){
+    //        var subtotalCell = gv.rows[i].cells[4];
+    //        var subtotal = parseFloat(subtotalCell.innerText) || 0;
+    //        total += subtotal;
+    //    }
+    //}
+    //total -= (total * porcentajeDescuento / 100);
+    //document.getElementById('ContentPlaceHolder1_txtTotal').value = total.toFixed(2);
 }
 
 function avoidEnterKey(event) {
