@@ -157,9 +157,11 @@
                     </asp:RegularExpressionValidator>
                   </div>   
                   <div id="timer" runat="server">05:00</div>
+                    <div class="d-flex justify-content-between">
                   <asp:Button ID="btnConfirmCode" CssClass="btn btn-success btn-block" runat="server" Text="Confirmar Código" OnClick="btnConfirmCode_Click" />
                   <asp:Label ID="LabelExpirado" CssClass="error-message hidden" runat="server" />
                   <asp:Button ID="btnChangeEmail" CssClass="btn btn-secondary btn-block" runat="server" CausesValidation="false" Text="Cambiar Correo" OnClick="btnChangeEmail_Click" />
+                        </div>
                 </div>
               </asp:Panel>
               <asp:Panel runat="server" DefaultButton="btnChangePassword">
@@ -187,9 +189,11 @@
                 </div>
               </asp:Panel>
                 <br />
+                <div class="d-flex justify-content-between">
               <asp:Button ID="Button1" CssClass="btn btn-secondary btn-block" runat="server" Text="Regresar" ValidationGroup="Ninguno" OnClick="btnRegresar_Click" />
               <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" CausesValidation="false" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
-            </ContentTemplate>
+                </div>
+                    </ContentTemplate>
           </asp:UpdatePanel>
         </div>
       </div>
