@@ -60,6 +60,24 @@ namespace DxnSisventas
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// Control reqCorreo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqCorreo;
+
+        /// <summary>
+        /// Control regexCorreo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexCorreo;
+
+        /// <summary>
         /// Control btnGetCode.
         /// </summary>
         /// <remarks>
@@ -78,6 +96,15 @@ namespace DxnSisventas
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl codeSection;
 
         /// <summary>
+        /// Control hiddenFieldTimerExpired.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hiddenFieldTimerExpired;
+
+        /// <summary>
         /// Control txtCode.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,15 @@ namespace DxnSisventas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCode;
+
+        /// <summary>
+        /// Control revCode.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCode;
 
         /// <summary>
         /// Control timer.
@@ -103,6 +139,15 @@ namespace DxnSisventas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnConfirmCode;
+
+        /// <summary>
+        /// Control LabelExpirado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelExpirado;
 
         /// <summary>
         /// Control btnChangeEmail.
