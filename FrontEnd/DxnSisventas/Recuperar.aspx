@@ -11,12 +11,26 @@
   <link rel="stylesheet" href="/Content/fontawesome.min.css" />
   <link rel="stylesheet" href="/Content/bootstrap.min.css" />
   <link rel="stylesheet" href="/CustomStyles/Master.css" />
+    <link href="CustomStyles/Login.css" rel="stylesheet" />
   <style>
-    .container {
-      max-width: 500px;
-      margin-top: 50px;
+      body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+     .container {
+      width:500px;
+      max-width: 600px;
+      margin-top: -60px;
+ 
     }
-
+     .btn{
+         padding: 0.45rem !important;
+     }
     .hidden {
       display: none;
     }
@@ -94,9 +108,11 @@
   </script>
 </head>
 <body>
+    <div class="background-image"></div>
   <form id="form1" runat="server">
 
     <div class="container">
+
       <div class="card">
         <div class="card-header text-center">
           <h2>Recuperar Contraseña</h2>
@@ -111,7 +127,7 @@
                 <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="error-message"></asp:Label>
               </asp:Panel>
                 <asp:Panel runat="server" DefaultButton="btnGetCode">
-              <div id="emailSection" class="col-sm-7" runat="server">
+              <div id="emailSection" class="col-sm-8" runat="server">
                 <div class="form-group">
                   <label for="txtEmail">Correo Electrónico</label>
 
@@ -176,6 +192,7 @@
                     </div>
                   </div>
                   <div class="form-group">
+                      <br />
                     <label for="txtConfirmPassword">Confirmar Nueva Contraseña</label>
                     <div class="input-group">
                       <asp:TextBox ID="txtConfirmPassword" CssClass="form-control" runat="server" placeholder="Confirme la nueva contraseña" TextMode="Password"></asp:TextBox>
@@ -185,6 +202,7 @@
                     </div>
                     <asp:Label ID="lblError" CssClass="error-message hidden" runat="server" Text="Las contraseñas no coinciden." />
                   </div>
+                    <br />
                   <asp:Button ID="btnChangePassword" CssClass="btn btn-primary btn-block" runat="server" Text="Cambiar Contraseña" OnClick="btnChangePassword_Click" />
                 </div>
               </asp:Panel>
