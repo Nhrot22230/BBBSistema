@@ -23,6 +23,7 @@ namespace DxnSisventas.Views
         private BindingList<lineaOrden> lineasOrden;
 
         private static string accion;
+        private static bool aplicarDescuento;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -52,12 +53,14 @@ namespace DxnSisventas.Views
             }
             else if (accion.Equals("new"))
             {
+             
                 ordenVenta = new ordenVenta();
                 TxtFechaCreacion.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
                 // no se puede crear una orden de venta con estado cancelado
                 ddlEstado.Items.Remove(ddlEstado.Items.FindByValue("Cancelado"));
                 TxtDescuento.Text = "0";
+                txtTotal.Text = "0.00";
                 if (!IsPostBack)
                 {
                     limpiarSesiones();
@@ -147,7 +150,7 @@ namespace DxnSisventas.Views
             TxtIDCliente.Text = ordenVenta.cliente.idCadena;
             TxtNombreCompletoCliente.Text = cliente.nombre + " " +
                 cliente.apellidoPaterno + " " + cliente.apellidoMaterno;
-
+            TxtPuntos.Text = cliente.puntos.ToString();
             // Información del repartidor en caso exista
             if(ordenVenta.repartidor != null)
             {
@@ -682,5 +685,7 @@ namespace DxnSisventas.Views
             gvLineasOrdenVenta.PageIndex = e.NewPageIndex;
             gvLineasOrdenVenta.DataBind();
         }
+
+
     }
 }
