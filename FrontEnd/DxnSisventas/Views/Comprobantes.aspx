@@ -65,7 +65,7 @@
         <asp:GridView ID="GridComprobantes" runat="server" AutoGenerateColumns="false"
           AllowPaging="true" PageSize="7" OnPageIndexChanging="GridComprobantes_PageIndexChanging"
           OnRowDataBound="GridComprobantes_RowDataBound"
-            CssClass="gridview-custom">
+            CssClass="table table-hover table-responsive table-striped">
           <Columns>
             <asp:BoundField DataField="idComprobanteCadena" HeaderText="ID Comprobante" />
             <asp:BoundField DataField="fechaEmision" HeaderText="Fecha Emisión" />

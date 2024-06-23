@@ -22,9 +22,8 @@
                             </div>
 
                             <label for="TxtFecha" class="col-sm-2 col-form-label">Fecha</label>
-                            <div class="col-sm-4">
-                                <asp:TextBox ID="TxtFechaComprobante" runat="server" type="date" Enabled="true" CssClass="form-control" onblur="validateFechaComprobante()"></asp:TextBox>
-                                <div id="fechaComprobanteErrorMessage" style="display: none; color: red;"></div>
+                            <div class="col-sm-auto">
+                                <asp:TextBox ID="TxtFechaComprobante" runat="server" Enabled="false" CssClass="form-control" onblur="validateFechaComprobante()"></asp:TextBox>
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -36,7 +35,7 @@
                                 </asp:DropDownList>
                             </div>
                             <label for="TxtTotal" class="col-sm-2 col-form-label">Total</label>
-                            <div class="col-sm-4">
+                            <div class="col-sm-auto">
                                 <asp:TextBox ID="TxtTotal" runat="server" Enabled="false" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
@@ -113,7 +112,7 @@
                         </div>
                     </div>
                     <div class="container row">
-                        <asp:GridView ID="gvOrdenes" runat="server" AllowPaging="true" PageSize="5" AutoGenerateColumns="false" CssClass="gridview-custom" OnPageIndexChanging="gvOrdenes_PageIndexChanging" OnRowDataBound="gvOrdenes_RowDataBound">
+                        <asp:GridView ID="gvOrdenes" runat="server" AllowPaging="true" PageSize="5" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" OnPageIndexChanging="gvOrdenes_PageIndexChanging" OnRowDataBound="gvOrdenes_RowDataBound">
                             <Columns>
                                 <asp:BoundField HeaderText="" DataField="idOrden" Visible="false" />
                                 <%-- Estamos enlazando de otra manera a traves del evento OnRowDataBound --%>

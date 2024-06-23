@@ -107,13 +107,14 @@ function validateOrdenAsociada() {
 }
 
 function validarFormularioComprobante() {
-    let val_fecha = validateFechaComprobante();
+    //let val_fecha = validateFechaComprobante();
     let val_orden = validateOrdenAsociada();
-    if (val_fecha && val_orden) {
+    return val_orden;
+    /*if (val_fecha && val_orden) {
         return true;
     }
 
-    return false;
+    return false;*/
 }
 
 function openInNewTab() {

@@ -106,13 +106,23 @@ namespace DxnSisventas.Views
             comprobante comprobante = new comprobante();
             comprobante.ordenAsociada = (orden)Session["OrdenSeleccionada"];
             comprobante.fechaEmisionSpecified = true;
-            comprobante.fechaEmision = DateTime.Parse(TxtFechaComprobante.Text);
+            comprobante.fechaEmision = DateTime.Now;
             comprobante.tipoComprobanteSpecified = true;
             comprobante.tipoComprobante = (tipoComprobante)Enum.Parse(typeof(tipoComprobante), DropDownListTipoComprobante.SelectedValue);
+            comprobante.ordenAsociada.estadoSpecified = true;
+            comprobante.ordenAsociada.estado = estadoOrden.Entregado;
+            if(comprobante.ordenAsociada is ordenVenta)
+            {
+                apiDocumentos.actualizarOrdenVenta((ordenVenta)comprobante.ordenAsociada);
+            }
+            else 
+            {
+                apiDocumentos.actualizarOrdenCompra((ordenCompra)comprobante.ordenAsociada);
+            }
             int res = apiDocumentos.insertarComprobante(comprobante);
             string mensaje = res > 0 ? "Comprobante guardado correctamente" : "Error al guardar el comprobante";
-            MostrarMensaje(mensaje, res > 0);
             if (res > 0) Response.Redirect("/Views/Comprobantes.aspx");
+            MostrarMensaje(mensaje, res > 0);
         }
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
@@ -162,7 +172,7 @@ namespace DxnSisventas.Views
         protected void gvOrdenes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvOrdenes.PageIndex = e.NewPageIndex;
-            GridBindOrdenes();
+            CargarTabla(txtCodOrdenModal.Text);
             CargarModalOrdenes();
         }
         private void GridBindOrdenes()
