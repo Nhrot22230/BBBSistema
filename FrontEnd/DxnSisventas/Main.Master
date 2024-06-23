@@ -16,7 +16,7 @@
   <asp:ContentPlaceHolder ID="head" runat="server">
   </asp:ContentPlaceHolder>
   <link rel="stylesheet" href="/Content/all.min.css" />
-  <link rel="stylesheet" href="/Content/fontawesome.min.css">
+  <link rel="stylesheet" href="/Content/fontawesome.min.css"/>
   <link rel="stylesheet" href="/Content/bootstrap.min.css" />
   <link rel="stylesheet" href="/CustomStyles/Master.css" />
 
