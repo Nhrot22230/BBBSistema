@@ -23,14 +23,13 @@ namespace DxnSisventas.Views
     // Page events
     protected void Page_Init(object sender, EventArgs e)
     {
-      TxtId.Enabled = false;
       Page.Title = "Productos";
       CargarTabla("");
     }
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+      TxtId.Enabled = false;
     }
 
     // GridView events
@@ -113,7 +112,6 @@ namespace DxnSisventas.Views
       ddlTipoProducto.SelectedValue = "0";
       ddlUnidadMedida.SelectedValue = "0";
       TxtId.Text = "";
-      TxtId.Enabled = true;
       Session["idProducto"] = null;
     }
 
@@ -131,7 +129,6 @@ namespace DxnSisventas.Views
         ddlTipoProducto.SelectedValue = p.tipo.ToString();
         ddlUnidadMedida.SelectedValue = p.unidadDeMedida.ToString();
         TxtId.Text = p.idProductoCadena;
-        TxtId.Enabled = false;
       }
     }
 

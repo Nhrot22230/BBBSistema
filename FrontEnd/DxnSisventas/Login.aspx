@@ -5,15 +5,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
   <title>Login Page</title>
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     rel="stylesheet" />
   <link rel="stylesheet" href="CustomStyles/Login.css" />
-
   <script type="text/javascript" src="Scripts/jquery-3.7.1.min.js"></script>
-
   <script>
     function showErrorPanel() {
       $(".error-panel").fadeIn().delay(2250).fadeOut();
@@ -67,8 +67,8 @@
         </ContentTemplate>
       </asp:UpdatePanel>
 
-        <asp:LinkButton ID="BtnRecuperar" runat="server" Text='Recuperar Contraseña'   CssClass="link-button" OnClick="BtnRecuperar_Click" />
-        <br />
+      <asp:LinkButton ID="BtnRecuperar" runat="server" Text='Recuperar Contraseña' CssClass="link-button" OnClick="BtnRecuperar_Click" />
+      <br />
       <asp:Button
         ID="LoginButton"
         CssClass="login-button btn"

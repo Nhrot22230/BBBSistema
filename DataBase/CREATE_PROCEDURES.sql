@@ -614,7 +614,7 @@ BEGIN
       id_cliente = p_id_cliente,
       id_empleado = p_id_empleado,
       id_repartidor = COALESCE(NULLIF(p_id_repartidor, 0), NULL),
-      fecha_entrega = p_fecha_entrega,
+      fecha_entrega = COALESCE(NULLIF(p_fecha_entrega, 0), NULL),
       tipo_venta = p_tipo_venta,
       metodo_pago = p_metodo_pago,
       porcentaje_descuento = p_porcentaje_descuento

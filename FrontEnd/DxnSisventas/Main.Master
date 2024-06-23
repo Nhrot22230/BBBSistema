@@ -4,7 +4,9 @@
 
 <html lang="es-es">
 <head runat="server">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
   <script type="text/javascript" src="/Scripts/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="/Scripts/jquery-3.7.1.min.js"></script>
   <script>
@@ -19,16 +21,10 @@
   <link rel="stylesheet" href="/Content/fontawesome.min.css"/>
   <link rel="stylesheet" href="/Content/bootstrap.min.css" />
   <link rel="stylesheet" href="/CustomStyles/Master.css" />
-
-  <style>
-    * {
-      min-width: fit-content;
-    }
-  </style>
 </head>
 <body data-bs-theme='<%= IsDarkModeEnabled() ? "dark" : "light" %>'>
   <form id="masterForm" runat="server">
-    <nav class="navbar navbar-expand-lg navbar-light bg-gradient" style="background-color: #082444;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #082444;">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center justify-content-center" href="#" style="gap: 10px;">
           <img src="/Assets/BBB.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
@@ -173,7 +169,6 @@
         </asp:ContentPlaceHolder>
       </div>
     </div>
-
 
     <footer class="footer">
       <nav class="navbar navbar-expand navbar-light bg-gradient fixed-bottom" style="background-color: #082444;">

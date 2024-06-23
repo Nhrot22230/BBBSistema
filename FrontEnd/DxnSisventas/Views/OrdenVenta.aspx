@@ -109,6 +109,7 @@
                     <asp:BoundField HeaderText="Monto" />
                     <asp:BoundField HeaderText="Estado" />
                     <asp:BoundField HeaderText="Descuento" />
+                    
                     <asp:TemplateField HeaderText="Opciones">
                         <ItemTemplate>
                             <asp:LinkButton ID="BtnVisualizar" runat="server" Text="<i class='fas fa-eye ps-2'>  </i>"
@@ -116,6 +117,13 @@
 
                             <asp:LinkButton ID="BtnEditar" runat="server" Text="<i class='fas fa-edit'></i>"
                                 OnClick="BtnEditar_Click">
+                            </asp:LinkButton>
+
+
+                            <asp:LinkButton ID="BtnEliminar" 
+                                Onclick="BtnEliminar_Click"
+                                runat="server" 
+                                Text="<i class='fas fa-solid fa-trash ps-2'></i>">
                             </asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>

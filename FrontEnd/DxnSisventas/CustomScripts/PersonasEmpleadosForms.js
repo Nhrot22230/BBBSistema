@@ -47,6 +47,12 @@ function validateTxtDNI() {
     errMsgDNI.style.display = "block";
     return false;
   }
+  if (parseInt(labelDNI.value) < 0) {
+    labelDNI.classList.add("is-invalid");
+    errMsgDNI.innerHTML = "El campo DNI no puede ser negativo";
+    errMsgDNI.style.display = "block";
+    return false;
+  }
 
   labelDNI.classList.remove("is-invalid");
   errMsgDNI.innerHTML = "";

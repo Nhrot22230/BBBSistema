@@ -25,10 +25,8 @@ errMsgCapacidad = document.getElementById("capacidadErrorMessage");
 
 function validatePoints() {
   if (labelPuntos.value === "") {
-    labelPuntos.classList.add("is-invalid");
-    errMsgPuntos.innerHTML = "El campo Puntos no puede estar vacío";
-    errMsgPuntos.style.display = "block";
-    return false;
+    labelPuntos.value = "0";
+    return true;
   }
   if (isNaN(labelPuntos.value)) {
     labelPuntos.classList.add("is-invalid");
