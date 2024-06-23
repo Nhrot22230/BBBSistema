@@ -114,7 +114,7 @@
                                 <div class="form-group">
                                     <label for="txtEmail">Correo Electrónico</label>
 
-                                    <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Ingrese su correo electrónico" TextMode="Email"></asp:TextBox>
+                                    <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Ingrese su correo electrónico"></asp:TextBox>
                                     <asp:RequiredFieldValidator
                                         ID="reqCorreo"
                                         runat="server"
@@ -181,7 +181,7 @@
                                 </div>
                             </asp:Panel>
                             <asp:Button ID="Button1" CssClass="btn btn-secondary btn-block" runat="server" Text="Regresar" ValidationGroup="Ninguno" OnClick="btnRegresar_Click" />
-                            <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
+                            <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" CausesValidation="false" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>

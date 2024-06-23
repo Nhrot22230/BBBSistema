@@ -37,7 +37,7 @@ namespace DxnSisventas
             }
             if (arrcuentaClientes != null)
             {
-                listaCuentasEmpleado = new BindingList<cuentaEmpleado>(arrCuentaEmpleado.ToList());
+                listaCuentaClientes = new BindingList<cuentaCliente>(arrcuentaClientes.ToList());
             }
             if (!IsPostBack)
             {
