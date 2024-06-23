@@ -47,6 +47,12 @@ function validateTxtDNI() {
     errMsgDNI.style.display = "block";
     return false;
   }
+  if (parseInt(labelDNI.value) < 0) {
+    labelDNI.classList.add("is-invalid");
+    errMsgDNI.innerHTML = "El campo DNI no puede ser negativo";
+    errMsgDNI.style.display = "block";
+    return false;
+  }
 
   labelDNI.classList.remove("is-invalid");
   errMsgDNI.innerHTML = "";
@@ -120,7 +126,7 @@ function validateTxtApellidoMat() {
 
 function validateTxtPuntos() {
   if (labelPuntos.value === "") {
-    labelPuntos.innerHTML = "0";
+    labelPuntos.value = "0";
     return true;
   }
   if (isNaN(labelPuntos.value)) {
@@ -132,6 +138,12 @@ function validateTxtPuntos() {
   if (regexSpecial.test(labelPuntos.value)) {
     labelPuntos.classList.add("is-invalid");
     errMsgPuntos.innerHTML = "El campo Puntos no puede contener caracteres especiales";
+    errMsgPuntos.style.display = "block";
+    return false;
+  }
+  if (parseInt(labelPuntos.value) < 0) {
+    labelPuntos.classList.add("is-invalid");
+    errMsgPuntos.innerHTML = "El campo Puntos no puede ser negativo";
     errMsgPuntos.style.display = "block";
     return false;
   }

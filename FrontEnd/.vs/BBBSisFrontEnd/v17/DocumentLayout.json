@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\gian luka\\desktop\\tareafinal_p3\\bbbsistema\\frontend\\dxnsisventas\\views\\ordencompraform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordencompraform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\ordencompra.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordencompra.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\dxnsisventas\\recuperar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\recuperar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\dxnsisventas\\recuperar.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\recuperar.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\dxnsisventas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\dxnsisventas\\views\\ordencompraform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordencompraform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,8 +9,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -46,83 +25,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrdenCompra.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompra.aspx.cs",
-              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenCompra.aspx.cs",
-              "ToolTip": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompra.aspx.cs",
-              "RelativeToolTip": "DxnSisventas\\Views\\OrdenCompra.aspx.cs",
-              "ViewState": "AQIAALoBAAAAAAAAAAAwwNkBAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T17:05:45.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrdenCompraForm.aspx",
-              "DocumentMoniker": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompraForm.aspx",
-              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenCompraForm.aspx",
-              "ToolTip": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompraForm.aspx",
-              "RelativeToolTip": "DxnSisventas\\Views\\OrdenCompraForm.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-23T06:10:50.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrdenCompraForm.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
-              "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
-              "ToolTip": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
-              "RelativeToolTip": "DxnSisventas\\Views\\OrdenCompraForm.aspx.cs",
-              "ViewState": "AQIAAEoBAAAAAAAAAAAuwN8BAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T06:01:38.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Recuperar.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Recuperar.aspx.cs",
-              "RelativeDocumentMoniker": "DxnSisventas\\Recuperar.aspx.cs",
-              "ToolTip": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Recuperar.aspx.cs",
-              "RelativeToolTip": "DxnSisventas\\Recuperar.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T04:45:19.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Login.aspx",
-              "RelativeDocumentMoniker": "DxnSisventas\\Login.aspx",
-              "ToolTip": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Login.aspx",
-              "RelativeToolTip": "DxnSisventas\\Login.aspx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-23T15:52:52.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Recuperar.aspx",
-              "DocumentMoniker": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Recuperar.aspx",
-              "RelativeDocumentMoniker": "DxnSisventas\\Recuperar.aspx",
-              "ToolTip": "C:\\Users\\Gian Luka\\Desktop\\TareaFinal_P3\\BBBSistema\\FrontEnd\\DxnSisventas\\Recuperar.aspx",
-              "RelativeToolTip": "DxnSisventas\\Recuperar.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-22T23:46:48.858Z"
             }
           ]
         }

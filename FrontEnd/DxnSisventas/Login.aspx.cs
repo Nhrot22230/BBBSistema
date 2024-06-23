@@ -60,11 +60,12 @@ namespace DxnSisventas
       try
       {
         // Intenta realizar una operación simple
-        cuentasAPIClient.Endpoint.Address.ToString();
+        cuentasAPIClient.hello(name: "DxnSisventas");
         return true;
       }
-      catch
+      catch (System.Exception ex)
       {
+
         return false;
       }
     }
