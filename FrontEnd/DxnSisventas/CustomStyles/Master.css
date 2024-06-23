@@ -242,8 +242,7 @@ input:checked + .slider {
 }
 
 .footer > nav > ul > li > a > i {
-  color: #b8c7ce;
-  font-size: 40px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1000px) {
@@ -265,12 +264,5 @@ input:checked + .slider {
 
   .main-content {
     padding-bottom: 100px;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer > nav > ul > li > a > i {
-    color: #b8c7ce;
-    font-size: 25px;
   }
 }
