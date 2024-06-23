@@ -352,7 +352,8 @@ namespace DxnSisventas.Views
                 {
                     e.Row.Cells[4].Text = orden.repartidor.nombre + " " +orden.repartidor.apellidoPaterno;
                 }
-                if(orden.fechaEntrega.ToString("dd/MM/yyyy") == "01/01/0001") { 
+        
+                if(orden.fechaEntrega.ToString("MM/yyyy") == "01/0001") { 
                     e.Row.Cells[5].Text = "No asignado";
                 }
                 else
@@ -369,6 +370,17 @@ namespace DxnSisventas.Views
                 LinkButton btnEditar = (LinkButton)e.Row.FindControl("BtnEditar");
                 btnEditar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
 
+                
+                LinkButton btnEliminar = (LinkButton)e.Row.FindControl("BtnEliminar");
+                btnEliminar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
+                
+                if(orden.estado == estadoOrden.Entregado || orden.estado == estadoOrden.Cancelado)
+                {
+                    btnEliminar.Visible = false;
+                    btnEditar.Visible = false;
+                }
+
+
             }
         }
 
@@ -377,6 +389,17 @@ namespace DxnSisventas.Views
             int idOrdenVenta = Int32.Parse(((LinkButton)sender).CommandArgument);
             Session["ordenSeleccionada"] = Blordenes.Where(x => x.idOrdenVentaNumerico == idOrdenVenta).FirstOrDefault();
             Response.Redirect("OrdenVentaForm.aspx?accion=editar");
+        }
+
+        protected void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            int idOrdenVenta = Int32.Parse(((LinkButton)sender).CommandArgument);
+            ordenVenta orden = Blordenes.Where(x => x.idOrdenVentaNumerico == idOrdenVenta).FirstOrDefault();
+            orden.estadoSpecified = true;
+            orden.fechaEntregaSpecified = true;
+            orden.estado = estadoOrden.Cancelado;
+            int res = documentosAPIClient.actualizarOrdenVenta(orden);
+            CargarTabla("");
         }
     }
 }

@@ -405,7 +405,9 @@ namespace DxnSisventas.Views
             if (total < 0)
             {
                 txtTotal.Text = "0.00";
-                Session["puntosSobrantes"] = (descuento - totalSinDescuento) * 10;
+                int puntosSobrantes = (int)(descuento - totalSinDescuento) * 10;
+
+                Session["puntosSobrantes"] = puntosSobrantes;
             }
             else
             {
