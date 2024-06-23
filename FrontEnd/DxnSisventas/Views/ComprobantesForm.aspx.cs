@@ -162,12 +162,18 @@ namespace DxnSisventas.Views
             comprobante.fechaEmision = DateTime.Now;
             comprobante.tipoComprobanteSpecified = true;
             comprobante.tipoComprobante = (tipoComprobante)Enum.Parse(typeof(tipoComprobante), DropDownListTipoComprobante.SelectedValue);
-            if(comprobante.ordenAsociada is ordenVenta)
+            comprobante.ordenAsociada.estadoSpecified = true;
+            comprobante.ordenAsociada.estado = estadoOrden.Entregado;
+            if (comprobante.ordenAsociada is ordenVenta)
             {
-                comprobante.ordenAsociada.estadoSpecified = true;
-                comprobante.ordenAsociada.estado = estadoOrden.Entregado;
                 ((ordenVenta)comprobante.ordenAsociada).fechaEntregaSpecified = true;
                 ((ordenVenta)comprobante.ordenAsociada).fechaEntrega = comprobante.fechaEmision;
+                apiDocumentos.actualizarOrdenVenta((ordenVenta)comprobante.ordenAsociada);
+            }
+            if (comprobante.ordenAsociada is ordenCompra)
+            {
+                ((ordenCompra)comprobante.ordenAsociada).fechaRecepcionSpecified = true;
+                ((ordenCompra)comprobante.ordenAsociada).fechaRecepcion = comprobante.fechaEmision;
                 apiDocumentos.actualizarOrdenVenta((ordenVenta)comprobante.ordenAsociada);
             }
             int res = apiDocumentos.insertarComprobante(comprobante);

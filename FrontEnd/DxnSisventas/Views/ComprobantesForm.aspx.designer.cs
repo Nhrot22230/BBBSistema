@@ -132,6 +132,15 @@ namespace DxnSisventas.Views
         protected global::System.Web.UI.WebControls.Button BtnEnviar;
 
         /// <summary>
+        /// Control PanelOrdenes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelOrdenes;
+
+        /// <summary>
         /// Control txtCodOrdenModal.
         /// </summary>
         /// <remarks>

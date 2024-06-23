@@ -89,6 +89,7 @@
     
     <asp:ScriptManager runat="server"></asp:ScriptManager>
     <div id="form-modal-ordenes" class="modal">
+        <asp:Panel id="PanelOrdenes" runat="server" CssClass="panel-class" DefaultButton="BtnBuscarModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -132,6 +133,7 @@
             </div>
 
         </div>
+        </asp:Panel>
     </div>
 
        <!-- Modal para agregar destinatario -->
