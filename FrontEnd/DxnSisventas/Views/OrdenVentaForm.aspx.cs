@@ -1,11 +1,7 @@
 ﻿using DxnSisventas.BBBWebService;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
-using System.ServiceModel.Channels;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -30,28 +26,31 @@ namespace DxnSisventas.Views
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            Page.Title = "Orden de Venta";
-            apiDocumentos = new DocumentosAPIClient();
-            apiPersonas = new PersonasAPIClient();
-            apiProductos = new ProductosAPIClient();
-            accion = Request.QueryString["accion"];
-            TxtFechaCreacion.Enabled = false;
+            
+            colocarTituloPagina();
+            inicializarApis();
+            inhabilitarCamposInit();
+            accionDePagina();                        
+        }
 
+        void accionDePagina()
+        {
+            accion = Request.QueryString["accion"];
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
-               
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
                 mostrarDatos();
-                if(ddlTipoVenta.SelectedValue.Equals("Presencial")){
+                if (ddlTipoVenta.SelectedValue.Equals("Presencial"))
+                {
                     panelRepartidor.Visible = false;
                 }
                 if (accion.Equals("visualizar"))
                 {
                     desabilitarCampos();
-                }         
-                
+                }
+
             }
-            else if(accion.Equals("new"))
+            else if (accion.Equals("new"))
             {
                 ordenVenta = new ordenVenta();
                 TxtFechaCreacion.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -67,7 +66,25 @@ namespace DxnSisventas.Views
             llenarGridLineas();
         }
 
-        void desabilitarCampos()
+        private void colocarTituloPagina()
+        {
+            Page.Title = "Orden de Venta";
+        }
+
+        private void inhabilitarCamposInit()
+        {
+            TxtFechaCreacion.Enabled = false;
+            TxtDescuento.Enabled = false;
+        }
+
+        private void inicializarApis()
+        {
+            apiDocumentos = new DocumentosAPIClient();
+            apiPersonas = new PersonasAPIClient();
+            apiProductos = new ProductosAPIClient();
+        }
+
+        private void desabilitarCampos()
         {
 
             // Txt
@@ -101,7 +118,7 @@ namespace DxnSisventas.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void mostrarDatos()

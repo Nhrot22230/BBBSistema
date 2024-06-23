@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\ordenventaform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\jhair\\desktop\\lp2\\proyectos\\proyectos jhairt\\bbbsistema\\frontend\\dxnsisventas\\views\\comprobantesform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\comprobantesform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\jhair\\desktop\\lp2\\proyectos\\proyectos jhairt\\bbbsistema\\frontend\\dxnsisventas\\recuperar.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\recuperar.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,6 +47,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComprobantesForm.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
+              "RelativeDocumentMoniker": "DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
+              "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
+              "RelativeToolTip": "DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswBQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T01:59:11.605Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -65,14 +82,14 @@
               "RelativeDocumentMoniker": "DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
               "ToolTip": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
               "RelativeToolTip": "DxnSisventas\\Views\\OrdenVentaForm.aspx.cs",
-              "ViewState": "AQIAAAIBAAAAAAAAAAA8wA0BAABTAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAiwHgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T01:56:38.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Recuperar.aspx.cs",
               "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Recuperar.aspx.cs",
               "RelativeDocumentMoniker": "DxnSisventas\\Recuperar.aspx.cs",
@@ -85,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Recuperar.aspx",
               "DocumentMoniker": "C:\\Users\\jhair\\Desktop\\LP2\\PROYECTOS\\PROYECTOS JHAIRT\\BBBSistema\\FrontEnd\\DxnSisventas\\Recuperar.aspx",
               "RelativeDocumentMoniker": "DxnSisventas\\Recuperar.aspx",
