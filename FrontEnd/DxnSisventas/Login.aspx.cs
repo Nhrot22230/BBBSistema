@@ -25,7 +25,10 @@ namespace DxnSisventas
         MostrarError("No se pudo establecer conexión con el servicio de cuentas");
         LoginButton.Enabled = false;
       }
-      LoginButton.Enabled = true;
+      else
+      {
+        LoginButton.Enabled = true;
+      }
     }
 
     protected void LoginButton_Click(object sender, EventArgs e)
@@ -77,9 +80,9 @@ namespace DxnSisventas
       ScriptManager.RegisterStartupScript(this, GetType(), "showErrorPanel", "showErrorPanel();", true);
     }
 
-        protected void BtnRecuperar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Recuperar.aspx");
-        }
+    protected void BtnRecuperar_Click(object sender, EventArgs e)
+    {
+      Response.Redirect("Recuperar.aspx");
     }
+  }
 }

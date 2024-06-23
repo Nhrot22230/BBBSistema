@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recuperar.aspx.cs" Inherits="DxnSisventas.Recuperar" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-es">
 <head runat="server">
   <meta http-equiv="Content-Type" content="text/html;" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
