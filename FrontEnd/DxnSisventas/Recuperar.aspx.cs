@@ -7,7 +7,10 @@ namespace DxnSisventas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+            }
         }
 
         protected void btnGetCode_Click(object sender, EventArgs e)
@@ -39,17 +42,24 @@ namespace DxnSisventas
 
         protected void btnChangePassword_Click(object sender, EventArgs e)
         {
-            // Lógica para cambiar la contraseña
+            // Ocultar mensaje de error al inicio
+            lblError.CssClass = "error-message hidden";
+
             // Verificar que las contraseñas coincidan
             if (txtNewPassword.Text == txtConfirmPassword.Text)
             {
                 // Cambiar la contraseña en la base de datos
                 // ...
                 Response.Write("<script>alert('Contraseña cambiada exitosamente');</script>");
+                Response.Redirect("Login.aspx");
             }
             else
             {
-                Response.Write("<script>alert('Las contraseñas no coinciden');</script>");
+                // Mostrar el mensaje de error
+                lblError.CssClass = "error-message";
+
+                // Mantener la sección de contraseña visible
+                ScriptManager.RegisterStartupScript(this, GetType(), "showPasswordSection", "showPasswordSection();", true);
             }
         }
 
