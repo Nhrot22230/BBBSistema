@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="/CustomStyles/Master.css" />
   <style>
     .container {
-      max-width: 1000px;
-      margin-top: 100px;
+      max-width: 500px;
+      margin-top: 50px;
     }
 
     .hidden {
@@ -110,7 +110,8 @@
                 <i class="fas fa-exclamation-circle"></i>
                 <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="error-message"></asp:Label>
               </asp:Panel>
-              <div id="emailSection" class="col-sm-4" runat="server">
+                <asp:Panel runat="server" DefaultButton="btnGetCode">
+              <div id="emailSection" class="col-sm-7" runat="server">
                 <div class="form-group">
                   <label for="txtEmail">Correo Electrónico</label>
 
@@ -136,20 +137,25 @@
                     SetFocusOnError="true"
                     ValidationGroup="CorreoGroup">
                   </asp:RegularExpressionValidator>
+                    <br />
                 </div>
                 <asp:Button ID="btnGetCode" CssClass="btn btn-primary btn-block" runat="server" ValidationGroup="CorreoGroup" Text="Obtener Código" OnClick="btnGetCode_Click" OnClientClick="resetTimer();" />
               </div>
+                   
+               </asp:Panel>
               <asp:Panel runat="server" DefaultButton="btnConfirmCode">
                 <div id="codeSection" class="hidden" runat="server">
                   <div class="form-group">
                     <label for="txtCode">Código de Verificación</label>
                     <asp:HiddenField ID="hiddenFieldTimerExpired" runat="server" Value="false" />
-                    <asp:TextBox ID="txtCode" CssClass="form-control" runat="server" placeholder="Ingrese el código" ValidationGroup="codigoGroup" MaxLength="6"></asp:TextBox>
+                      <div class="col-sm-3">
+                    <asp:TextBox ID="txtCode" CssClass="form-control" runat="server" placeholder="codigo" ValidationGroup="codigoGroup" MaxLength="6"></asp:TextBox>
+                          </div>
                     <asp:RegularExpressionValidator ID="revCode" runat="server" ControlToValidate="txtCode"
                       ErrorMessage="Debe ingresar exactamente 6 dígitos numéricos positivos." ValidationExpression="^[1-9]\d{5}$"
                       ValidationGroup="codigoGroup">
                     </asp:RegularExpressionValidator>
-                  </div>
+                  </div>   
                   <div id="timer" runat="server">05:00</div>
                   <asp:Button ID="btnConfirmCode" CssClass="btn btn-success btn-block" runat="server" Text="Confirmar Código" OnClick="btnConfirmCode_Click" />
                   <asp:Label ID="LabelExpirado" CssClass="error-message hidden" runat="server" />
@@ -180,6 +186,7 @@
                   <asp:Button ID="btnChangePassword" CssClass="btn btn-primary btn-block" runat="server" Text="Cambiar Contraseña" OnClick="btnChangePassword_Click" />
                 </div>
               </asp:Panel>
+                <br />
               <asp:Button ID="Button1" CssClass="btn btn-secondary btn-block" runat="server" Text="Regresar" ValidationGroup="Ninguno" OnClick="btnRegresar_Click" />
               <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" CausesValidation="false" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
             </ContentTemplate>
