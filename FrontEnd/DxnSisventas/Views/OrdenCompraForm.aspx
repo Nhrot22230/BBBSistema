@@ -204,7 +204,7 @@
 
     <!-- Modal para agregar destinatario -->
     <div class="modal fade" id="form-modal-enviar" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Agregar destinatario</h5>
@@ -218,40 +218,45 @@
                                 <div class="col-auto">
                                     <asp:Label CssClass="form-label" runat="server" Text="Ingresar destinatario:"></asp:Label>
                                 </div>
-                                <div class="col-sm-3">
-                                    <asp:TextBox CssClass="form-control" ID="txtCorreo" runat="server" onkeydown="if (event.keyCode == 13) return false;" OnTextChanged="txtCorreo_TextChanged"></asp:TextBox>
-                                    <asp:RequiredFieldValidator 
-                                        ID="reqCorreo" 
-                                        runat="server" 
-                                        ControlToValidate="txtCorreo"
-                                        ErrorMessage="El campo de correo electrónico es obligatorio."
-                                        Display="Dynamic" 
-                                        ForeColor="Red" 
-                                        SetFocusOnError="true"
-                                        ValidationGroup="CorreoGroup">
-                                    </asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator 
-                                        ID="regexCorreo" 
-                                        runat="server" 
-                                        ControlToValidate="txtCorreo"
-                                        ErrorMessage="Por favor, ingrese un correo electrónico válido."
-                                        ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
-                                        Display="Dynamic" 
-                                        ForeColor="Red" 
-                                        SetFocusOnError="true"
-                                        ValidationGroup="CorreoGroup">
-                                    </asp:RegularExpressionValidator>
-                                </div>
-                                <div class="col-sm-2">
-                                    <asp:LinkButton 
-                                        ID="EnviarModal" 
-                                        runat="server" 
-                                        CssClass="btn btn-info" 
-                                        Text="<i class='fas fa-paper-plane' style='color:white'></i> <span style='color:white'>Enviar</span>" 
-                                        OnClick="lbEnviaroModal_Click" 
-                                        ValidationGroup="CorreoGroup">
-                                    </asp:LinkButton>
-                                </div>
+                                <asp:Panel runat="server" DefaultButton="EnviarModal">
+                                    <div class ="row">
+                                    <div class="col-sm-5">
+                                        <asp:TextBox CssClass="form-control" ID="txtCorreo" runat="server" onkeydown="if (event.keyCode == 13) return false;"></asp:TextBox>
+                                        <asp:RequiredFieldValidator
+                                            ID="reqCorreo"
+                                            runat="server"
+                                            ControlToValidate="txtCorreo"
+                                            ErrorMessage="El campo de correo electrónico es obligatorio."
+                                            Display="Dynamic"
+                                            ForeColor="Red"
+                                            SetFocusOnError="true"
+                                            ValidationGroup="CorreoGroup">
+                                        </asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator
+                                            ID="regexCorreo"
+                                            runat="server"
+                                            ControlToValidate="txtCorreo"
+                                            ErrorMessage="Por favor, ingrese un correo electrónico válido."
+                                            ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                            Display="Dynamic"
+                                            ForeColor="Red"
+                                            SetFocusOnError="true"
+                                            ValidationGroup="CorreoGroup">
+                                        </asp:RegularExpressionValidator>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <asp:LinkButton
+                                            ID="EnviarModal"
+                                            runat="server"
+                                            CssClass="btn btn-info"
+                                            Text="<i class='fas fa-paper-plane' style='color:white'></i> <span style='color:white'>Enviar</span>"
+                                            OnClick="lbEnviaroModal_Click"
+                                            ValidationGroup="CorreoGroup">
+                                        </asp:LinkButton>
+                                        </div>
+                                    </div>
+                                </asp:Panel>
                             </div>
                         </div>
                     </ContentTemplate>

@@ -28,7 +28,7 @@ namespace DxnSisventas
         { 
             apiCuentas = new CuentasAPIClient();
             apiCorreo = new CorreosAPIClient();
-
+            ErrorPanel.Visible = false;
             cuentaEmpleado[] arrCuentaEmpleado= apiCuentas.listarCuentaEmpleado();
             cuentaCliente[] arrcuentaClientes = apiCuentas.listarCuentaCliente();
             if(arrCuentaEmpleado != null)
@@ -99,11 +99,12 @@ namespace DxnSisventas
                 {
                     esEmpleado = true;
                     ViewState["timeLeft"] = 300;
+                    MostrarMensaje("Correo Enviado", true);
                     ScriptManager.RegisterStartupScript(this, GetType(), "showCodeSection", "showCodeSection();", true);
                 }
                 else
                 {
-
+                    MostrarMensaje("Error al enviar correo", false);
                     ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
                 }
 
@@ -121,17 +122,20 @@ namespace DxnSisventas
                 {
                     esCliente = true;
                     ViewState["timeLeft"] = 300;
+                    MostrarMensaje("Correo Enviado", true);
                     ScriptManager.RegisterStartupScript(this, GetType(), "showCodeSection", "showCodeSection();", true);
                 }
                 else
                 {
+                    MostrarMensaje("Error al enviar correo", false);
                     ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
                 }
             }
             else
             {
-
+                MostrarMensaje("No registrado en el sistema",false);
             }
+            
             
         }
 
@@ -145,10 +149,12 @@ namespace DxnSisventas
             {
                 if (!timerExpired)
                 {
+                    MostrarMensaje("Ingrese su nueva contraseña", true);
                     ScriptManager.RegisterStartupScript(this, GetType(), "showPasswordSection", "showPasswordSection();", true);
                 }
                 else
                 {
+                    MostrarMensaje("Codigo expirado solicite uno nuevo", false);
                     LabelExpirado.CssClass = "error-message";
                     LabelExpirado.Text = "El código ha expirado. Por favor, solicita uno nuevo.";
                     txtCode.Text = ""; // Limpiar el campo de código
@@ -156,6 +162,7 @@ namespace DxnSisventas
             }
             else
             {
+                MostrarMensaje("Codigo Incorrecto", false);
                 LabelExpirado.Text = "Código incorrecto. Por favor, verifica e intenta nuevamente.";
                 txtCode.Text = ""; // Limpiar el campo de código
                 ScriptManager.RegisterStartupScript(this, GetType(), "showCodeSection", "showCodeSection();", true);
@@ -168,7 +175,7 @@ namespace DxnSisventas
         {
             // Lógica para cambiar de correo electrónico
             // ...
-
+            MostrarMensaje("Ingrese el nuevo correo", true);
             // Mostrar la sección de email
             ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
         }
@@ -200,7 +207,7 @@ namespace DxnSisventas
             {
                 // Mostrar el mensaje de error
                 lblError.CssClass = "error-message";
-
+                MostrarMensaje("Contraseñas diferentes", false);
                 // Mantener la sección de contraseña visible
                 ScriptManager.RegisterStartupScript(this, GetType(), "showPasswordSection", "showPasswordSection();", true);
             }
@@ -210,6 +217,48 @@ namespace DxnSisventas
         {
             // Lógica para regresar a una vista anterior
             // Mostrar la sección de email
+            //ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
+            Response.Redirect("Login.aspx");
+        }
+        public void ClearError()
+        {
+            ErrorPanel.Visible = false;
+            ErrorLabel.Text = "";
+        }
+
+        public void MostrarError(string mensaje)
+        {
+            ErrorPanel.CssClass = "notification-panel error-panel";
+            ErrorLabel.CssClass = "error-message";
+            ErrorPanel.Visible = true;
+            ErrorLabel.Text = mensaje;
+            ScriptManager.RegisterStartupScript(this, GetType(), "showPanel", "showErrorPanel();", true);
+        }
+
+        public void MostrarExito(string mensaje)
+        {
+            ErrorPanel.CssClass = "notification-panel success-panel";
+            ErrorLabel.CssClass = "success-message";
+            ErrorPanel.Visible = true;
+            ErrorLabel.Text = mensaje;
+            ScriptManager.RegisterStartupScript(this, GetType(), "showPanel", "showErrorPanel();", true);
+        }
+        private void MostrarMensaje(string mensaje, bool exito)
+        {
+            
+                if (exito)
+                {
+                   MostrarExito(mensaje);
+                }
+                else
+                {
+                    MostrarError(mensaje);
+                }
+            
+        }
+
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
             ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
         }
     }
