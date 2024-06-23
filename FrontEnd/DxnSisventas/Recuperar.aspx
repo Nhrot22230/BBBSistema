@@ -34,7 +34,7 @@
     <script type="text/javascript" src="/Scripts/jquery-3.7.1.min.js"></script>
     <script>
         let timer;
-        let timeLeft = 300; // 5 minutes in seconds
+        let timeLeft = 300; 
         function showErrorPanel() {
             $(".notification-panel").fadeIn().delay(2250).fadeOut();
         }
@@ -46,8 +46,7 @@
                     clearInterval(timer);
                     document.getElementById('<%= hiddenFieldTimerExpired.ClientID %>').value = 'true';
                     document.getElementById('<%= timer.ClientID %>').innerText = 'Código expirado';
-                    // Aquí puedes agregar lógica para enviar una señal al servidor
-                    // Por ejemplo, puedes usar un campo oculto y modificarlo cuando el timer expire.
+                    
                 } else {
                     let minutes = Math.floor(timeLeft / 60);
                     let seconds = timeLeft % 60;
@@ -66,7 +65,7 @@
         function showCodeSection() {
             document.getElementById('<%= emailSection.ClientID %>').classList.add('hidden');
         document.getElementById('<%= codeSection.ClientID %>').classList.remove('hidden');
-            startTimer(); // Llama a startTimer para iniciar el contador al mostrar la sección del código
+            startTimer(); 
         }
 
         function showEmailSection() {

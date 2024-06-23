@@ -458,27 +458,25 @@ namespace DxnSisventas.Views
       byte[] pdfBytes = GetPdfFromWebService(ordenCompra.idOrdenCompraNumerico);
       if (pdfBytes != null)
       {
-        // Definir la ruta del archivo temporal
+       
         string tempFolderPath = Server.MapPath("~/Temp");
 
-        // Crear la carpeta Temp si no existe
+        
         if (!System.IO.Directory.Exists(tempFolderPath))
         {
           System.IO.Directory.CreateDirectory(tempFolderPath);
         }
         string nombrearch = "Comprobante_" + ordenCompra.idOrdenCompraCadena + ".pdf";
-        // Definir la ruta completa del archivo PDF
+        
         string tempFilePath = System.IO.Path.Combine(tempFolderPath, nombrearch);
 
-        // Guardar el PDF en la ruta temporal
+        
         System.IO.File.WriteAllBytes(tempFilePath, pdfBytes);
 
-        // Mostrar el PDF en un iframe (opcional)
+        
         string base64Pdf = Convert.ToBase64String(pdfBytes);
-        //pdfFrame.Attributes["src"] = "data:application/pdf;base64," + base64Pdf;
-        //pdfFrame.Style["display"] = "block";
+        
 
-        // Llamar a la función de envío de correo con el archivo adjunto
         return tempFilePath;
       }
       return null;
