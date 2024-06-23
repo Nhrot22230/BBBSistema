@@ -75,6 +75,16 @@ namespace DxnSisventas.Views
                 return;
             }
                 BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.Where(x => x.estado.ToString() != estadoOrden.Cancelado.ToString()).ToList());
+            if (!verificarFechas())
+            {
+                MostrarMensaje("Ingrese un rango de fechas correcto", verificarFechas());
+                return;
+            }
+            if (!verificarMontos())
+            {
+                MostrarMensaje("Ingrese un rango de montos correcto", verificarMontos());
+                return;
+            }
             if (TxtBuscar.Text.ToString() != "")
             {
                 BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.Where(x => x.idOrdenCompraNumerico == (int.Parse(TxtBuscar.Text))).ToList());
@@ -106,6 +116,7 @@ namespace DxnSisventas.Views
                 BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.Where(x => x.total <= montomax).ToList());
             }
             ordenarFechaMonto();
+            MostrarMensaje("Se aplico el filtro", true);
 
         }
 
@@ -114,8 +125,16 @@ namespace DxnSisventas.Views
             // Verificar si se ha seleccionado algún tipo de ordenamiento por fecha o por monto
             bool ordenarPorFecha = OrdenarPorFecha.SelectedValue != "todos";
             bool ordenarPorMonto = OrdenarPorMonto.SelectedValue != "todos";
-
-
+            if (!verificarFechas())
+            {
+                MostrarMensaje("Ingrese un rango de fechas correcto", verificarFechas());
+                return;
+            }
+            if (!verificarMontos())
+            {
+                MostrarMensaje("Ingrese un rango de montos correcto", verificarMontos());
+                return;
+            }
             // Aplicar ordenamiento
             if (ordenarPorFecha && ordenarPorMonto)
             {
@@ -159,6 +178,7 @@ namespace DxnSisventas.Views
                     {
                         BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.OrderByDescending(x => x.fechaCreacion.Date).ToList());
                     }
+                    MostrarMensaje("Ordenes ordenadas por fecha", true);
                 }
                 else if (ordenarPorMonto)
                 {
@@ -171,8 +191,11 @@ namespace DxnSisventas.Views
                     {
                         BlordenesFiltradas = new BindingList<ordenCompra>(BlordenesFiltradas.OrderByDescending(x => x.total).ToList());
                     }
+                    MostrarMensaje("Ordenes ordenada por monto", true);
+
                 }
             }
+            
         }
 
         private void GridBind()
@@ -237,7 +260,7 @@ namespace DxnSisventas.Views
             GridCompras.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void FechaFin_TextChanged(object sender, EventArgs e)
@@ -250,7 +273,7 @@ namespace DxnSisventas.Views
             GridCompras.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void GridCompras_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -299,7 +322,7 @@ namespace DxnSisventas.Views
             AplicarFiltro();
             GridCompras.PageIndex = 0;
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
+            
 
         }
 
@@ -353,7 +376,7 @@ namespace DxnSisventas.Views
             GridCompras.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void TxtMontoMax_TextChanged(object sender, EventArgs e)
@@ -367,7 +390,7 @@ namespace DxnSisventas.Views
             GridCompras.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -385,7 +408,7 @@ namespace DxnSisventas.Views
             GridCompras.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void OrdenarPorFecha_SelectedIndexChanged(object sender, EventArgs e)
@@ -393,7 +416,7 @@ namespace DxnSisventas.Views
             AplicarFiltro();
             GridCompras.PageIndex = 0;
             GridBind();
-            MostrarMensaje("Ordenes ordenadas por fecha", true);
+            
         }
 
         protected void OrdenarPorMonto_SelectedIndexChanged(object sender, EventArgs e)
@@ -401,7 +424,6 @@ namespace DxnSisventas.Views
             AplicarFiltro();
             GridCompras.PageIndex = 0;
             GridBind();
-            MostrarMensaje("Ordenes ordenada por monto", true);
         }
         private void listarComprobatentes()
         {

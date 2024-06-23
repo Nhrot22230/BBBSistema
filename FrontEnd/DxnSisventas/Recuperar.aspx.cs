@@ -198,7 +198,7 @@ namespace DxnSisventas
                     CuentaRecupearEmpleado.contrasena= txtConfirmPassword.Text;
                     apiCuentas.actualizarCuentaEmpleado(CuentaRecupearEmpleado);
                 }
-                Response.Write("<script>alert('Contraseña cambiada exitosamente');</script>");
+                MostrarMensaje("Contraseña cambiada", true);
                 Response.Redirect("Login.aspx");
             }
             else

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DxnSisventas.BBBWebService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,65 @@ namespace DxnSisventas
 {
   public partial class Main : System.Web.UI.MasterPage
   {
+    private void HandleAdminRole()
+    {
+      liProductos.Visible = true;
+      footerliProductos.Visible = true;
+      liUsuarios.Visible = true;
+      footerliUsuarios.Visible = true;
+      liUsuariosClientes.Visible = true;
+      footerliUsuariosClientes.Visible = true;
+      liUsuariosEmpleados.Visible = true;
+      footerliUsuariosEmpleados.Visible = true;
+      liCuentas.Visible = true;
+      footerliCuentas.Visible = true;
+      liOrdenCompra.Visible = true;
+      footerliOrdenCompra.Visible = true;
+      liOrdenVenta.Visible = true;
+      footerliOrdenVenta.Visible = true;
+      liReportes.Visible = true;
+      footerliReportes.Visible = true;
+      liReporteVenta.Visible = true;
+      footerliReporteVenta.Visible = true;
+      liReporteAlmacen.Visible = true;
+      footerliReporteAlmacen.Visible = true;
+    }
+
+    private void HandleSalesRole()
+    {
+      liUsuarios.Visible = true;
+      footerliUsuarios.Visible = true;
+      liUsuariosClientes.Visible = true;
+      footerliUsuariosClientes.Visible = true;
+      liOrdenVenta.Visible = true;
+      footerliOrdenVenta.Visible = true;
+      liReportes.Visible = true;
+      footerliReportes.Visible = true;
+      liReporteVenta.Visible = true;
+      footerliReporteVenta.Visible = true;
+    }
+
+    private void HandleWarehouseRole()
+    {
+      liProductos.Visible = true;
+      footerliProductos.Visible = true;
+      liOrdenCompra.Visible = true;
+      footerliOrdenCompra.Visible = true;
+      liReportes.Visible = true;
+      footerliReportes.Visible = true;
+      liReporteAlmacen.Visible = true;
+      footerliReporteAlmacen.Visible = true;
+    }
+
+    private void HandleDeliverryRole()
+    {
+      liUsuarios.Visible = true;
+      footerliUsuarios.Visible = true;
+      liUsuariosClientes.Visible = true;
+      footerliUsuariosClientes.Visible = true;
+      liOrdenVenta.Visible = true;
+      footerliOrdenVenta.Visible = true;
+    }
 
     protected void Page_Init(object sender, EventArgs e)
     {
@@ -20,6 +80,26 @@ namespace DxnSisventas
       if (Session["DarkMode"] == null)
       {
         Session["DarkMode"] = false;
+      }
+
+      empleado user = (empleado)Session["empleado"];
+      rol rolUsuario = user.rol;
+
+      if (rolUsuario.Equals(rol.Administrador))
+      {
+        HandleAdminRole();
+      }
+      else if (rolUsuario.Equals(rol.EncargadoVentas))
+      {
+        HandleSalesRole();
+      }
+      else if (rolUsuario.Equals(rol.EncargadoAlmacen))
+      {
+        HandleWarehouseRole();
+      }
+      else
+      {
+        HandleDeliverryRole();
       }
 
       DarkModeCheckBox.Checked = (bool)Session["DarkMode"];

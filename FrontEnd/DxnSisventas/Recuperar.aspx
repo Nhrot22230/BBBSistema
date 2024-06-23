@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recuperar.aspx.cs" Inherits="DxnSisventas.Recuperar" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-es">
 <head runat="server">
   <meta http-equiv="Content-Type" content="text/html;" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,12 +11,26 @@
   <link rel="stylesheet" href="/Content/fontawesome.min.css" />
   <link rel="stylesheet" href="/Content/bootstrap.min.css" />
   <link rel="stylesheet" href="/CustomStyles/Master.css" />
+    <link href="CustomStyles/Login.css" rel="stylesheet" />
   <style>
-    .container {
-      max-width: 1000px;
-      margin-top: 100px;
+      body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+     .container {
+      width:500px;
+      max-width: 600px;
+      margin-top: -60px;
+ 
     }
-
+     .btn{
+         padding: 0.45rem !important;
+     }
     .hidden {
       display: none;
     }
@@ -94,9 +108,11 @@
   </script>
 </head>
 <body>
+    <div class="background-image"></div>
   <form id="form1" runat="server">
 
     <div class="container">
+
       <div class="card">
         <div class="card-header text-center">
           <h2>Recuperar Contraseña</h2>
@@ -110,7 +126,8 @@
                 <i class="fas fa-exclamation-circle"></i>
                 <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="error-message"></asp:Label>
               </asp:Panel>
-              <div id="emailSection" class="col-sm-4" runat="server">
+                <asp:Panel runat="server" DefaultButton="btnGetCode">
+              <div id="emailSection" class="col-sm-8" runat="server">
                 <div class="form-group">
                   <label for="txtEmail">Correo Electrónico</label>
 
@@ -136,24 +153,31 @@
                     SetFocusOnError="true"
                     ValidationGroup="CorreoGroup">
                   </asp:RegularExpressionValidator>
+                    <br />
                 </div>
                 <asp:Button ID="btnGetCode" CssClass="btn btn-primary btn-block" runat="server" ValidationGroup="CorreoGroup" Text="Obtener Código" OnClick="btnGetCode_Click" OnClientClick="resetTimer();" />
               </div>
+                   
+               </asp:Panel>
               <asp:Panel runat="server" DefaultButton="btnConfirmCode">
                 <div id="codeSection" class="hidden" runat="server">
                   <div class="form-group">
                     <label for="txtCode">Código de Verificación</label>
                     <asp:HiddenField ID="hiddenFieldTimerExpired" runat="server" Value="false" />
-                    <asp:TextBox ID="txtCode" CssClass="form-control" runat="server" placeholder="Ingrese el código" ValidationGroup="codigoGroup" MaxLength="6"></asp:TextBox>
+                      <div class="col-sm-3">
+                    <asp:TextBox ID="txtCode" CssClass="form-control" runat="server" placeholder="codigo" ValidationGroup="codigoGroup" MaxLength="6"></asp:TextBox>
+                          </div>
                     <asp:RegularExpressionValidator ID="revCode" runat="server" ControlToValidate="txtCode"
                       ErrorMessage="Debe ingresar exactamente 6 dígitos numéricos positivos." ValidationExpression="^[1-9]\d{5}$"
                       ValidationGroup="codigoGroup">
                     </asp:RegularExpressionValidator>
-                  </div>
+                  </div>   
                   <div id="timer" runat="server">05:00</div>
+                    <div class="d-flex justify-content-between">
                   <asp:Button ID="btnConfirmCode" CssClass="btn btn-success btn-block" runat="server" Text="Confirmar Código" OnClick="btnConfirmCode_Click" />
                   <asp:Label ID="LabelExpirado" CssClass="error-message hidden" runat="server" />
                   <asp:Button ID="btnChangeEmail" CssClass="btn btn-secondary btn-block" runat="server" CausesValidation="false" Text="Cambiar Correo" OnClick="btnChangeEmail_Click" />
+                        </div>
                 </div>
               </asp:Panel>
               <asp:Panel runat="server" DefaultButton="btnChangePassword">
@@ -168,6 +192,7 @@
                     </div>
                   </div>
                   <div class="form-group">
+                      <br />
                     <label for="txtConfirmPassword">Confirmar Nueva Contraseña</label>
                     <div class="input-group">
                       <asp:TextBox ID="txtConfirmPassword" CssClass="form-control" runat="server" placeholder="Confirme la nueva contraseña" TextMode="Password"></asp:TextBox>
@@ -177,12 +202,16 @@
                     </div>
                     <asp:Label ID="lblError" CssClass="error-message hidden" runat="server" Text="Las contraseñas no coinciden." />
                   </div>
+                    <br />
                   <asp:Button ID="btnChangePassword" CssClass="btn btn-primary btn-block" runat="server" Text="Cambiar Contraseña" OnClick="btnChangePassword_Click" />
                 </div>
               </asp:Panel>
+                <br />
+                <div class="d-flex justify-content-between">
               <asp:Button ID="Button1" CssClass="btn btn-secondary btn-block" runat="server" Text="Regresar" ValidationGroup="Ninguno" OnClick="btnRegresar_Click" />
               <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" CausesValidation="false" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
-            </ContentTemplate>
+                </div>
+                    </ContentTemplate>
           </asp:UpdatePanel>
         </div>
       </div>
