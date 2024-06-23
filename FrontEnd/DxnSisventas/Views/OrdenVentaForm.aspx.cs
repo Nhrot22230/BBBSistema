@@ -36,6 +36,7 @@ namespace DxnSisventas.Views
 
         void accionDePagina()
         {
+            ddlEstado.Enabled = false;
             accion = Request.QueryString["accion"];
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
