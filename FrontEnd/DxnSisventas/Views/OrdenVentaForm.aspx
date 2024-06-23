@@ -255,6 +255,7 @@
                                     <asp:BoundField HeaderText="Cantidad" />
                                     <asp:BoundField HeaderText="Precio" />
                                     <asp:BoundField HeaderText="Subtotal" />
+                                    <asp:BoundField HeaderText="Puntos" />
                                     <asp:TemplateField HeaderText="Acciones">
                                         <ItemTemplate>
                                             <asp:Button ID="BtnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger"
