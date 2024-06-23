@@ -18,6 +18,8 @@ namespace DxnSisventas.Views
         private BindingList<orden> listaOrdenes = null;
         private BindingList<ordenCompra> listaOrdenesCompra = null;
         private BindingList<ordenVenta> listaOrdenesVenta = null;
+        private CorreosAPIClient apiCorreo;
+        private ReportesAPIClient apiReportes;
         private orden ord;
         private comprobante comprobante=null;
 
@@ -32,20 +34,71 @@ namespace DxnSisventas.Views
         protected void Page_Init()
         {
             apiDocumentos = new DocumentosAPIClient();
+            apiCorreo = new CorreosAPIClient();
+            apiReportes = new ReportesAPIClient();
             tipoOrdenCompra = true;
             CargarTabla("");
+            String accion = Request.QueryString["accion"];
+            if (accion != null && accion == "ver" && Session["idComprobanteSeleccionado"] != null)
+            {
+                CargarDatos();
+                ModoVisualizar();
+            }
+            else
+            {
+                ModoAgregar();
+            }
         }
+        protected void ModoVisualizar()
+        {
+            DropDownListTipoComprobante.Enabled = false;
+            DropDownListTipoOrden.Enabled = false;
+            BtnBuscar.Visible = false;
+            BtnBuscar.Enabled = false;
+            BtnGuardar.Enabled = false;
+            BtnGuardar.Visible = false;
+            BtnEnviar.Visible = true;
+            BtnEnviar.Enabled = true;
+        }
+
+        protected void ModoAgregar()
+        {
+            DropDownListTipoComprobante.Enabled = true;
+            DropDownListTipoOrden.Enabled = true;
+            BtnBuscar.Visible = true;
+            BtnBuscar.Enabled = true;
+            BtnGuardar.Enabled = true;
+            BtnGuardar.Visible = true;
+            BtnEnviar.Visible = false;
+            BtnEnviar.Enabled = false;
+        }
+
         protected void CargarDatos()
         {
+            int idComprobanteSeleccionado = (int)Session["idComprobanteSeleccionado"];
+            comprobante = apiDocumentos.listarComprobante("").SingleOrDefault(x => x.idComprobanteNumerico == idComprobanteSeleccionado);
             if (comprobante != null)
             {
                 TxtId.Text = comprobante.idComprobanteCadena;
                 TxtFechaComprobante.Text = comprobante.fechaEmision.ToString("dd/MM/yyyy");
-                //DropDownListTipoComprobante.SelectedValue = comprobante.tipoComprobante.ToString();
+                DropDownListTipoComprobante.SelectedValue = comprobante.tipoComprobante.ToString();
                 if (comprobante.ordenAsociada != null)
                 {
-                    TxtIdOrden.Text = comprobante.ordenAsociada.idOrden.ToString();
+
                     TxtFechaOrden.Text = comprobante.ordenAsociada.fechaCreacion.ToString("dd/MM/yyyy");
+                    DropDownListTipoOrden.AutoPostBack = false;
+                    if (comprobante.ordenAsociada is ordenCompra)
+                    {
+                        TxtIdOrden.Text = ((ordenCompra)comprobante.ordenAsociada).idOrdenCompraCadena;
+                        DropDownListTipoOrden.SelectedValue = "Compra";
+                    }
+                    else
+                    {
+                        TxtIdOrden.Text = ((ordenVenta)comprobante.ordenAsociada).idOrdenVentaCadena;
+                        DropDownListTipoOrden.SelectedValue = "Venta";
+                    }
+                    DropDownListTipoOrden.AutoPostBack = true;
+                    TxtTotal.Text = comprobante.ordenAsociada.total.ToString("N2");
                 }
             }
         }
@@ -109,21 +162,26 @@ namespace DxnSisventas.Views
             comprobante.fechaEmision = DateTime.Now;
             comprobante.tipoComprobanteSpecified = true;
             comprobante.tipoComprobante = (tipoComprobante)Enum.Parse(typeof(tipoComprobante), DropDownListTipoComprobante.SelectedValue);
-            comprobante.ordenAsociada.estadoSpecified = true;
-            comprobante.ordenAsociada.estado = estadoOrden.Entregado;
             if(comprobante.ordenAsociada is ordenVenta)
             {
+                comprobante.ordenAsociada.estadoSpecified = true;
+                comprobante.ordenAsociada.estado = estadoOrden.Entregado;
+                ((ordenVenta)comprobante.ordenAsociada).fechaEntregaSpecified = true;
+                ((ordenVenta)comprobante.ordenAsociada).fechaEntrega = comprobante.fechaEmision;
                 apiDocumentos.actualizarOrdenVenta((ordenVenta)comprobante.ordenAsociada);
-            }
-            else 
-            {
-                apiDocumentos.actualizarOrdenCompra((ordenCompra)comprobante.ordenAsociada);
             }
             int res = apiDocumentos.insertarComprobante(comprobante);
             string mensaje = res > 0 ? "Comprobante guardado correctamente" : "Error al guardar el comprobante";
             if (res > 0) Response.Redirect("/Views/Comprobantes.aspx");
             MostrarMensaje(mensaje, res > 0);
         }
+
+        protected void BtnEnviar_Click(object sender, EventArgs e)
+        {
+            string script = "window.onload = function() { showModalFormEnviar() };";
+            ClientScript.RegisterStartupScript(GetType(), "", script, true);
+        }
+
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
             CargarModalOrdenes();
@@ -134,15 +192,20 @@ namespace DxnSisventas.Views
             int idOrden = Int32.Parse(((LinkButton)sender).CommandArgument);
             orden[] lista = apiDocumentos.listarOrden(txtCodOrdenModal.Text);
             orden ordenSeleccionada = lista.SingleOrDefault(x => x.idOrden == idOrden);
-            Session["OrdenSeleccionada"] = ordenSeleccionada;
             if (ordenSeleccionada is ordenVenta)
             {
-                TxtIdOrden.Text = ((ordenVenta)ordenSeleccionada).idOrdenVentaCadena;
+                ordenVenta ordenVentaSelec = apiDocumentos.listarOrdenVenta(txtCodOrdenModal.Text).SingleOrDefault(x => x.idOrden == idOrden);
+                TxtIdOrden.Text = ordenVentaSelec.idOrdenVentaCadena;
+                ordenSeleccionada = ordenVentaSelec;
             }
             else
             {
-                TxtIdOrden.Text = ((ordenCompra)ordenSeleccionada).idOrdenCompraCadena;
+                ordenCompra ordenCompraSelec = apiDocumentos.listarOrdenCompra(txtCodOrdenModal.Text).SingleOrDefault(x => x.idOrden == idOrden);
+                TxtIdOrden.Text = ordenCompraSelec.idOrdenCompraCadena;
+                ordenSeleccionada = ordenCompraSelec;
+                
             }
+            Session["OrdenSeleccionada"] = ordenSeleccionada;
             TxtFechaOrden.Text = ordenSeleccionada.fechaCreacion.ToString("dd/MM/yyyy");
             TxtTotal.Text = ordenSeleccionada.total.ToString("N2");
             ScriptManager.RegisterStartupScript(this, GetType(), "", "__doPostBack('','');", true);
@@ -225,6 +288,97 @@ namespace DxnSisventas.Views
                 e.Row.Cells[2].Text = ((DateTime)DataBinder.Eval(e.Row.DataItem, "fechaCreacion")).ToString("dd/MM/yyyy");
                 e.Row.Cells[3].Text = ((DateTime)DataBinder.Eval(e.Row.DataItem, "fechaCreacion")).ToString("HH:mm:ss");
             }
+        }
+
+        private byte[] GetPdfFromWebService(int idComprobanteNumerico)
+        {
+            byte[] pdfFile = null;
+            try
+            {
+                pdfFile = apiReportes.imprimirComprobante(idComprobanteNumerico);
+            }
+            catch (System.Exception ex)
+            {
+                MostrarMensaje("Error al obtener el archivo PDF" + ex, false);
+                return null;
+            }
+
+            return pdfFile;
+        }
+
+
+        protected string armarpdf()
+        {
+            int idComprobante = (int)Session["idComprobanteSeleccionado"];
+            byte[] pdfBytes = GetPdfFromWebService(idComprobante);
+            if (pdfBytes != null)
+            {
+                // Definir la ruta del archivo temporal
+                string tempFolderPath = Server.MapPath("~/Temp");
+
+                // Crear la carpeta Temp si no existe
+                if (!System.IO.Directory.Exists(tempFolderPath))
+                {
+                    System.IO.Directory.CreateDirectory(tempFolderPath);
+                }
+                string nombrearch = "Comprobante_" + idComprobante + ".pdf";
+                // Definir la ruta completa del archivo PDF
+                string tempFilePath = System.IO.Path.Combine(tempFolderPath, nombrearch);
+
+                // Guardar el PDF en la ruta temporal
+                System.IO.File.WriteAllBytes(tempFilePath, pdfBytes);
+
+                // Mostrar el PDF en un iframe (opcional)
+                string base64Pdf = Convert.ToBase64String(pdfBytes);
+                //pdfFrame.Attributes["src"] = "data:application/pdf;base64," + base64Pdf;
+                //pdfFrame.Style["display"] = "block";
+
+                // Llamar a la función de envío de correo con el archivo adjunto
+                return tempFilePath;
+            }
+            return null;
+        }
+
+        protected string CrearContenido()
+        {
+            string contenido = "<html><body style='font-family: Arial, sans-serif;'>";
+            contenido += "<h2 style='text-align: center;'>Saludos Estimado(a),</h2>";
+            contenido += "<p>Adjunto encontrará el comprobante Nro: " + comprobante.idComprobanteCadena.ToString() + ".</p>";
+
+
+            contenido += "</table>";
+            contenido += "<p style='text-align: right; font-weight: bold; margin-top: 20px;'>Total: " + comprobante.ordenAsociada.total.ToString("N2") + "</p>";
+            contenido += "<p>Quedamos a disposición para cualquier consulta.</p>";
+            contenido += "<p>Atentamente,<br>BBB Ventas</p>";
+            contenido += "</body></html>";
+
+            return contenido;
+        }
+        protected void lbEnviaroModal_Click(object sender, EventArgs e)
+        {
+            
+            string asunto = "Comprobante Nro: " + comprobante.idComprobanteCadena;
+            string contenido = CrearContenido();
+            string correo = txtCorreo.Text.ToString();
+
+
+            int resultado;
+            string path = armarpdf();
+
+            resultado = apiCorreo.enviarCorreoWeb(asunto, contenido, correo, path);
+
+
+            if (resultado == 0)
+            {
+                MostrarMensaje("Ingrese un correo valido", resultado == 0);
+                return;
+            }
+            else
+            {
+                MostrarMensaje("Correo Enviado", false);
+
+            }
+            Response.Redirect("/Views/Comprobantes.aspx");
         }
 
         private void MostrarMensaje(string mensaje, bool exito)
