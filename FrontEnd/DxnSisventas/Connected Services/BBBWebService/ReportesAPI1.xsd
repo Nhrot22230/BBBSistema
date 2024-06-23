@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.webservice.BBB.pucp.edu.pe/" targetNamespace="http://services.webservice.BBB.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="generarReporteAlmacen" type="tns:generarReporteAlmacen" />
+  <xs:element name="generarReporteAlmacenResponse" type="tns:generarReporteAlmacenResponse" />
+  <xs:element name="generarReporteOrdenCompra" type="tns:generarReporteOrdenCompra" />
+  <xs:element name="generarReporteOrdenCompraResponse" type="tns:generarReporteOrdenCompraResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:element name="imprimirComprobante" type="tns:imprimirComprobante" />
+  <xs:element name="imprimirComprobanteResponse" type="tns:imprimirComprobanteResponse" />
+  <xs:element name="reporteOrdenVentaPDF" type="tns:reporteOrdenVentaPDF" />
+  <xs:element name="reporteOrdenVentaPDFResponse" type="tns:reporteOrdenVentaPDFResponse" />
+  <xs:complexType name="generarReporteAlmacen">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="generarReporteAlmacenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="imprimirComprobante">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="imprimirComprobanteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteOrdenVentaPDF">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteOrdenVentaPDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteOrdenCompra">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteOrdenCompraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

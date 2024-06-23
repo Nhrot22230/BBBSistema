@@ -19,22 +19,22 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://3.82.221.165:8080/BBBWebService/AmazonBBBServices.disco" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://100.29.112.28:8080/BBBWebService/AmazonBBBServices.disco" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProductosAPI.xsd" MetadataType="Schema" ID="a4d7e8e5-d5ee-4efc-8b5e-a16d7e71685d" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/ProductosAPI?xsd=1" />
-    <MetadataFile FileName="CorreosAPI1.xsd" MetadataType="Schema" ID="e7e27096-9dd3-438a-9ed5-fed2eb7e7015" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/CorreosAPI?xsd=1" />
-    <MetadataFile FileName="CuentasAPI.xsd" MetadataType="Schema" ID="c762cd52-94e5-425b-8305-c2734b41d6f7" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/CuentasAPI?xsd=1" />
-    <MetadataFile FileName="CuentasAPI.wsdl" MetadataType="Wsdl" ID="23512204-ca37-4d6a-a9eb-7589108087ab" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/CuentasAPI?WSDL" />
-    <MetadataFile FileName="ReportesAPI.xsd" MetadataType="Schema" ID="854f1d60-bc72-4dce-8d08-5f272f01fa94" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/ReportesAPI?xsd=1" />
-    <MetadataFile FileName="ReportesAPI.wsdl" MetadataType="Wsdl" ID="8b6a04c1-e8a6-4d26-8a77-09d33ccf7149" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/ReportesAPI?WSDL" />
-    <MetadataFile FileName="CorreosAPI1.wsdl" MetadataType="Wsdl" ID="0895a495-b4a1-4bb4-a745-f5d1e34ceaa3" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/CorreosAPI?WSDL" />
-    <MetadataFile FileName="PersonasAPI.xsd" MetadataType="Schema" ID="043d29e7-e424-41a1-b349-332793c13fe0" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/PersonasAPI?xsd=1" />
-    <MetadataFile FileName="ProductosAPI.wsdl" MetadataType="Wsdl" ID="ee004e31-fc33-4ed2-914f-353e5899a098" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/ProductosAPI?WSDL" />
-    <MetadataFile FileName="DocumentosAPI.wsdl" MetadataType="Wsdl" ID="944a3316-89d3-4aa1-b224-05828fc780fd" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/DocumentosAPI?WSDL" />
-    <MetadataFile FileName="PersonasAPI.wsdl" MetadataType="Wsdl" ID="12677311-9e52-471d-a9bd-bc60f010dd82" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/PersonasAPI?WSDL" />
-    <MetadataFile FileName="AmazonBBBServices.disco" MetadataType="Disco" ID="adaac903-2d5d-450d-9dd2-632e4c1750d9" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/AmazonBBBServices.disco" />
-    <MetadataFile FileName="DocumentosAPI.xsd" MetadataType="Schema" ID="3890220b-5a58-4331-936c-a187113e19bd" SourceId="1" SourceUrl="http://3.82.221.165:8080/BBBWebService/DocumentosAPI?xsd=1" />
+    <MetadataFile FileName="ReportesAPI1.wsdl" MetadataType="Wsdl" ID="9e91ce10-a5e7-45e0-8593-0518a786c947" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/ReportesAPI?WSDL" />
+    <MetadataFile FileName="CorreosAPI.xsd" MetadataType="Schema" ID="3a7e8f9b-48c5-4b66-91f2-dd33889e7d06" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/CorreosAPI?xsd=1" />
+    <MetadataFile FileName="PersonasAPI1.xsd" MetadataType="Schema" ID="0a3e88f5-e059-4e5a-ba4b-9dfab1893310" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/PersonasAPI?xsd=1" />
+    <MetadataFile FileName="CuentasAPI1.wsdl" MetadataType="Wsdl" ID="7b5e9b27-30d2-4577-b1c1-2e14cd4e189c" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/CuentasAPI?WSDL" />
+    <MetadataFile FileName="CorreosAPI.wsdl" MetadataType="Wsdl" ID="f2b003a7-328b-4978-87bf-9fa6a213de81" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/CorreosAPI?WSDL" />
+    <MetadataFile FileName="DocumentosAPI1.wsdl" MetadataType="Wsdl" ID="4be454cc-2a08-4117-82bb-22b0c2c4fb51" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/DocumentosAPI?WSDL" />
+    <MetadataFile FileName="AmazonBBBServices1.disco" MetadataType="Disco" ID="35479027-12d0-45cf-83da-ca12cb42834d" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/AmazonBBBServices.disco" />
+    <MetadataFile FileName="ProductosAPI1.wsdl" MetadataType="Wsdl" ID="f7027976-4f04-45e6-8409-f3ff8227665f" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/ProductosAPI?WSDL" />
+    <MetadataFile FileName="PersonasAPI1.wsdl" MetadataType="Wsdl" ID="45818caa-f133-4267-84de-fd7f46bbfe9b" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/PersonasAPI?WSDL" />
+    <MetadataFile FileName="CuentasAPI1.xsd" MetadataType="Schema" ID="2eb575de-fb12-411d-85a1-d5ee9fa9320f" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/CuentasAPI?xsd=1" />
+    <MetadataFile FileName="ReportesAPI1.xsd" MetadataType="Schema" ID="d581a251-49bd-42b1-a9c6-c0b6db35ab00" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/ReportesAPI?xsd=1" />
+    <MetadataFile FileName="DocumentosAPI1.xsd" MetadataType="Schema" ID="ce698815-ca6d-411a-9f6d-90622a85bb0e" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/DocumentosAPI?xsd=1" />
+    <MetadataFile FileName="ProductosAPI1.xsd" MetadataType="Schema" ID="12c3cf29-1aa2-4471-b87a-399e8b16eacb" SourceId="1" SourceUrl="http://100.29.112.28:8080/BBBWebService/ProductosAPI?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,0 +1,26 @@
+﻿
+.card-custom {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-custom {
+  border-radius: 15px 15px 0 0;
+  font-weight: bold;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+  .info-item strong {
+    margin-left: 5px;
+  }

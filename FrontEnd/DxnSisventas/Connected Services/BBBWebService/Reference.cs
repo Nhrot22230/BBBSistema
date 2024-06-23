@@ -43,48 +43,564 @@ namespace DxnSisventas.BBBWebService {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.ReportesAPI")]
+    public interface ReportesAPI {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenReque" +
+            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.generarReporteAlmacenResponse generarReporteAlmacen(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenReque" +
+            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteAlmacenResponse> generarReporteAlmacenAsync(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.imprimirComprobanteResponse imprimirComprobante(DxnSisventas.BBBWebService.imprimirComprobanteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRespons" +
+            "e")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.imprimirComprobanteResponse> imprimirComprobanteAsync(DxnSisventas.BBBWebService.imprimirComprobanteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
+            "equest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse generarReporteOrdenCompra(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
+            "equest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
+            "esponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse> generarReporteOrdenCompraAsync(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(DxnSisventas.BBBWebService.Exception), Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDF/Fault" +
+            "/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse reporteOrdenVentaPDF(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFRespon" +
+            "se")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse> reporteOrdenVentaPDFAsync(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteAlmacen", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReporteAlmacenRequest {
+        
+        public generarReporteAlmacenRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteAlmacenResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReporteAlmacenResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public generarReporteAlmacenResponse() {
+        }
+        
+        public generarReporteAlmacenResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="imprimirComprobante", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class imprimirComprobanteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public imprimirComprobanteRequest() {
+        }
+        
+        public imprimirComprobanteRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="imprimirComprobanteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class imprimirComprobanteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public imprimirComprobanteResponse() {
+        }
+        
+        public imprimirComprobanteResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteOrdenCompra", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReporteOrdenCompraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public generarReporteOrdenCompraRequest() {
+        }
+        
+        public generarReporteOrdenCompraRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteOrdenCompraResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReporteOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public generarReporteOrdenCompraResponse() {
+        }
+        
+        public generarReporteOrdenCompraResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteOrdenVentaPDF", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class reporteOrdenVentaPDFRequest {
+        
+        public reporteOrdenVentaPDFRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteOrdenVentaPDFResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class reporteOrdenVentaPDFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reporteOrdenVentaPDFResponse() {
+        }
+        
+        public reporteOrdenVentaPDFResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class helloRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string name;
+        
+        public helloRequest() {
+        }
+        
+        public helloRequest(string name) {
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class helloResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public helloResponse() {
+        }
+        
+        public helloResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ReportesAPIChannel : DxnSisventas.BBBWebService.ReportesAPI, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ReportesAPIClient : System.ServiceModel.ClientBase<DxnSisventas.BBBWebService.ReportesAPI>, DxnSisventas.BBBWebService.ReportesAPI {
+        
+        public ReportesAPIClient() {
+        }
+        
+        public ReportesAPIClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ReportesAPIClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ReportesAPIClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ReportesAPIClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.generarReporteAlmacenResponse DxnSisventas.BBBWebService.ReportesAPI.generarReporteAlmacen(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request) {
+            return base.Channel.generarReporteAlmacen(request);
+        }
+        
+        public byte[] generarReporteAlmacen() {
+            DxnSisventas.BBBWebService.generarReporteAlmacenRequest inValue = new DxnSisventas.BBBWebService.generarReporteAlmacenRequest();
+            DxnSisventas.BBBWebService.generarReporteAlmacenResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteAlmacen(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteAlmacenResponse> DxnSisventas.BBBWebService.ReportesAPI.generarReporteAlmacenAsync(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request) {
+            return base.Channel.generarReporteAlmacenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteAlmacenResponse> generarReporteAlmacenAsync() {
+            DxnSisventas.BBBWebService.generarReporteAlmacenRequest inValue = new DxnSisventas.BBBWebService.generarReporteAlmacenRequest();
+            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteAlmacenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.imprimirComprobanteResponse DxnSisventas.BBBWebService.ReportesAPI.imprimirComprobante(DxnSisventas.BBBWebService.imprimirComprobanteRequest request) {
+            return base.Channel.imprimirComprobante(request);
+        }
+        
+        public byte[] imprimirComprobante(int arg0) {
+            DxnSisventas.BBBWebService.imprimirComprobanteRequest inValue = new DxnSisventas.BBBWebService.imprimirComprobanteRequest();
+            inValue.arg0 = arg0;
+            DxnSisventas.BBBWebService.imprimirComprobanteResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).imprimirComprobante(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.imprimirComprobanteResponse> DxnSisventas.BBBWebService.ReportesAPI.imprimirComprobanteAsync(DxnSisventas.BBBWebService.imprimirComprobanteRequest request) {
+            return base.Channel.imprimirComprobanteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.imprimirComprobanteResponse> imprimirComprobanteAsync(int arg0) {
+            DxnSisventas.BBBWebService.imprimirComprobanteRequest inValue = new DxnSisventas.BBBWebService.imprimirComprobanteRequest();
+            inValue.arg0 = arg0;
+            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).imprimirComprobanteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse DxnSisventas.BBBWebService.ReportesAPI.generarReporteOrdenCompra(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request) {
+            return base.Channel.generarReporteOrdenCompra(request);
+        }
+        
+        public byte[] generarReporteOrdenCompra(int id) {
+            DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest inValue = new DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest();
+            inValue.id = id;
+            DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteOrdenCompra(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse> DxnSisventas.BBBWebService.ReportesAPI.generarReporteOrdenCompraAsync(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request) {
+            return base.Channel.generarReporteOrdenCompraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse> generarReporteOrdenCompraAsync(int id) {
+            DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest inValue = new DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest();
+            inValue.id = id;
+            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteOrdenCompraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse DxnSisventas.BBBWebService.ReportesAPI.reporteOrdenVentaPDF(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request) {
+            return base.Channel.reporteOrdenVentaPDF(request);
+        }
+        
+        public byte[] reporteOrdenVentaPDF() {
+            DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest inValue = new DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest();
+            DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).reporteOrdenVentaPDF(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse> DxnSisventas.BBBWebService.ReportesAPI.reporteOrdenVentaPDFAsync(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request) {
+            return base.Channel.reporteOrdenVentaPDFAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse> reporteOrdenVentaPDFAsync() {
+            DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest inValue = new DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest();
+            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).reporteOrdenVentaPDFAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.helloResponse DxnSisventas.BBBWebService.ReportesAPI.hello(DxnSisventas.BBBWebService.helloRequest request) {
+            return base.Channel.hello(request);
+        }
+        
+        public string hello(string name) {
+            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
+            inValue.name = name;
+            DxnSisventas.BBBWebService.helloResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).hello(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> DxnSisventas.BBBWebService.ReportesAPI.helloAsync(DxnSisventas.BBBWebService.helloRequest request) {
+            return base.Channel.helloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(string name) {
+            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
+            inValue.name = name;
+            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).helloAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.CuentasAPI")]
+    public interface CuentasAPI {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse listarCuentaEmpleado(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRespons" +
+            "e")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse> listarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoReque" +
+            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse insertarCuentaEmpleado(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoReque" +
+            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse> insertarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoReq" +
+            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse actualizarCuentaEmpleado(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoReq" +
+            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse> actualizarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoReque" +
+            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse eliminarCuentaEmpleado(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoReque" +
+            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse> eliminarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasReq" +
+            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.listarClientesMasCuentasResponse listarClientesMasCuentas(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasReq" +
+            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesMasCuentasResponse> listarClientesMasCuentasAsync(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
+            "quest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse listarEmpleadosMasCuentas(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
+            "quest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse> listarEmpleadosMasCuentasAsync(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.iniciarSesionClienteResponse iniciarSesionCliente(DxnSisventas.BBBWebService.iniciarSesionClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRespons" +
+            "e")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.iniciarSesionClienteResponse> iniciarSesionClienteAsync(DxnSisventas.BBBWebService.iniciarSesionClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.listarCuentaClienteResponse listarCuentaCliente(DxnSisventas.BBBWebService.listarCuentaClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteResponse" +
+            "")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaClienteResponse> listarCuentaClienteAsync(DxnSisventas.BBBWebService.listarCuentaClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.insertarCuentaClienteResponse insertarCuentaCliente(DxnSisventas.BBBWebService.insertarCuentaClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteRespon" +
+            "se")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaClienteResponse> insertarCuentaClienteAsync(DxnSisventas.BBBWebService.insertarCuentaClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteRequ" +
+            "est", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.actualizarCuentaClienteResponse actualizarCuentaCliente(DxnSisventas.BBBWebService.actualizarCuentaClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteRequ" +
+            "est", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteResp" +
+            "onse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaClienteResponse> actualizarCuentaClienteAsync(DxnSisventas.BBBWebService.actualizarCuentaClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.eliminarCuentaClienteResponse eliminarCuentaCliente(DxnSisventas.BBBWebService.eliminarCuentaClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteRespon" +
+            "se")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaClienteResponse> eliminarCuentaClienteAsync(DxnSisventas.BBBWebService.eliminarCuentaClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.iniciarSesionEmpleadoResponse iniciarSesionEmpleado(DxnSisventas.BBBWebService.iniciarSesionEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoReques" +
+            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.iniciarSesionEmpleadoResponse> iniciarSesionEmpleadoAsync(DxnSisventas.BBBWebService.iniciarSesionEmpleadoRequest request);
+    }
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
-    public partial class personaCuenta : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class cuentaEmpleado : cuenta {
         
-        private cuenta cuentaField;
-        
-        private persona personaField;
+        private int fid_EmpleadoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public cuenta cuenta {
+        public int fid_Empleado {
             get {
-                return this.cuentaField;
+                return this.fid_EmpleadoField;
             }
             set {
-                this.cuentaField = value;
-                this.RaisePropertyChanged("cuenta");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public persona persona {
-            get {
-                return this.personaField;
-            }
-            set {
-                this.personaField = value;
-                this.RaisePropertyChanged("persona");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                this.fid_EmpleadoField = value;
+                this.RaisePropertyChanged("fid_Empleado");
             }
         }
     }
@@ -171,29 +687,6 @@ namespace DxnSisventas.BBBWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
-    public partial class cuentaEmpleado : cuenta {
-        
-        private int fid_EmpleadoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int fid_Empleado {
-            get {
-                return this.fid_EmpleadoField;
-            }
-            set {
-                this.fid_EmpleadoField = value;
-                this.RaisePropertyChanged("fid_Empleado");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
     public partial class cuentaCliente : cuenta {
         
         private int fid_ClienteField;
@@ -207,6 +700,188 @@ namespace DxnSisventas.BBBWebService {
             set {
                 this.fid_ClienteField = value;
                 this.RaisePropertyChanged("fid_Cliente");
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCuentaEmpleadoRequest {
+        
+        public listarCuentaEmpleadoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCuentaEmpleadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.cuentaEmpleado[] @return;
+        
+        public listarCuentaEmpleadoResponse() {
+        }
+        
+        public listarCuentaEmpleadoResponse(DxnSisventas.BBBWebService.cuentaEmpleado[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCuentaEmpleadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado;
+        
+        public insertarCuentaEmpleadoRequest() {
+        }
+        
+        public insertarCuentaEmpleadoRequest(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
+            this.cuentaEmpleado = cuentaEmpleado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCuentaEmpleadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarCuentaEmpleadoResponse() {
+        }
+        
+        public insertarCuentaEmpleadoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCuentaEmpleadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado;
+        
+        public actualizarCuentaEmpleadoRequest() {
+        }
+        
+        public actualizarCuentaEmpleadoRequest(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
+            this.cuentaEmpleado = cuentaEmpleado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCuentaEmpleadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarCuentaEmpleadoResponse() {
+        }
+        
+        public actualizarCuentaEmpleadoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCuentaEmpleadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_empleado;
+        
+        public eliminarCuentaEmpleadoRequest() {
+        }
+        
+        public eliminarCuentaEmpleadoRequest(int id_empleado) {
+            this.id_empleado = id_empleado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCuentaEmpleadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCuentaEmpleadoResponse() {
+        }
+        
+        public eliminarCuentaEmpleadoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
+    public partial class personaCuenta : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private cuenta cuentaField;
+        
+        private persona personaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public cuenta cuenta {
+            get {
+                return this.cuentaField;
+            }
+            set {
+                this.cuentaField = value;
+                this.RaisePropertyChanged("cuenta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public persona persona {
+            get {
+                return this.personaField;
+            }
+            set {
+                this.personaField = value;
+                this.RaisePropertyChanged("persona");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -534,206 +1209,74 @@ namespace DxnSisventas.BBBWebService {
         Administrador,
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.CuentasAPI")]
-    public interface CuentasAPI {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/helloResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.iniciarSesionClienteResponse iniciarSesionCliente(DxnSisventas.BBBWebService.iniciarSesionClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionClienteRespons" +
-            "e")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.iniciarSesionClienteResponse> iniciarSesionClienteAsync(DxnSisventas.BBBWebService.iniciarSesionClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.listarCuentaClienteResponse listarCuentaCliente(DxnSisventas.BBBWebService.listarCuentaClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaClienteResponse" +
-            "")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaClienteResponse> listarCuentaClienteAsync(DxnSisventas.BBBWebService.listarCuentaClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.insertarCuentaClienteResponse insertarCuentaCliente(DxnSisventas.BBBWebService.insertarCuentaClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaClienteRespon" +
-            "se")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaClienteResponse> insertarCuentaClienteAsync(DxnSisventas.BBBWebService.insertarCuentaClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteRequ" +
-            "est", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.actualizarCuentaClienteResponse actualizarCuentaCliente(DxnSisventas.BBBWebService.actualizarCuentaClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteRequ" +
-            "est", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaClienteResp" +
-            "onse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaClienteResponse> actualizarCuentaClienteAsync(DxnSisventas.BBBWebService.actualizarCuentaClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.eliminarCuentaClienteResponse eliminarCuentaCliente(DxnSisventas.BBBWebService.eliminarCuentaClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaClienteRespon" +
-            "se")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaClienteResponse> eliminarCuentaClienteAsync(DxnSisventas.BBBWebService.eliminarCuentaClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.iniciarSesionEmpleadoResponse iniciarSesionEmpleado(DxnSisventas.BBBWebService.iniciarSesionEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/iniciarSesionEmpleadoRespon" +
-            "se")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.iniciarSesionEmpleadoResponse> iniciarSesionEmpleadoAsync(DxnSisventas.BBBWebService.iniciarSesionEmpleadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse listarCuentaEmpleado(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarCuentaEmpleadoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse> listarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoReque" +
-            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse insertarCuentaEmpleado(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoReque" +
-            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/insertarCuentaEmpleadoRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse> insertarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoReq" +
-            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse actualizarCuentaEmpleado(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoReq" +
-            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/actualizarCuentaEmpleadoRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse> actualizarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoReque" +
-            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse eliminarCuentaEmpleado(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoReque" +
-            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/eliminarCuentaEmpleadoRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse> eliminarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasReq" +
-            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.listarClientesMasCuentasResponse listarClientesMasCuentas(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasReq" +
-            "uest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarClientesMasCuentasRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesMasCuentasResponse> listarClientesMasCuentasAsync(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
-            "quest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse listarEmpleadosMasCuentas(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
-            "quest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/CuentasAPI/listarEmpleadosMasCuentasRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse> listarEmpleadosMasCuentasAsync(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request);
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class helloRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesMasCuentas", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClientesMasCuentasRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string name;
+        public string filtro;
         
-        public helloRequest() {
+        public listarClientesMasCuentasRequest() {
         }
         
-        public helloRequest(string name) {
-            this.name = name;
+        public listarClientesMasCuentasRequest(string filtro) {
+            this.filtro = filtro;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class helloResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesMasCuentasResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClientesMasCuentasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.personaCuenta[] @return;
+        
+        public listarClientesMasCuentasResponse() {
+        }
+        
+        public listarClientesMasCuentasResponse(DxnSisventas.BBBWebService.personaCuenta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEmpleadosMasCuentas", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEmpleadosMasCuentasRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        public string filtro;
         
-        public helloResponse() {
+        public listarEmpleadosMasCuentasRequest() {
         }
         
-        public helloResponse(string @return) {
+        public listarEmpleadosMasCuentasRequest(string filtro) {
+            this.filtro = filtro;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEmpleadosMasCuentasResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarEmpleadosMasCuentasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.personaCuenta[] @return;
+        
+        public listarEmpleadosMasCuentasResponse() {
+        }
+        
+        public listarEmpleadosMasCuentasResponse(DxnSisventas.BBBWebService.personaCuenta[] @return) {
             this.@return = @return;
         }
     }
@@ -956,214 +1499,6 @@ namespace DxnSisventas.BBBWebService {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCuentaEmpleadoRequest {
-        
-        public listarCuentaEmpleadoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCuentaEmpleadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.cuentaEmpleado[] @return;
-        
-        public listarCuentaEmpleadoResponse() {
-        }
-        
-        public listarCuentaEmpleadoResponse(DxnSisventas.BBBWebService.cuentaEmpleado[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCuentaEmpleadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado;
-        
-        public insertarCuentaEmpleadoRequest() {
-        }
-        
-        public insertarCuentaEmpleadoRequest(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
-            this.cuentaEmpleado = cuentaEmpleado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCuentaEmpleadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarCuentaEmpleadoResponse() {
-        }
-        
-        public insertarCuentaEmpleadoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCuentaEmpleadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado;
-        
-        public actualizarCuentaEmpleadoRequest() {
-        }
-        
-        public actualizarCuentaEmpleadoRequest(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
-            this.cuentaEmpleado = cuentaEmpleado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCuentaEmpleadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarCuentaEmpleadoResponse() {
-        }
-        
-        public actualizarCuentaEmpleadoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCuentaEmpleado", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCuentaEmpleadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_empleado;
-        
-        public eliminarCuentaEmpleadoRequest() {
-        }
-        
-        public eliminarCuentaEmpleadoRequest(int id_empleado) {
-            this.id_empleado = id_empleado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCuentaEmpleadoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCuentaEmpleadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCuentaEmpleadoResponse() {
-        }
-        
-        public eliminarCuentaEmpleadoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesMasCuentas", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClientesMasCuentasRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string filtro;
-        
-        public listarClientesMasCuentasRequest() {
-        }
-        
-        public listarClientesMasCuentasRequest(string filtro) {
-            this.filtro = filtro;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesMasCuentasResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClientesMasCuentasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.personaCuenta[] @return;
-        
-        public listarClientesMasCuentasResponse() {
-        }
-        
-        public listarClientesMasCuentasResponse(DxnSisventas.BBBWebService.personaCuenta[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEmpleadosMasCuentas", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarEmpleadosMasCuentasRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string filtro;
-        
-        public listarEmpleadosMasCuentasRequest() {
-        }
-        
-        public listarEmpleadosMasCuentasRequest(string filtro) {
-            this.filtro = filtro;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEmpleadosMasCuentasResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarEmpleadosMasCuentasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.personaCuenta[] @return;
-        
-        public listarEmpleadosMasCuentasResponse() {
-        }
-        
-        public listarEmpleadosMasCuentasResponse(DxnSisventas.BBBWebService.personaCuenta[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CuentasAPIChannel : DxnSisventas.BBBWebService.CuentasAPI, System.ServiceModel.IClientChannel {
     }
@@ -1189,6 +1524,142 @@ namespace DxnSisventas.BBBWebService {
         
         public CuentasAPIClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.listarCuentaEmpleado(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request) {
+            return base.Channel.listarCuentaEmpleado(request);
+        }
+        
+        public DxnSisventas.BBBWebService.cuentaEmpleado[] listarCuentaEmpleado() {
+            DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest();
+            DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarCuentaEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.listarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request) {
+            return base.Channel.listarCuentaEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse> listarCuentaEmpleadoAsync() {
+            DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest();
+            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarCuentaEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.insertarCuentaEmpleado(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request) {
+            return base.Channel.insertarCuentaEmpleado(request);
+        }
+        
+        public int insertarCuentaEmpleado(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
+            DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest();
+            inValue.cuentaEmpleado = cuentaEmpleado;
+            DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).insertarCuentaEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.insertarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request) {
+            return base.Channel.insertarCuentaEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse> insertarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
+            DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest();
+            inValue.cuentaEmpleado = cuentaEmpleado;
+            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).insertarCuentaEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.actualizarCuentaEmpleado(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request) {
+            return base.Channel.actualizarCuentaEmpleado(request);
+        }
+        
+        public int actualizarCuentaEmpleado(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
+            DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest();
+            inValue.cuentaEmpleado = cuentaEmpleado;
+            DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).actualizarCuentaEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.actualizarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request) {
+            return base.Channel.actualizarCuentaEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse> actualizarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
+            DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest();
+            inValue.cuentaEmpleado = cuentaEmpleado;
+            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).actualizarCuentaEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.eliminarCuentaEmpleado(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request) {
+            return base.Channel.eliminarCuentaEmpleado(request);
+        }
+        
+        public int eliminarCuentaEmpleado(int id_empleado) {
+            DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest();
+            inValue.id_empleado = id_empleado;
+            DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).eliminarCuentaEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.eliminarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request) {
+            return base.Channel.eliminarCuentaEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse> eliminarCuentaEmpleadoAsync(int id_empleado) {
+            DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest();
+            inValue.id_empleado = id_empleado;
+            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).eliminarCuentaEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.listarClientesMasCuentasResponse DxnSisventas.BBBWebService.CuentasAPI.listarClientesMasCuentas(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request) {
+            return base.Channel.listarClientesMasCuentas(request);
+        }
+        
+        public DxnSisventas.BBBWebService.personaCuenta[] listarClientesMasCuentas(string filtro) {
+            DxnSisventas.BBBWebService.listarClientesMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarClientesMasCuentasRequest();
+            inValue.filtro = filtro;
+            DxnSisventas.BBBWebService.listarClientesMasCuentasResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarClientesMasCuentas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesMasCuentasResponse> DxnSisventas.BBBWebService.CuentasAPI.listarClientesMasCuentasAsync(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request) {
+            return base.Channel.listarClientesMasCuentasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesMasCuentasResponse> listarClientesMasCuentasAsync(string filtro) {
+            DxnSisventas.BBBWebService.listarClientesMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarClientesMasCuentasRequest();
+            inValue.filtro = filtro;
+            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarClientesMasCuentasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse DxnSisventas.BBBWebService.CuentasAPI.listarEmpleadosMasCuentas(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request) {
+            return base.Channel.listarEmpleadosMasCuentas(request);
+        }
+        
+        public DxnSisventas.BBBWebService.personaCuenta[] listarEmpleadosMasCuentas(string filtro) {
+            DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest();
+            inValue.filtro = filtro;
+            DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarEmpleadosMasCuentas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse> DxnSisventas.BBBWebService.CuentasAPI.listarEmpleadosMasCuentasAsync(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request) {
+            return base.Channel.listarEmpleadosMasCuentasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse> listarEmpleadosMasCuentasAsync(string filtro) {
+            DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest();
+            inValue.filtro = filtro;
+            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarEmpleadosMasCuentasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1352,477 +1823,6 @@ namespace DxnSisventas.BBBWebService {
             inValue.user = user;
             inValue.pass = pass;
             return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).iniciarSesionEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.listarCuentaEmpleado(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request) {
-            return base.Channel.listarCuentaEmpleado(request);
-        }
-        
-        public DxnSisventas.BBBWebService.cuentaEmpleado[] listarCuentaEmpleado() {
-            DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest();
-            DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarCuentaEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.listarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest request) {
-            return base.Channel.listarCuentaEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse> listarCuentaEmpleadoAsync() {
-            DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.listarCuentaEmpleadoRequest();
-            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarCuentaEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.insertarCuentaEmpleado(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request) {
-            return base.Channel.insertarCuentaEmpleado(request);
-        }
-        
-        public int insertarCuentaEmpleado(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
-            DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest();
-            inValue.cuentaEmpleado = cuentaEmpleado;
-            DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).insertarCuentaEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.insertarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest request) {
-            return base.Channel.insertarCuentaEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse> insertarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
-            DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarCuentaEmpleadoRequest();
-            inValue.cuentaEmpleado = cuentaEmpleado;
-            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).insertarCuentaEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.actualizarCuentaEmpleado(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request) {
-            return base.Channel.actualizarCuentaEmpleado(request);
-        }
-        
-        public int actualizarCuentaEmpleado(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
-            DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest();
-            inValue.cuentaEmpleado = cuentaEmpleado;
-            DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).actualizarCuentaEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.actualizarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest request) {
-            return base.Channel.actualizarCuentaEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse> actualizarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.cuentaEmpleado cuentaEmpleado) {
-            DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarCuentaEmpleadoRequest();
-            inValue.cuentaEmpleado = cuentaEmpleado;
-            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).actualizarCuentaEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse DxnSisventas.BBBWebService.CuentasAPI.eliminarCuentaEmpleado(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request) {
-            return base.Channel.eliminarCuentaEmpleado(request);
-        }
-        
-        public int eliminarCuentaEmpleado(int id_empleado) {
-            DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest();
-            inValue.id_empleado = id_empleado;
-            DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).eliminarCuentaEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse> DxnSisventas.BBBWebService.CuentasAPI.eliminarCuentaEmpleadoAsync(DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest request) {
-            return base.Channel.eliminarCuentaEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse> eliminarCuentaEmpleadoAsync(int id_empleado) {
-            DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarCuentaEmpleadoRequest();
-            inValue.id_empleado = id_empleado;
-            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).eliminarCuentaEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.listarClientesMasCuentasResponse DxnSisventas.BBBWebService.CuentasAPI.listarClientesMasCuentas(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request) {
-            return base.Channel.listarClientesMasCuentas(request);
-        }
-        
-        public DxnSisventas.BBBWebService.personaCuenta[] listarClientesMasCuentas(string filtro) {
-            DxnSisventas.BBBWebService.listarClientesMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarClientesMasCuentasRequest();
-            inValue.filtro = filtro;
-            DxnSisventas.BBBWebService.listarClientesMasCuentasResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarClientesMasCuentas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesMasCuentasResponse> DxnSisventas.BBBWebService.CuentasAPI.listarClientesMasCuentasAsync(DxnSisventas.BBBWebService.listarClientesMasCuentasRequest request) {
-            return base.Channel.listarClientesMasCuentasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesMasCuentasResponse> listarClientesMasCuentasAsync(string filtro) {
-            DxnSisventas.BBBWebService.listarClientesMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarClientesMasCuentasRequest();
-            inValue.filtro = filtro;
-            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarClientesMasCuentasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse DxnSisventas.BBBWebService.CuentasAPI.listarEmpleadosMasCuentas(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request) {
-            return base.Channel.listarEmpleadosMasCuentas(request);
-        }
-        
-        public DxnSisventas.BBBWebService.personaCuenta[] listarEmpleadosMasCuentas(string filtro) {
-            DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest();
-            inValue.filtro = filtro;
-            DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse retVal = ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarEmpleadosMasCuentas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse> DxnSisventas.BBBWebService.CuentasAPI.listarEmpleadosMasCuentasAsync(DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest request) {
-            return base.Channel.listarEmpleadosMasCuentasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse> listarEmpleadosMasCuentasAsync(string filtro) {
-            DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosMasCuentasRequest();
-            inValue.filtro = filtro;
-            return ((DxnSisventas.BBBWebService.CuentasAPI)(this)).listarEmpleadosMasCuentasAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.ReportesAPI")]
-    public interface ReportesAPI {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/helloResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenReque" +
-            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.generarReporteAlmacenResponse generarReporteAlmacen(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenReque" +
-            "st", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteAlmacenRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteAlmacenResponse> generarReporteAlmacenAsync(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.imprimirComprobanteResponse imprimirComprobante(DxnSisventas.BBBWebService.imprimirComprobanteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/imprimirComprobanteRespons" +
-            "e")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.imprimirComprobanteResponse> imprimirComprobanteAsync(DxnSisventas.BBBWebService.imprimirComprobanteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
-            "equest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
-            "esponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse generarReporteOrdenCompra(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
-            "equest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/generarReporteOrdenCompraR" +
-            "esponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse> generarReporteOrdenCompraAsync(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFRespon" +
-            "se")]
-        [System.ServiceModel.FaultContractAttribute(typeof(DxnSisventas.BBBWebService.Exception), Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDF/Fault" +
-            "/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse reporteOrdenVentaPDF(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFReques" +
-            "t", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ReportesAPI/reporteOrdenVentaPDFRespon" +
-            "se")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse> reporteOrdenVentaPDFAsync(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteAlmacen", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReporteAlmacenRequest {
-        
-        public generarReporteAlmacenRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteAlmacenResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReporteAlmacenResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
-        
-        public generarReporteAlmacenResponse() {
-        }
-        
-        public generarReporteAlmacenResponse(byte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="imprimirComprobante", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class imprimirComprobanteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public imprimirComprobanteRequest() {
-        }
-        
-        public imprimirComprobanteRequest(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="imprimirComprobanteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class imprimirComprobanteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
-        
-        public imprimirComprobanteResponse() {
-        }
-        
-        public imprimirComprobanteResponse(byte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteOrdenCompra", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReporteOrdenCompraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public generarReporteOrdenCompraRequest() {
-        }
-        
-        public generarReporteOrdenCompraRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteOrdenCompraResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReporteOrdenCompraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
-        
-        public generarReporteOrdenCompraResponse() {
-        }
-        
-        public generarReporteOrdenCompraResponse(byte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteOrdenVentaPDF", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class reporteOrdenVentaPDFRequest {
-        
-        public reporteOrdenVentaPDFRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteOrdenVentaPDFResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class reporteOrdenVentaPDFResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
-        
-        public reporteOrdenVentaPDFResponse() {
-        }
-        
-        public reporteOrdenVentaPDFResponse(byte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ReportesAPIChannel : DxnSisventas.BBBWebService.ReportesAPI, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ReportesAPIClient : System.ServiceModel.ClientBase<DxnSisventas.BBBWebService.ReportesAPI>, DxnSisventas.BBBWebService.ReportesAPI {
-        
-        public ReportesAPIClient() {
-        }
-        
-        public ReportesAPIClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public ReportesAPIClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public ReportesAPIClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public ReportesAPIClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.helloResponse DxnSisventas.BBBWebService.ReportesAPI.hello(DxnSisventas.BBBWebService.helloRequest request) {
-            return base.Channel.hello(request);
-        }
-        
-        public string hello(string name) {
-            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
-            inValue.name = name;
-            DxnSisventas.BBBWebService.helloResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).hello(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> DxnSisventas.BBBWebService.ReportesAPI.helloAsync(DxnSisventas.BBBWebService.helloRequest request) {
-            return base.Channel.helloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(string name) {
-            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
-            inValue.name = name;
-            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).helloAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.generarReporteAlmacenResponse DxnSisventas.BBBWebService.ReportesAPI.generarReporteAlmacen(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request) {
-            return base.Channel.generarReporteAlmacen(request);
-        }
-        
-        public byte[] generarReporteAlmacen() {
-            DxnSisventas.BBBWebService.generarReporteAlmacenRequest inValue = new DxnSisventas.BBBWebService.generarReporteAlmacenRequest();
-            DxnSisventas.BBBWebService.generarReporteAlmacenResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteAlmacen(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteAlmacenResponse> DxnSisventas.BBBWebService.ReportesAPI.generarReporteAlmacenAsync(DxnSisventas.BBBWebService.generarReporteAlmacenRequest request) {
-            return base.Channel.generarReporteAlmacenAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteAlmacenResponse> generarReporteAlmacenAsync() {
-            DxnSisventas.BBBWebService.generarReporteAlmacenRequest inValue = new DxnSisventas.BBBWebService.generarReporteAlmacenRequest();
-            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteAlmacenAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.imprimirComprobanteResponse DxnSisventas.BBBWebService.ReportesAPI.imprimirComprobante(DxnSisventas.BBBWebService.imprimirComprobanteRequest request) {
-            return base.Channel.imprimirComprobante(request);
-        }
-        
-        public byte[] imprimirComprobante(int arg0) {
-            DxnSisventas.BBBWebService.imprimirComprobanteRequest inValue = new DxnSisventas.BBBWebService.imprimirComprobanteRequest();
-            inValue.arg0 = arg0;
-            DxnSisventas.BBBWebService.imprimirComprobanteResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).imprimirComprobante(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.imprimirComprobanteResponse> DxnSisventas.BBBWebService.ReportesAPI.imprimirComprobanteAsync(DxnSisventas.BBBWebService.imprimirComprobanteRequest request) {
-            return base.Channel.imprimirComprobanteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.imprimirComprobanteResponse> imprimirComprobanteAsync(int arg0) {
-            DxnSisventas.BBBWebService.imprimirComprobanteRequest inValue = new DxnSisventas.BBBWebService.imprimirComprobanteRequest();
-            inValue.arg0 = arg0;
-            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).imprimirComprobanteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse DxnSisventas.BBBWebService.ReportesAPI.generarReporteOrdenCompra(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request) {
-            return base.Channel.generarReporteOrdenCompra(request);
-        }
-        
-        public byte[] generarReporteOrdenCompra(int id) {
-            DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest inValue = new DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest();
-            inValue.id = id;
-            DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteOrdenCompra(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse> DxnSisventas.BBBWebService.ReportesAPI.generarReporteOrdenCompraAsync(DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest request) {
-            return base.Channel.generarReporteOrdenCompraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse> generarReporteOrdenCompraAsync(int id) {
-            DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest inValue = new DxnSisventas.BBBWebService.generarReporteOrdenCompraRequest();
-            inValue.id = id;
-            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).generarReporteOrdenCompraAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse DxnSisventas.BBBWebService.ReportesAPI.reporteOrdenVentaPDF(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request) {
-            return base.Channel.reporteOrdenVentaPDF(request);
-        }
-        
-        public byte[] reporteOrdenVentaPDF() {
-            DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest inValue = new DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest();
-            DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse retVal = ((DxnSisventas.BBBWebService.ReportesAPI)(this)).reporteOrdenVentaPDF(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse> DxnSisventas.BBBWebService.ReportesAPI.reporteOrdenVentaPDFAsync(DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest request) {
-            return base.Channel.reporteOrdenVentaPDFAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse> reporteOrdenVentaPDFAsync() {
-            DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest inValue = new DxnSisventas.BBBWebService.reporteOrdenVentaPDFRequest();
-            return ((DxnSisventas.BBBWebService.ReportesAPI)(this)).reporteOrdenVentaPDFAsync(inValue);
         }
     }
     
@@ -2090,551 +2090,6 @@ namespace DxnSisventas.BBBWebService {
             inValue.Body.contenido = contenido;
             inValue.Body.correo = correo;
             return ((DxnSisventas.BBBWebService.CorreosAPI)(this)).enviarCorreoWebSinArchivoAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.ProductosAPI")]
-    public interface ProductosAPI {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.listarProductosResponse listarProductos(DxnSisventas.BBBWebService.listarProductosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarProductosResponse> listarProductosAsync(DxnSisventas.BBBWebService.listarProductosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.insertarProductoResponse insertarProducto(DxnSisventas.BBBWebService.insertarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarProductoResponse> insertarProductoAsync(DxnSisventas.BBBWebService.insertarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.actualizarProductoResponse actualizarProducto(DxnSisventas.BBBWebService.actualizarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRequest" +
-            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarProductoResponse> actualizarProductoAsync(DxnSisventas.BBBWebService.actualizarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.eliminarProductoResponse eliminarProducto(DxnSisventas.BBBWebService.eliminarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarProductoResponse> eliminarProductoAsync(DxnSisventas.BBBWebService.eliminarProductoRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
-    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double capacidadField;
-        
-        private string idProductoCadenaField;
-        
-        private int idProductoNumericoField;
-        
-        private string nombreField;
-        
-        private double precioUnitarioField;
-        
-        private int puntosField;
-        
-        private int stockField;
-        
-        private tipoProducto tipoField;
-        
-        private bool tipoFieldSpecified;
-        
-        private unidadMedida unidadDeMedidaField;
-        
-        private bool unidadDeMedidaFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double capacidad {
-            get {
-                return this.capacidadField;
-            }
-            set {
-                this.capacidadField = value;
-                this.RaisePropertyChanged("capacidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string idProductoCadena {
-            get {
-                return this.idProductoCadenaField;
-            }
-            set {
-                this.idProductoCadenaField = value;
-                this.RaisePropertyChanged("idProductoCadena");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idProductoNumerico {
-            get {
-                return this.idProductoNumericoField;
-            }
-            set {
-                this.idProductoNumericoField = value;
-                this.RaisePropertyChanged("idProductoNumerico");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public double precioUnitario {
-            get {
-                return this.precioUnitarioField;
-            }
-            set {
-                this.precioUnitarioField = value;
-                this.RaisePropertyChanged("precioUnitario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int puntos {
-            get {
-                return this.puntosField;
-            }
-            set {
-                this.puntosField = value;
-                this.RaisePropertyChanged("puntos");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int stock {
-            get {
-                return this.stockField;
-            }
-            set {
-                this.stockField = value;
-                this.RaisePropertyChanged("stock");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public tipoProducto tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool tipoSpecified {
-            get {
-                return this.tipoFieldSpecified;
-            }
-            set {
-                this.tipoFieldSpecified = value;
-                this.RaisePropertyChanged("tipoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public unidadMedida unidadDeMedida {
-            get {
-                return this.unidadDeMedidaField;
-            }
-            set {
-                this.unidadDeMedidaField = value;
-                this.RaisePropertyChanged("unidadDeMedida");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool unidadDeMedidaSpecified {
-            get {
-                return this.unidadDeMedidaFieldSpecified;
-            }
-            set {
-                this.unidadDeMedidaFieldSpecified = value;
-                this.RaisePropertyChanged("unidadDeMedidaSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
-    public enum tipoProducto {
-        
-        /// <remarks/>
-        Comestible,
-        
-        /// <remarks/>
-        CuidadoPersonal,
-        
-        /// <remarks/>
-        Otro,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
-    public enum unidadMedida {
-        
-        /// <remarks/>
-        gramos,
-        
-        /// <remarks/>
-        mililitros,
-        
-        /// <remarks/>
-        unidad,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductos", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarProductosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cadena;
-        
-        public listarProductosRequest() {
-        }
-        
-        public listarProductosRequest(string cadena) {
-            this.cadena = cadena;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarProductosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.producto[] @return;
-        
-        public listarProductosResponse() {
-        }
-        
-        public listarProductosResponse(DxnSisventas.BBBWebService.producto[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProducto", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.producto producto;
-        
-        public insertarProductoRequest() {
-        }
-        
-        public insertarProductoRequest(DxnSisventas.BBBWebService.producto producto) {
-            this.producto = producto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarProductoResponse() {
-        }
-        
-        public insertarProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProducto", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.producto producto;
-        
-        public actualizarProductoRequest() {
-        }
-        
-        public actualizarProductoRequest(DxnSisventas.BBBWebService.producto producto) {
-            this.producto = producto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProductoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarProductoResponse() {
-        }
-        
-        public actualizarProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProducto", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_producto;
-        
-        public eliminarProductoRequest() {
-        }
-        
-        public eliminarProductoRequest(int id_producto) {
-            this.id_producto = id_producto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarProductoResponse() {
-        }
-        
-        public eliminarProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProductosAPIChannel : DxnSisventas.BBBWebService.ProductosAPI, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProductosAPIClient : System.ServiceModel.ClientBase<DxnSisventas.BBBWebService.ProductosAPI>, DxnSisventas.BBBWebService.ProductosAPI {
-        
-        public ProductosAPIClient() {
-        }
-        
-        public ProductosAPIClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public ProductosAPIClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public ProductosAPIClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public ProductosAPIClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.helloResponse DxnSisventas.BBBWebService.ProductosAPI.hello(DxnSisventas.BBBWebService.helloRequest request) {
-            return base.Channel.hello(request);
-        }
-        
-        public string hello(string name) {
-            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
-            inValue.name = name;
-            DxnSisventas.BBBWebService.helloResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).hello(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> DxnSisventas.BBBWebService.ProductosAPI.helloAsync(DxnSisventas.BBBWebService.helloRequest request) {
-            return base.Channel.helloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(string name) {
-            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
-            inValue.name = name;
-            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).helloAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.listarProductosResponse DxnSisventas.BBBWebService.ProductosAPI.listarProductos(DxnSisventas.BBBWebService.listarProductosRequest request) {
-            return base.Channel.listarProductos(request);
-        }
-        
-        public DxnSisventas.BBBWebService.producto[] listarProductos(string cadena) {
-            DxnSisventas.BBBWebService.listarProductosRequest inValue = new DxnSisventas.BBBWebService.listarProductosRequest();
-            inValue.cadena = cadena;
-            DxnSisventas.BBBWebService.listarProductosResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).listarProductos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarProductosResponse> DxnSisventas.BBBWebService.ProductosAPI.listarProductosAsync(DxnSisventas.BBBWebService.listarProductosRequest request) {
-            return base.Channel.listarProductosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarProductosResponse> listarProductosAsync(string cadena) {
-            DxnSisventas.BBBWebService.listarProductosRequest inValue = new DxnSisventas.BBBWebService.listarProductosRequest();
-            inValue.cadena = cadena;
-            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).listarProductosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.insertarProductoResponse DxnSisventas.BBBWebService.ProductosAPI.insertarProducto(DxnSisventas.BBBWebService.insertarProductoRequest request) {
-            return base.Channel.insertarProducto(request);
-        }
-        
-        public int insertarProducto(DxnSisventas.BBBWebService.producto producto) {
-            DxnSisventas.BBBWebService.insertarProductoRequest inValue = new DxnSisventas.BBBWebService.insertarProductoRequest();
-            inValue.producto = producto;
-            DxnSisventas.BBBWebService.insertarProductoResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).insertarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarProductoResponse> DxnSisventas.BBBWebService.ProductosAPI.insertarProductoAsync(DxnSisventas.BBBWebService.insertarProductoRequest request) {
-            return base.Channel.insertarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarProductoResponse> insertarProductoAsync(DxnSisventas.BBBWebService.producto producto) {
-            DxnSisventas.BBBWebService.insertarProductoRequest inValue = new DxnSisventas.BBBWebService.insertarProductoRequest();
-            inValue.producto = producto;
-            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).insertarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.actualizarProductoResponse DxnSisventas.BBBWebService.ProductosAPI.actualizarProducto(DxnSisventas.BBBWebService.actualizarProductoRequest request) {
-            return base.Channel.actualizarProducto(request);
-        }
-        
-        public int actualizarProducto(DxnSisventas.BBBWebService.producto producto) {
-            DxnSisventas.BBBWebService.actualizarProductoRequest inValue = new DxnSisventas.BBBWebService.actualizarProductoRequest();
-            inValue.producto = producto;
-            DxnSisventas.BBBWebService.actualizarProductoResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).actualizarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarProductoResponse> DxnSisventas.BBBWebService.ProductosAPI.actualizarProductoAsync(DxnSisventas.BBBWebService.actualizarProductoRequest request) {
-            return base.Channel.actualizarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarProductoResponse> actualizarProductoAsync(DxnSisventas.BBBWebService.producto producto) {
-            DxnSisventas.BBBWebService.actualizarProductoRequest inValue = new DxnSisventas.BBBWebService.actualizarProductoRequest();
-            inValue.producto = producto;
-            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).actualizarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.eliminarProductoResponse DxnSisventas.BBBWebService.ProductosAPI.eliminarProducto(DxnSisventas.BBBWebService.eliminarProductoRequest request) {
-            return base.Channel.eliminarProducto(request);
-        }
-        
-        public int eliminarProducto(int id_producto) {
-            DxnSisventas.BBBWebService.eliminarProductoRequest inValue = new DxnSisventas.BBBWebService.eliminarProductoRequest();
-            inValue.id_producto = id_producto;
-            DxnSisventas.BBBWebService.eliminarProductoResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).eliminarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarProductoResponse> DxnSisventas.BBBWebService.ProductosAPI.eliminarProductoAsync(DxnSisventas.BBBWebService.eliminarProductoRequest request) {
-            return base.Channel.eliminarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarProductoResponse> eliminarProductoAsync(int id_producto) {
-            DxnSisventas.BBBWebService.eliminarProductoRequest inValue = new DxnSisventas.BBBWebService.eliminarProductoRequest();
-            inValue.id_producto = id_producto;
-            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).eliminarProductoAsync(inValue);
         }
     }
     
@@ -3115,6 +2570,210 @@ namespace DxnSisventas.BBBWebService {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
+    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double capacidadField;
+        
+        private string idProductoCadenaField;
+        
+        private int idProductoNumericoField;
+        
+        private string nombreField;
+        
+        private double precioUnitarioField;
+        
+        private int puntosField;
+        
+        private int stockField;
+        
+        private tipoProducto tipoField;
+        
+        private bool tipoFieldSpecified;
+        
+        private unidadMedida unidadDeMedidaField;
+        
+        private bool unidadDeMedidaFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double capacidad {
+            get {
+                return this.capacidadField;
+            }
+            set {
+                this.capacidadField = value;
+                this.RaisePropertyChanged("capacidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string idProductoCadena {
+            get {
+                return this.idProductoCadenaField;
+            }
+            set {
+                this.idProductoCadenaField = value;
+                this.RaisePropertyChanged("idProductoCadena");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idProductoNumerico {
+            get {
+                return this.idProductoNumericoField;
+            }
+            set {
+                this.idProductoNumericoField = value;
+                this.RaisePropertyChanged("idProductoNumerico");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public double precioUnitario {
+            get {
+                return this.precioUnitarioField;
+            }
+            set {
+                this.precioUnitarioField = value;
+                this.RaisePropertyChanged("precioUnitario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int puntos {
+            get {
+                return this.puntosField;
+            }
+            set {
+                this.puntosField = value;
+                this.RaisePropertyChanged("puntos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int stock {
+            get {
+                return this.stockField;
+            }
+            set {
+                this.stockField = value;
+                this.RaisePropertyChanged("stock");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public tipoProducto tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool tipoSpecified {
+            get {
+                return this.tipoFieldSpecified;
+            }
+            set {
+                this.tipoFieldSpecified = value;
+                this.RaisePropertyChanged("tipoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public unidadMedida unidadDeMedida {
+            get {
+                return this.unidadDeMedidaField;
+            }
+            set {
+                this.unidadDeMedidaField = value;
+                this.RaisePropertyChanged("unidadDeMedida");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool unidadDeMedidaSpecified {
+            get {
+                return this.unidadDeMedidaFieldSpecified;
+            }
+            set {
+                this.unidadDeMedidaFieldSpecified = value;
+                this.RaisePropertyChanged("unidadDeMedidaSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
+    public enum tipoProducto {
+        
+        /// <remarks/>
+        Comestible,
+        
+        /// <remarks/>
+        CuidadoPersonal,
+        
+        /// <remarks/>
+        Otro,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/")]
+    public enum unidadMedida {
+        
+        /// <remarks/>
+        gramos,
+        
+        /// <remarks/>
+        mililitros,
+        
+        /// <remarks/>
+        unidad,
     }
     
     /// <remarks/>
@@ -4231,53 +3890,349 @@ namespace DxnSisventas.BBBWebService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.PersonasAPI")]
-    public interface PersonasAPI {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.ProductosAPI")]
+    public interface ProductosAPI {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.listarProductosResponse listarProductos(DxnSisventas.BBBWebService.listarProductosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/listarProductosResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarProductosResponse> listarProductosAsync(DxnSisventas.BBBWebService.listarProductosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.insertarProductoResponse insertarProducto(DxnSisventas.BBBWebService.insertarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/insertarProductoResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarProductoResponse> insertarProductoAsync(DxnSisventas.BBBWebService.insertarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.actualizarProductoResponse actualizarProducto(DxnSisventas.BBBWebService.actualizarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRequest" +
+            "", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/actualizarProductoRespons" +
+            "e")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarProductoResponse> actualizarProductoAsync(DxnSisventas.BBBWebService.actualizarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.eliminarProductoResponse eliminarProducto(DxnSisventas.BBBWebService.eliminarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/eliminarProductoResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarProductoResponse> eliminarProductoAsync(DxnSisventas.BBBWebService.eliminarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/ProductosAPI/helloResponse")]
         System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductos", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarProductosRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.listarClientesResponse listarClientes(DxnSisventas.BBBWebService.listarClientesRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cadena;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesResponse> listarClientesAsync(DxnSisventas.BBBWebService.listarClientesRequest request);
+        public listarProductosRequest() {
+        }
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.insertarClienteResponse insertarCliente(DxnSisventas.BBBWebService.insertarClienteRequest request);
+        public listarProductosRequest(string cadena) {
+            this.cadena = cadena;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarProductosResponse {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarClienteResponse> insertarClienteAsync(DxnSisventas.BBBWebService.insertarClienteRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.producto[] @return;
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.actualizarClienteResponse actualizarCliente(DxnSisventas.BBBWebService.actualizarClienteRequest request);
+        public listarProductosResponse() {
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarClienteResponse> actualizarClienteAsync(DxnSisventas.BBBWebService.actualizarClienteRequest request);
+        public listarProductosResponse(DxnSisventas.BBBWebService.producto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProducto", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProductoRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        DxnSisventas.BBBWebService.eliminarClienteResponse eliminarCliente(DxnSisventas.BBBWebService.eliminarClienteRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.producto producto;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteResponse")]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarClienteResponse> eliminarClienteAsync(DxnSisventas.BBBWebService.eliminarClienteRequest request);
+        public insertarProductoRequest() {
+        }
+        
+        public insertarProductoRequest(DxnSisventas.BBBWebService.producto producto) {
+            this.producto = producto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarProductoResponse() {
+        }
+        
+        public insertarProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProducto", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.producto producto;
+        
+        public actualizarProductoRequest() {
+        }
+        
+        public actualizarProductoRequest(DxnSisventas.BBBWebService.producto producto) {
+            this.producto = producto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProductoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarProductoResponse() {
+        }
+        
+        public actualizarProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProducto", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_producto;
+        
+        public eliminarProductoRequest() {
+        }
+        
+        public eliminarProductoRequest(int id_producto) {
+            this.id_producto = id_producto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarProductoResponse() {
+        }
+        
+        public eliminarProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ProductosAPIChannel : DxnSisventas.BBBWebService.ProductosAPI, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ProductosAPIClient : System.ServiceModel.ClientBase<DxnSisventas.BBBWebService.ProductosAPI>, DxnSisventas.BBBWebService.ProductosAPI {
+        
+        public ProductosAPIClient() {
+        }
+        
+        public ProductosAPIClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ProductosAPIClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ProductosAPIClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ProductosAPIClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.listarProductosResponse DxnSisventas.BBBWebService.ProductosAPI.listarProductos(DxnSisventas.BBBWebService.listarProductosRequest request) {
+            return base.Channel.listarProductos(request);
+        }
+        
+        public DxnSisventas.BBBWebService.producto[] listarProductos(string cadena) {
+            DxnSisventas.BBBWebService.listarProductosRequest inValue = new DxnSisventas.BBBWebService.listarProductosRequest();
+            inValue.cadena = cadena;
+            DxnSisventas.BBBWebService.listarProductosResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).listarProductos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarProductosResponse> DxnSisventas.BBBWebService.ProductosAPI.listarProductosAsync(DxnSisventas.BBBWebService.listarProductosRequest request) {
+            return base.Channel.listarProductosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarProductosResponse> listarProductosAsync(string cadena) {
+            DxnSisventas.BBBWebService.listarProductosRequest inValue = new DxnSisventas.BBBWebService.listarProductosRequest();
+            inValue.cadena = cadena;
+            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).listarProductosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.insertarProductoResponse DxnSisventas.BBBWebService.ProductosAPI.insertarProducto(DxnSisventas.BBBWebService.insertarProductoRequest request) {
+            return base.Channel.insertarProducto(request);
+        }
+        
+        public int insertarProducto(DxnSisventas.BBBWebService.producto producto) {
+            DxnSisventas.BBBWebService.insertarProductoRequest inValue = new DxnSisventas.BBBWebService.insertarProductoRequest();
+            inValue.producto = producto;
+            DxnSisventas.BBBWebService.insertarProductoResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).insertarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarProductoResponse> DxnSisventas.BBBWebService.ProductosAPI.insertarProductoAsync(DxnSisventas.BBBWebService.insertarProductoRequest request) {
+            return base.Channel.insertarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarProductoResponse> insertarProductoAsync(DxnSisventas.BBBWebService.producto producto) {
+            DxnSisventas.BBBWebService.insertarProductoRequest inValue = new DxnSisventas.BBBWebService.insertarProductoRequest();
+            inValue.producto = producto;
+            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).insertarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.actualizarProductoResponse DxnSisventas.BBBWebService.ProductosAPI.actualizarProducto(DxnSisventas.BBBWebService.actualizarProductoRequest request) {
+            return base.Channel.actualizarProducto(request);
+        }
+        
+        public int actualizarProducto(DxnSisventas.BBBWebService.producto producto) {
+            DxnSisventas.BBBWebService.actualizarProductoRequest inValue = new DxnSisventas.BBBWebService.actualizarProductoRequest();
+            inValue.producto = producto;
+            DxnSisventas.BBBWebService.actualizarProductoResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).actualizarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarProductoResponse> DxnSisventas.BBBWebService.ProductosAPI.actualizarProductoAsync(DxnSisventas.BBBWebService.actualizarProductoRequest request) {
+            return base.Channel.actualizarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarProductoResponse> actualizarProductoAsync(DxnSisventas.BBBWebService.producto producto) {
+            DxnSisventas.BBBWebService.actualizarProductoRequest inValue = new DxnSisventas.BBBWebService.actualizarProductoRequest();
+            inValue.producto = producto;
+            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).actualizarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.eliminarProductoResponse DxnSisventas.BBBWebService.ProductosAPI.eliminarProducto(DxnSisventas.BBBWebService.eliminarProductoRequest request) {
+            return base.Channel.eliminarProducto(request);
+        }
+        
+        public int eliminarProducto(int id_producto) {
+            DxnSisventas.BBBWebService.eliminarProductoRequest inValue = new DxnSisventas.BBBWebService.eliminarProductoRequest();
+            inValue.id_producto = id_producto;
+            DxnSisventas.BBBWebService.eliminarProductoResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).eliminarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarProductoResponse> DxnSisventas.BBBWebService.ProductosAPI.eliminarProductoAsync(DxnSisventas.BBBWebService.eliminarProductoRequest request) {
+            return base.Channel.eliminarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarProductoResponse> eliminarProductoAsync(int id_producto) {
+            DxnSisventas.BBBWebService.eliminarProductoRequest inValue = new DxnSisventas.BBBWebService.eliminarProductoRequest();
+            inValue.id_producto = id_producto;
+            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).eliminarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.helloResponse DxnSisventas.BBBWebService.ProductosAPI.hello(DxnSisventas.BBBWebService.helloRequest request) {
+            return base.Channel.hello(request);
+        }
+        
+        public string hello(string name) {
+            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
+            inValue.name = name;
+            DxnSisventas.BBBWebService.helloResponse retVal = ((DxnSisventas.BBBWebService.ProductosAPI)(this)).hello(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> DxnSisventas.BBBWebService.ProductosAPI.helloAsync(DxnSisventas.BBBWebService.helloRequest request) {
+            return base.Channel.helloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(string name) {
+            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
+            inValue.name = name;
+            return ((DxnSisventas.BBBWebService.ProductosAPI)(this)).helloAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", ConfigurationName="BBBWebService.PersonasAPI")]
+    public interface PersonasAPI {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarEmpleadosRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarEmpleadosResponse")]
@@ -4316,150 +4271,51 @@ namespace DxnSisventas.BBBWebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarEmpleadoRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarEmpleadoResponse")]
         System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarEmpleadoResponse> eliminarEmpleadoAsync(DxnSisventas.BBBWebService.eliminarEmpleadoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientes", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClientesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cadena;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.listarClientesResponse listarClientes(DxnSisventas.BBBWebService.listarClientesRequest request);
         
-        public listarClientesRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarClientesResponse> listarClientesAsync(DxnSisventas.BBBWebService.listarClientesRequest request);
         
-        public listarClientesRequest(string cadena) {
-            this.cadena = cadena;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClientesResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.insertarClienteResponse insertarCliente(DxnSisventas.BBBWebService.insertarClienteRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.cliente[] @return;
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarClienteResponse> insertarClienteAsync(DxnSisventas.BBBWebService.insertarClienteRequest request);
         
-        public listarClientesResponse() {
-        }
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.actualizarClienteResponse actualizarCliente(DxnSisventas.BBBWebService.actualizarClienteRequest request);
         
-        public listarClientesResponse(DxnSisventas.BBBWebService.cliente[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarClienteRequest {
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarClienteResponse> actualizarClienteAsync(DxnSisventas.BBBWebService.actualizarClienteRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.cliente cliente;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.eliminarClienteResponse eliminarCliente(DxnSisventas.BBBWebService.eliminarClienteRequest request);
         
-        public insertarClienteRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarClienteResponse> eliminarClienteAsync(DxnSisventas.BBBWebService.eliminarClienteRequest request);
         
-        public insertarClienteRequest(DxnSisventas.BBBWebService.cliente cliente) {
-            this.cliente = cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarClienteResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        DxnSisventas.BBBWebService.helloResponse hello(DxnSisventas.BBBWebService.helloRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarClienteResponse() {
-        }
-        
-        public insertarClienteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCliente", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public DxnSisventas.BBBWebService.cliente cliente;
-        
-        public actualizarClienteRequest() {
-        }
-        
-        public actualizarClienteRequest(DxnSisventas.BBBWebService.cliente cliente) {
-            this.cliente = cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarClienteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarClienteResponse() {
-        }
-        
-        public actualizarClienteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCliente", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cliente;
-        
-        public eliminarClienteRequest() {
-        }
-        
-        public eliminarClienteRequest(int cliente) {
-            this.cliente = cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarClienteResponse() {
-        }
-        
-        public eliminarClienteResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloRequest", ReplyAction="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloResponse")]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(DxnSisventas.BBBWebService.helloRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4606,6 +4462,150 @@ namespace DxnSisventas.BBBWebService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientes", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClientesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cadena;
+        
+        public listarClientesRequest() {
+        }
+        
+        public listarClientesRequest(string cadena) {
+            this.cadena = cadena;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClientesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.cliente[] @return;
+        
+        public listarClientesResponse() {
+        }
+        
+        public listarClientesResponse(DxnSisventas.BBBWebService.cliente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.cliente cliente;
+        
+        public insertarClienteRequest() {
+        }
+        
+        public insertarClienteRequest(DxnSisventas.BBBWebService.cliente cliente) {
+            this.cliente = cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarClienteResponse() {
+        }
+        
+        public insertarClienteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCliente", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public DxnSisventas.BBBWebService.cliente cliente;
+        
+        public actualizarClienteRequest() {
+        }
+        
+        public actualizarClienteRequest(DxnSisventas.BBBWebService.cliente cliente) {
+            this.cliente = cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarClienteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarClienteResponse() {
+        }
+        
+        public actualizarClienteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCliente", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cliente;
+        
+        public eliminarClienteRequest() {
+        }
+        
+        public eliminarClienteRequest(int cliente) {
+            this.cliente = cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteResponse", WrapperNamespace="http://services.webservice.BBB.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.webservice.BBB.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarClienteResponse() {
+        }
+        
+        public eliminarClienteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PersonasAPIChannel : DxnSisventas.BBBWebService.PersonasAPI, System.ServiceModel.IClientChannel {
     }
@@ -4634,26 +4634,95 @@ namespace DxnSisventas.BBBWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.helloResponse DxnSisventas.BBBWebService.PersonasAPI.hello(DxnSisventas.BBBWebService.helloRequest request) {
-            return base.Channel.hello(request);
+        DxnSisventas.BBBWebService.listarEmpleadosResponse DxnSisventas.BBBWebService.PersonasAPI.listarEmpleados(DxnSisventas.BBBWebService.listarEmpleadosRequest request) {
+            return base.Channel.listarEmpleados(request);
         }
         
-        public string hello(string name) {
-            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
-            inValue.name = name;
-            DxnSisventas.BBBWebService.helloResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).hello(inValue);
+        public DxnSisventas.BBBWebService.empleado[] listarEmpleados(string cadena) {
+            DxnSisventas.BBBWebService.listarEmpleadosRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosRequest();
+            inValue.cadena = cadena;
+            DxnSisventas.BBBWebService.listarEmpleadosResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).listarEmpleados(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> DxnSisventas.BBBWebService.PersonasAPI.helloAsync(DxnSisventas.BBBWebService.helloRequest request) {
-            return base.Channel.helloAsync(request);
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosResponse> DxnSisventas.BBBWebService.PersonasAPI.listarEmpleadosAsync(DxnSisventas.BBBWebService.listarEmpleadosRequest request) {
+            return base.Channel.listarEmpleadosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(string name) {
-            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
-            inValue.name = name;
-            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).helloAsync(inValue);
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosResponse> listarEmpleadosAsync(string cadena) {
+            DxnSisventas.BBBWebService.listarEmpleadosRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosRequest();
+            inValue.cadena = cadena;
+            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).listarEmpleadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.insertarEmpleadoResponse DxnSisventas.BBBWebService.PersonasAPI.insertarEmpleado(DxnSisventas.BBBWebService.insertarEmpleadoRequest request) {
+            return base.Channel.insertarEmpleado(request);
+        }
+        
+        public int insertarEmpleado(DxnSisventas.BBBWebService.empleado empleado) {
+            DxnSisventas.BBBWebService.insertarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarEmpleadoRequest();
+            inValue.empleado = empleado;
+            DxnSisventas.BBBWebService.insertarEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).insertarEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarEmpleadoResponse> DxnSisventas.BBBWebService.PersonasAPI.insertarEmpleadoAsync(DxnSisventas.BBBWebService.insertarEmpleadoRequest request) {
+            return base.Channel.insertarEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarEmpleadoResponse> insertarEmpleadoAsync(DxnSisventas.BBBWebService.empleado empleado) {
+            DxnSisventas.BBBWebService.insertarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarEmpleadoRequest();
+            inValue.empleado = empleado;
+            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).insertarEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.actualizarEmpleadoResponse DxnSisventas.BBBWebService.PersonasAPI.actualizarEmpleado(DxnSisventas.BBBWebService.actualizarEmpleadoRequest request) {
+            return base.Channel.actualizarEmpleado(request);
+        }
+        
+        public int actualizarEmpleado(DxnSisventas.BBBWebService.empleado empleado) {
+            DxnSisventas.BBBWebService.actualizarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarEmpleadoRequest();
+            inValue.empleado = empleado;
+            DxnSisventas.BBBWebService.actualizarEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).actualizarEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarEmpleadoResponse> DxnSisventas.BBBWebService.PersonasAPI.actualizarEmpleadoAsync(DxnSisventas.BBBWebService.actualizarEmpleadoRequest request) {
+            return base.Channel.actualizarEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarEmpleadoResponse> actualizarEmpleadoAsync(DxnSisventas.BBBWebService.empleado empleado) {
+            DxnSisventas.BBBWebService.actualizarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarEmpleadoRequest();
+            inValue.empleado = empleado;
+            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).actualizarEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DxnSisventas.BBBWebService.eliminarEmpleadoResponse DxnSisventas.BBBWebService.PersonasAPI.eliminarEmpleado(DxnSisventas.BBBWebService.eliminarEmpleadoRequest request) {
+            return base.Channel.eliminarEmpleado(request);
+        }
+        
+        public int eliminarEmpleado(int empleado) {
+            DxnSisventas.BBBWebService.eliminarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarEmpleadoRequest();
+            inValue.empleado = empleado;
+            DxnSisventas.BBBWebService.eliminarEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).eliminarEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarEmpleadoResponse> DxnSisventas.BBBWebService.PersonasAPI.eliminarEmpleadoAsync(DxnSisventas.BBBWebService.eliminarEmpleadoRequest request) {
+            return base.Channel.eliminarEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarEmpleadoResponse> eliminarEmpleadoAsync(int empleado) {
+            DxnSisventas.BBBWebService.eliminarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarEmpleadoRequest();
+            inValue.empleado = empleado;
+            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).eliminarEmpleadoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4749,95 +4818,26 @@ namespace DxnSisventas.BBBWebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.listarEmpleadosResponse DxnSisventas.BBBWebService.PersonasAPI.listarEmpleados(DxnSisventas.BBBWebService.listarEmpleadosRequest request) {
-            return base.Channel.listarEmpleados(request);
+        DxnSisventas.BBBWebService.helloResponse DxnSisventas.BBBWebService.PersonasAPI.hello(DxnSisventas.BBBWebService.helloRequest request) {
+            return base.Channel.hello(request);
         }
         
-        public DxnSisventas.BBBWebService.empleado[] listarEmpleados(string cadena) {
-            DxnSisventas.BBBWebService.listarEmpleadosRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosRequest();
-            inValue.cadena = cadena;
-            DxnSisventas.BBBWebService.listarEmpleadosResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).listarEmpleados(inValue);
+        public string hello(string name) {
+            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
+            inValue.name = name;
+            DxnSisventas.BBBWebService.helloResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).hello(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosResponse> DxnSisventas.BBBWebService.PersonasAPI.listarEmpleadosAsync(DxnSisventas.BBBWebService.listarEmpleadosRequest request) {
-            return base.Channel.listarEmpleadosAsync(request);
+        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> DxnSisventas.BBBWebService.PersonasAPI.helloAsync(DxnSisventas.BBBWebService.helloRequest request) {
+            return base.Channel.helloAsync(request);
         }
         
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.listarEmpleadosResponse> listarEmpleadosAsync(string cadena) {
-            DxnSisventas.BBBWebService.listarEmpleadosRequest inValue = new DxnSisventas.BBBWebService.listarEmpleadosRequest();
-            inValue.cadena = cadena;
-            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).listarEmpleadosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.insertarEmpleadoResponse DxnSisventas.BBBWebService.PersonasAPI.insertarEmpleado(DxnSisventas.BBBWebService.insertarEmpleadoRequest request) {
-            return base.Channel.insertarEmpleado(request);
-        }
-        
-        public int insertarEmpleado(DxnSisventas.BBBWebService.empleado empleado) {
-            DxnSisventas.BBBWebService.insertarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarEmpleadoRequest();
-            inValue.empleado = empleado;
-            DxnSisventas.BBBWebService.insertarEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).insertarEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarEmpleadoResponse> DxnSisventas.BBBWebService.PersonasAPI.insertarEmpleadoAsync(DxnSisventas.BBBWebService.insertarEmpleadoRequest request) {
-            return base.Channel.insertarEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.insertarEmpleadoResponse> insertarEmpleadoAsync(DxnSisventas.BBBWebService.empleado empleado) {
-            DxnSisventas.BBBWebService.insertarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.insertarEmpleadoRequest();
-            inValue.empleado = empleado;
-            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).insertarEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.actualizarEmpleadoResponse DxnSisventas.BBBWebService.PersonasAPI.actualizarEmpleado(DxnSisventas.BBBWebService.actualizarEmpleadoRequest request) {
-            return base.Channel.actualizarEmpleado(request);
-        }
-        
-        public int actualizarEmpleado(DxnSisventas.BBBWebService.empleado empleado) {
-            DxnSisventas.BBBWebService.actualizarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarEmpleadoRequest();
-            inValue.empleado = empleado;
-            DxnSisventas.BBBWebService.actualizarEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).actualizarEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarEmpleadoResponse> DxnSisventas.BBBWebService.PersonasAPI.actualizarEmpleadoAsync(DxnSisventas.BBBWebService.actualizarEmpleadoRequest request) {
-            return base.Channel.actualizarEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.actualizarEmpleadoResponse> actualizarEmpleadoAsync(DxnSisventas.BBBWebService.empleado empleado) {
-            DxnSisventas.BBBWebService.actualizarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.actualizarEmpleadoRequest();
-            inValue.empleado = empleado;
-            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).actualizarEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        DxnSisventas.BBBWebService.eliminarEmpleadoResponse DxnSisventas.BBBWebService.PersonasAPI.eliminarEmpleado(DxnSisventas.BBBWebService.eliminarEmpleadoRequest request) {
-            return base.Channel.eliminarEmpleado(request);
-        }
-        
-        public int eliminarEmpleado(int empleado) {
-            DxnSisventas.BBBWebService.eliminarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarEmpleadoRequest();
-            inValue.empleado = empleado;
-            DxnSisventas.BBBWebService.eliminarEmpleadoResponse retVal = ((DxnSisventas.BBBWebService.PersonasAPI)(this)).eliminarEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarEmpleadoResponse> DxnSisventas.BBBWebService.PersonasAPI.eliminarEmpleadoAsync(DxnSisventas.BBBWebService.eliminarEmpleadoRequest request) {
-            return base.Channel.eliminarEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.eliminarEmpleadoResponse> eliminarEmpleadoAsync(int empleado) {
-            DxnSisventas.BBBWebService.eliminarEmpleadoRequest inValue = new DxnSisventas.BBBWebService.eliminarEmpleadoRequest();
-            inValue.empleado = empleado;
-            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).eliminarEmpleadoAsync(inValue);
+        public System.Threading.Tasks.Task<DxnSisventas.BBBWebService.helloResponse> helloAsync(string name) {
+            DxnSisventas.BBBWebService.helloRequest inValue = new DxnSisventas.BBBWebService.helloRequest();
+            inValue.name = name;
+            return ((DxnSisventas.BBBWebService.PersonasAPI)(this)).helloAsync(inValue);
         }
     }
 }

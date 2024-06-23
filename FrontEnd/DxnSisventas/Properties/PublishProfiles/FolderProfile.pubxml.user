@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Candi\Downloads\ASP_PUBLISH</_PublishTargetUrl>
+    <History>True|2024-06-23T00:35:16.9007045Z||;True|2024-06-22T15:42:15.7370880-05:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Assets/BBB.png">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Assets/LOGO.svg">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Assets/SHOP.png">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Assets/Templates/Almacen.jrxml">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="bin/DxnSisventas.dll">
+      <publishTime>06/22/2024 19:35:16</publishTime>
+    </File>
+    <File Include="bin/DxnSisventas.pdb">
+      <publishTime>06/22/2024 19:35:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.CurrentVersions.targets">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Buffers.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Memory.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Numerics.Vectors.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="bin/System.Buffers.dll">
+      <publishTime>05/21/2024 21:18:20</publishTime>
+    </File>
+    <File Include="bin/System.Memory.dll">
+      <publishTime>05/21/2024 21:18:20</publishTime>
+    </File>
+    <File Include="bin/System.Numerics.Vectors.dll">
+      <publishTime>05/21/2024 21:18:20</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>05/21/2024 21:18:20</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarComprobanteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarCuentaClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarOrdenCompraResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarOrdenVentaResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarProductoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.cliente.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.comprobante.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.cuentaCliente.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.cuentaEmpleado.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarComprobanteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarCuentaClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarLOVResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarProductoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.empleado.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.enviarCorreoWebResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.enviarCorreoWebSinArchivoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.generarReporteAlmacenResponse.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.helloResponse.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.imprimirComprobanteResponse.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.iniciarSesionClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.iniciarSesionEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarComprobanteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarCuentaClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarLOVResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarOrdenCompraResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarOrdenVentaResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarProductoResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarClientesMasCuentasResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarClientesResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarComprobanteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarCuentaClienteResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarEmpleadosResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarOrdenCompraResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarOrdenResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarOrdenVentaResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarProductosResponse.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.orden.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.ordenCompra.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.ordenVenta.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.personaCuenta.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.producto.datasource">
+      <publishTime>06/22/2024 19:34:56</publishTime>
+    </File>
+    <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse.datasource">
+      <publishTime>06/22/2024 19:34:55</publishTime>
+    </File>
+    <File Include="Content/all.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/all.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.rtl.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.rtl.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap-utilities.rtl.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/bootstrap.rtl.min.css.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/brands.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/brands.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/fontawesome.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/fontawesome.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/regular.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/regular.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/solid.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/solid.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/svg-with-js.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/svg-with-js.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/v4-shims.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Content/v4-shims.min.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/Documentos.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/Login.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/Master.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/OrdenVenta.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/PersonasClientesForms.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/PersonasEmpleadosForms.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomScripts/Productos.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomStyles/Comprobante.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomStyles/Home.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomStyles/Login.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomStyles/Master.css">
+      <publishTime>06/21/2024 21:00:03</publishTime>
+    </File>
+    <File Include="CustomStyles/OrdenCompra.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="CustomStyles/OrdenVenta.css">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>06/21/2024 17:53:19</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>06/21/2024 21:48:05</publishTime>
+    </File>
+    <File Include="Main.Master">
+      <publishTime>06/21/2024 21:10:02</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.js.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.esm.min.js.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/all.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/all.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/brands.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/brands.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/conflict-detection.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/conflict-detection.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/fontawesome.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/fontawesome.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/regular.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/regular.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/solid.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/solid.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/v4-shims.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/fontawesome/v4-shims.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.min.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.slim.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.slim.min.js">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.7.1.slim.min.map">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Views/Comprobantes.aspx">
+      <publishTime>06/21/2024 17:31:04</publishTime>
+    </File>
+    <File Include="Views/ComprobantesForm.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/CuentasClientes.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/CuentasEmpleados.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/OrdenCompra.aspx">
+      <publishTime>06/21/2024 21:48:05</publishTime>
+    </File>
+    <File Include="Views/OrdenCompraForm.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/OrdenVenta.aspx">
+      <publishTime>06/21/2024 21:48:05</publishTime>
+    </File>
+    <File Include="Views/OrdenVentaForm.aspx">
+      <publishTime>06/22/2024 14:16:45</publishTime>
+    </File>
+    <File Include="Views/PersonasClientes.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/PersonasClientesForms.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/PersonasEmpleados.aspx">
+      <publishTime>06/21/2024 20:47:55</publishTime>
+    </File>
+    <File Include="Views/PersonasEmpleadosForms.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/Productos.aspx">
+      <publishTime>06/21/2024 20:46:06</publishTime>
+    </File>
+    <File Include="Views/ReporteOrdenVenta.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Views/Test.aspx">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/22/2024 19:35:16</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.eot">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.svg">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.ttf">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.woff">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-brands-400.woff2">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.eot">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.svg">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.ttf">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.woff">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-regular-400.woff2">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.eot">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.svg">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.ttf">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.woff">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+    <File Include="webfonts/fa-solid-900.woff2">
+      <publishTime>06/21/2024 17:31:05</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

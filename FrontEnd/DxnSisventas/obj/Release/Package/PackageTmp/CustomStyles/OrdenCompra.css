@@ -1,0 +1,162 @@
+﻿/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor de búsqueda */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Fila de búsqueda */
+.search-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Elementos de búsqueda */
+.search-item {
+    flex: 1 1 100%; /* Ocupa todo el ancho posible */
+    min-width: 200px;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el grupo de entrada */
+.input-group,
+.form-select,
+.form-control {
+    width: 100%;
+}
+
+/* Estilo del botón primario */
+.btn-primary {
+    background-color: #003366 !important;
+    border-color: #003366 !important;
+    color: #fff !important;
+    font-size: 0.875em !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .btn-primary:hover {
+        background-color: #002244 !important;
+        border-color: #002244 !important;
+        color: #fff !important;
+    }
+
+/* Estilo de los botones */
+.btn-link {
+    color: #003366 !important;
+    text-decoration: none !important;
+}
+
+    .btn-link:hover {
+        text-decoration: underline !important;
+    }
+
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+.no-arrows {
+    -moz-appearance: textfield !important;
+}
+
+.form-control[type="date"] {
+    padding-right: 10px;
+}
+
+.col-form-label {
+    margin-bottom: 5px; /* Más pequeño para mejor ajuste */
+}
+
+/* Estilo del contenedor de la tabla */
+.gridview-custom {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border-radius: 12px; /* Borde redondeado */
+    overflow: hidden; /* Para que el contenido se ajuste al borde redondeado */
+    border: none; /* Bordes transparentes */
+    margin-top: 20px; /* Espacio con respecto a la búsqueda */
+}
+
+    /* Estilo del botón de enlace en la tabla */
+    .gridview-custom .link-button {
+        color: #003366;
+        text-decoration: none;
+    }
+
+        .gridview-custom .link-button:hover {
+            text-decoration: underline;
+        }
+
+/* Media queries para responsividad */
+@media (max-width: 1024px) {
+    .search-container {
+        padding: 10px;
+    }
+
+    .search-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-item {
+        max-width: 100%; /* Full width en pantallas más pequeñas */
+        margin-bottom: 10px; /* Espacio entre los elementos */
+    }
+
+    .btn-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-item {
+        max-width: 100%;
+    }
+
+    .btn-primary {
+        width: 100%; /* Botón de ancho completo en pantallas pequeñas */
+        justify-content: center;
+    }
+}
+
+/* Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .search-container {
+        padding: 5px;
+    }
+
+    .search-item {
+        max-width: 100%;
+        margin-bottom: 5px; /* Más pequeño en pantallas más pequeñas */
+    }
+
+    .btn-primary {
+        font-size: 0.8em !important;
+        padding: 5px !important;
+    }
+
+    .btn-link {
+        font-size: 0.8em !important;
+    }
+}

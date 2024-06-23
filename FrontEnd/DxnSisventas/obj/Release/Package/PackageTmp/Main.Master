@@ -1,0 +1,239 @@
+﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="DxnSisventas.Main" %>
+
+<!DOCTYPE html>
+
+<html lang="es-es">
+<head runat="server">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="/Scripts/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/Scripts/jquery-3.7.1.min.js"></script>
+  <script>
+    function showErrorPanel() {
+      $(".notification-panel").fadeIn().delay(2250).fadeOut();
+    }
+  </script>
+  <title id="PageTitle" runat="server"></title>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+  <link rel="stylesheet" href="/Content/all.min.css" />
+  <link rel="stylesheet" href="/Content/fontawesome.min.css">
+  <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+  <link rel="stylesheet" href="/CustomStyles/Master.css" />
+
+  <style>
+    * {
+      min-width: fit-content;
+    }
+  </style>
+</head>
+<body data-bs-theme='<%= IsDarkModeEnabled() ? "dark" : "light" %>'>
+  <form id="masterForm" runat="server">
+    <nav class="navbar navbar-expand-lg navbar-light bg-gradient" style="background-color: #082444;">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center justify-content-center" href="#" style="gap: 10px;">
+          <img src="/Assets/BBB.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+          <p class="fw-bold" style="color: white; margin: 0; padding: 0;">Bueno Barato y Bonito</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: white;">Usuario
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li>
+                  <asp:LinkButton CssClass="dropdown-item" Text="Cerrar Sesión" ID="LbCerrarSesion" runat="server"
+                    OnClick="LbCerrarSesion_Click"></asp:LinkButton>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <label class="toggle-switch">
+                <asp:CheckBox ID="DarkModeCheckBox" runat="server" AutoPostBack="true" OnCheckedChanged="DarkModeCheckBox_CheckedChanged" />
+                <span class="slider"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <asp:Panel ID="ErrorPanel" runat="server" CssClass="notification-panel error-panel">
+      <i class="fas fa-exclamation-circle"></i>
+      <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="error-message"></asp:Label>
+    </asp:Panel>
+    <div class="main-view" style="overflow: scroll;">
+      <section class="side-container" style="min-width: 250px;">
+        <ul class="sidebar-menu">
+          <li class="header">MENU DE NAVEGACION</li>
+          <li>
+            <asp:LinkButton ID="LbInicio" runat="server" OnClick="LbInicio_Click">
+              <i class="fa fa-home"></i> <span>Inicio</span>
+            </asp:LinkButton>
+          </li>
+          <li>
+            <asp:LinkButton ID="LbProductos" runat="server" OnClick="LbProductos_Click">
+            <i class="fa fa-shopping-basket"></i> <span>Productos</span>
+            </asp:LinkButton>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-users"></i><span>Usuarios</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <asp:LinkButton ID="LbUsuariosClientes" runat="server" OnClick="LbUsuariosClientes_Click">
+                  <i class="fa fa-user"></i> <span>Clientes</span>
+                </asp:LinkButton>
+              </li>
+              <li>
+                <asp:LinkButton ID="LbUsuariosEmpleados" runat="server" OnClick="LbUsuariosEmpleados_Click">
+                  <i class="fa fa-briefcase"></i> <span>Empleados</span>
+                </asp:LinkButton>
+              </li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-envelope"></i><span>Cuentas</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <asp:LinkButton ID="LbCuentasClientes" runat="server" OnClick="LbCuentasClientes_Click">
+                  <i class="fa fa-user"></i> <span>Clientes</span>
+                </asp:LinkButton>
+              </li>
+              <li>
+                <asp:LinkButton ID="LbCuentasEmpleado" runat="server" OnClick="LbCuentasEmpleado_Click">
+                  <i class="fa fa-briefcase"></i> <span>Empleados</span>
+                </asp:LinkButton>
+              </li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fas fa-file-pdf"></i><span>Registros</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li class="treeview">
+                <a href="#">
+                  <i class="fa fa-dashboard"></i><span>Ordenes</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li>
+                    <asp:LinkButton ID="LbOrdenCompra" runat="server" OnClick="LbOrdenCompra_Click">
+                      <i class="fa fa-industry"></i> <span>Compra</span>
+                    </asp:LinkButton>
+                  </li>
+                  <li>
+                    <asp:LinkButton ID="LbOrdenVenta" runat="server" OnClick="LbOrdenVenta_Click">
+                      <i class="fa fa-shopping-cart"></i> <span>Venta</span>
+                    </asp:LinkButton>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <asp:LinkButton ID="LbComprobante" runat="server" OnClick="LbComprobante_Click">
+                  <i class="fas fa-file"></i> <span>Comprobantes</span>
+                </asp:LinkButton>
+              </li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fas fa-chart-line"></i><span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <asp:LinkButton ID="LbReporte" runat="server" OnClick="LbReporte_Click"><i class="fa fa-info-circle"></i>Reporte de inventario</asp:LinkButton>
+              </li>
+                <li>
+                  <asp:LinkButton ID="LbReporteVenta" runat="server" OnClick="LbReporteVenta_Click"><i class="fa fa-info-circle"></i>Reporte de Venta</asp:LinkButton>
+                </li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fas fa-cogs"></i>Configuracion de Perfil</a></li>
+        </ul>
+      </section>
+      <div class="main-content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <nav class="navbar navbar-expand navbar-light bg-gradient fixed-bottom" style="background-color: #082444;">
+        <ul class="navbar-nav d-flex justify-content-around w-100">
+          <li class="nav-item">
+            <asp:LinkButton class="nav-link" runat="server" OnClick="LbInicio_Click"><i class="fa fa-home"></i></asp:LinkButton>
+          </li>
+          <li class="nav-item">
+            <asp:LinkButton class="nav-link" runat="server" OnClick="LbProductos_Click"><i class="fa fa-shopping-basket"></i></asp:LinkButton>
+          </li>
+          <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-users"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li class="dropdown-header">Personas</li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbUsuariosClientes_Click"><i class="fa fa-user"></i> Clientes</asp:LinkButton>
+              </li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbUsuariosEmpleados_Click"><i class="fa fa-briefcase"></i> Empleados</asp:LinkButton>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-envelope"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li class="dropdown-header">Cuentas</li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbCuentasClientes_Click"><i class="fa fa-user"></i> Clientes</asp:LinkButton>
+              </li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbCuentasEmpleado_Click"><i class="fa fa-briefcase"></i> Empleados</asp:LinkButton>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-folder-open"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li class="dropdown-header"> Documentos</li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbOrdenCompra_Click"><i class="fa fa-industry"></i> Orden Compra</asp:LinkButton>
+              </li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbOrdenVenta_Click"><i class="fa fa-shopping-cart"></i> Orden Venta</asp:LinkButton>
+              </li>
+              <li class="nav-item">
+                <asp:LinkButton class="nav-link" runat="server" OnClick="LbComprobante_Click"><i class="fas fa-file"></i> Comprobantes</asp:LinkButton>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </form>
+  <script type="text/javascript" src="/CustomScripts/Master.js"></script>
+</body>
+</html>
