@@ -36,7 +36,7 @@ LEFT JOIN Orden o ON o.id_orden = oc.id_orden
 LEFT JOIN LineaOrden lo ON o.id_orden = lo.id_orden
 LEFT JOIN Producto p ON lo.id_producto = p.id_producto
 WHERE o.id_orden IS NOT NULL
-  AND oc.id_orden_compra LIKE CONCAT('%',  $P{ID_comprobante}  , '%')]]>
+  AND oc.id_orden_compra = $P{ID_comprobante}]]>
 	</queryString>
 	<field name="id_orden" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="id_orden"/>
@@ -188,8 +188,7 @@ WHERE o.id_orden IS NOT NULL
 				<textElement>
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA["F. Emisión : " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA["F. Emisión : " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
 			</textField>
 			<frame>
 				<reportElement style="Style1" x="0" y="10" width="809" height="140" uuid="68a2d0f9-8da5-4ff6-85bb-68f7c932b72a"/>

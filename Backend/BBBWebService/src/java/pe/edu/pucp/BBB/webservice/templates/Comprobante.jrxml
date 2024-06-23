@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue" pageWidth="850" pageHeight="842" columnWidth="810" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0dfd5d71-48af-4a69-8fb4-c89012c06a8b">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
 	<style name="Style1" radius="0">
 		<pen lineWidth="14.0" lineStyle="Solid" lineColor="#030000"/>
 		<box>
@@ -36,7 +36,7 @@
   LEFT JOIN Empleado e ON ov.id_empleado = e.id_empleado
   LEFT JOIN Empleado e2 ON ov.id_repartidor = e2.id_empleado
   WHERE c.id_orden IS NOT NULL
-  AND (c.id_comprobante LIKE CONCAT('%', $P{ID_comprobante}  , '%') );]]>
+  AND (c.id_comprobante = $P{ID_comprobante}  )]]>
 	</queryString>
 	<field name="id_comprobante" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="id_comprobante"/>
@@ -344,8 +344,7 @@
 				<textElement>
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ? "Cliente: " +  $F{nombre_cliente}  + " "  + $F{apellido_paterno_cliente} + " " + $F{apellido_materno_cliente} : "Bueno Barato y Bonito Store"
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ? "Cliente: " +  $F{nombre_cliente}  + " "  + $F{apellido_paterno_cliente} + " " + $F{apellido_materno_cliente} : "Bueno Barato y Bonito Store"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="570" y="50" width="240" height="30" uuid="d378807c-06d1-40c8-933f-c65632a4e1c0"/>
@@ -359,30 +358,21 @@
 				<textElement>
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ?"Direccion: " + $F{direccion} : "Direccion:  CA DIEGO LOPEZ DE ZUÑIGA 272, CHANCAY"
-
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ?"Direccion: " + $F{direccion} : "Direccion:  CA DIEGO LOPEZ DE ZUÑIGA 272, CHANCAY"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="15" y="80" width="374" height="30" uuid="bd042bbe-f4bb-484f-b140-88ccc279b13b"/>
 				<textElement>
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ?"DNI: "+$F{dni_cliente}: "Ruc: 202035487"
-
-
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ?"DNI: "+$F{dni_cliente}: "Ruc: 202035487"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="15" y="110" width="374" height="30" uuid="2b5cec89-1f9a-40d1-b7f1-3562d979d2ed"/>
 				<textElement>
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ?"Metodo de pago: " + $F{metodo_pago}: null
-
-
-
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{id_orden_venta}!= null ?"Metodo de pago: " + $F{metodo_pago}: null]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="570" y="20" width="240" height="30" uuid="0d3a8d31-fb74-4407-a610-230cf338f4cb"/>
@@ -592,12 +582,11 @@
 				<textFieldExpression><![CDATA[$F{tipo_venta}!= null ? "Tipo de Venta: " + $F{tipo_venta} : null]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement x="0" y="68" width="430" height="110" uuid="6de66bec-74f4-49fa-aae0-ff5855cb8231"/>
+				<reportElement x="0" y="68" width="419" height="110" uuid="6de66bec-74f4-49fa-aae0-ff5855cb8231"/>
 				<textElement>
 					<font size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{id_orden_compra} != null ? "Estimado proveedor, por favor envíe los productos detallados en la Orden de Compra Nro. " + $F{id_orden_compra}+ " según las especificaciones adjuntas a la mayor brevedad." : null
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{id_orden_compra} != null ? "Estimado proveedor, por favor envíe los productos detallados en la Orden de Compra Nro. " + $F{id_orden_compra}+ " según las especificaciones adjuntas a la mayor brevedad." : null]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnFooter>
