@@ -2,7 +2,7 @@
     CodeBehind="OrdenVentaForm.aspx.cs" Inherits="DxnSisventas.Views.OrdenVentaForm" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../CustomStyles/OrdenVenta.css" rel="stylesheet" />
+    <link href="../CustomStyles/OrdenVenta.css?v5" rel="stylesheet" />
 
 
 
@@ -102,11 +102,6 @@
                                     </asp:TextBox>
 
                                 </div>
-                               
-                               
-
-
-
                             </div>
                         </div>
                     </div>
