@@ -43,8 +43,8 @@
           <div class="col-sm-4">
             <asp:DropDownList ID="DropDownListRoles" runat="server" CssClass="form-select">
               <asp:ListItem Text="Repartidor" Value="Repartidor"></asp:ListItem>
-              <asp:ListItem Text="Encargado de Ventas" Value="Encargado de Ventas" />
-              <asp:ListItem Text="Encargado de Almacen" Value="Encargado de Almacen" />
+              <asp:ListItem Text="Encargado de Ventas" Value="EncargadoVentas" />
+              <asp:ListItem Text="Encargado de Almacen" Value="EncargadoAlmacen" />
               <asp:ListItem Text="Administrador" Value="Administrador" />
             </asp:DropDownList>
           </div>

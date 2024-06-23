@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\candi\\onedrive\\documentos\\netbeansprojects\\bbbsistema\\frontend\\dxnsisventas\\views\\personasclientesforms.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\personasclientesforms.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\candi\\onedrive\\documentos\\netbeansprojects\\bbbsistema\\frontend\\dxnsisventas\\customstyles\\master.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\customstyles\\master.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\candi\\onedrive\\documentos\\netbeansprojects\\bbbsistema\\frontend\\dxnsisventas\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,14 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PersonasClientesForms.aspx",
-              "DocumentMoniker": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\PersonasClientesForms.aspx",
-              "RelativeDocumentMoniker": "DxnSisventas\\Views\\PersonasClientesForms.aspx",
-              "ToolTip": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\PersonasClientesForms.aspx",
-              "RelativeToolTip": "DxnSisventas\\Views\\PersonasClientesForms.aspx",
+              "Title": "Master.css",
+              "DocumentMoniker": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\CustomStyles\\Master.css",
+              "RelativeDocumentMoniker": "DxnSisventas\\CustomStyles\\Master.css",
+              "ToolTip": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\CustomStyles\\Master.css",
+              "RelativeToolTip": "DxnSisventas\\CustomStyles\\Master.css",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAAAAwBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-23T22:16:46.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.Master",
+              "DocumentMoniker": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\Main.Master",
+              "RelativeDocumentMoniker": "DxnSisventas\\Main.Master",
+              "ToolTip": "C:\\Users\\Candi\\OneDrive\\Documentos\\NetBeansProjects\\BBBSistema\\FrontEnd\\DxnSisventas\\Main.Master",
+              "RelativeToolTip": "DxnSisventas\\Main.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-23T19:27:49.607Z",
+              "WhenOpened": "2024-06-23T22:16:07.454Z",
               "EditorCaption": ""
             }
           ]
