@@ -37,7 +37,7 @@ namespace DxnSisventas
             }
             if (arrcuentaClientes != null)
             {
-                listaCuentasEmpleado = new BindingList<cuentaEmpleado>(arrCuentaEmpleado.ToList());
+                listaCuentaClientes = new BindingList<cuentaCliente>(arrcuentaClientes.ToList());
             }
             if (!IsPostBack)
             {
@@ -81,8 +81,7 @@ namespace DxnSisventas
         }
         protected void btnGetCode_Click(object sender, EventArgs e)
         {
-            // Lógica para enviar el código de verificación al correo electrónico
-            // ...
+            
             Random random = new Random();
 
             // Generar un número aleatorio de 6 dígitos
@@ -164,17 +163,16 @@ namespace DxnSisventas
             {
                 MostrarMensaje("Codigo Incorrecto", false);
                 LabelExpirado.Text = "Código incorrecto. Por favor, verifica e intenta nuevamente.";
-                txtCode.Text = ""; // Limpiar el campo de código
+                //txtCode.Text = ""; // Limpiar el campo de código
                 ScriptManager.RegisterStartupScript(this, GetType(), "showCodeSection", "showCodeSection();", true);
             }
 
-            // Mostrar la sección para cambiar la contraseña y ocultar las otras
+            
             
         }
         protected void btnChangeEmail_Click(object sender, EventArgs e)
         {
-            // Lógica para cambiar de correo electrónico
-            // ...
+            
             MostrarMensaje("Ingrese el nuevo correo", true);
             // Mostrar la sección de email
             ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
@@ -182,14 +180,14 @@ namespace DxnSisventas
 
         protected void btnChangePassword_Click(object sender, EventArgs e)
         {
-            // Ocultar mensaje de error al inicio
+           
             lblError.CssClass = "error-message hidden";
 
             // Verificar que las contraseñas coincidan
             if (txtNewPassword.Text == txtConfirmPassword.Text)
             {
                 // Cambiar la contraseña en la base de datos
-                // ...
+                
                 if (esCliente)
                 {
                     CuentaRecuperarCliente.contrasena=txtNewPassword.Text;
@@ -215,9 +213,7 @@ namespace DxnSisventas
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            // Lógica para regresar a una vista anterior
-            // Mostrar la sección de email
-            //ScriptManager.RegisterStartupScript(this, GetType(), "showEmailSection", "showEmailSection();", true);
+            
             Response.Redirect("Login.aspx");
         }
         public void ClearError()

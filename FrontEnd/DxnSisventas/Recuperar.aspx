@@ -34,7 +34,7 @@
     <script type="text/javascript" src="/Scripts/jquery-3.7.1.min.js"></script>
     <script>
         let timer;
-        let timeLeft = 300; // 5 minutes in seconds
+        let timeLeft = 300; 
         function showErrorPanel() {
             $(".notification-panel").fadeIn().delay(2250).fadeOut();
         }
@@ -46,8 +46,7 @@
                     clearInterval(timer);
                     document.getElementById('<%= hiddenFieldTimerExpired.ClientID %>').value = 'true';
                     document.getElementById('<%= timer.ClientID %>').innerText = 'Código expirado';
-                    // Aquí puedes agregar lógica para enviar una señal al servidor
-                    // Por ejemplo, puedes usar un campo oculto y modificarlo cuando el timer expire.
+                    
                 } else {
                     let minutes = Math.floor(timeLeft / 60);
                     let seconds = timeLeft % 60;
@@ -66,7 +65,7 @@
         function showCodeSection() {
             document.getElementById('<%= emailSection.ClientID %>').classList.add('hidden');
         document.getElementById('<%= codeSection.ClientID %>').classList.remove('hidden');
-            startTimer(); // Llama a startTimer para iniciar el contador al mostrar la sección del código
+            startTimer(); 
         }
 
         function showEmailSection() {
@@ -114,7 +113,7 @@
                                 <div class="form-group">
                                     <label for="txtEmail">Correo Electrónico</label>
 
-                                    <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Ingrese su correo electrónico" TextMode="Email"></asp:TextBox>
+                                    <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Ingrese su correo electrónico"></asp:TextBox>
                                     <asp:RequiredFieldValidator
                                         ID="reqCorreo"
                                         runat="server"
@@ -181,7 +180,7 @@
                                 </div>
                             </asp:Panel>
                             <asp:Button ID="Button1" CssClass="btn btn-secondary btn-block" runat="server" Text="Regresar" ValidationGroup="Ninguno" OnClick="btnRegresar_Click" />
-                            <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
+                            <asp:Button ID="btnBack" CssClass="btn btn-secondary btn-block" runat="server" Text="Iniciar Session" CausesValidation="false" ValidationGroup="Ninguno" OnClick="btnBack_Click" />
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
