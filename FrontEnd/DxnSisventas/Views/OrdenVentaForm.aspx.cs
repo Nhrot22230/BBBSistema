@@ -123,7 +123,6 @@ namespace DxnSisventas.Views
         {
             
         }
-
         private void mostrarDatos()
         {
             
@@ -254,7 +253,7 @@ namespace DxnSisventas.Views
             lineaOrden linea = lineasOrden.Where(lo => lo.producto.idProductoNumerico == idProducto).FirstOrDefault();
             lineasOrden.Remove(linea);
             Session["lineasDeOrden"] = lineasOrden;
-            txtTotal.Text = lineasOrden.Sum(lo => lo.subtotal).ToString("N2");
+            calcularTotalConDescuento();
             llenarGridLineas();
         }
 
@@ -298,6 +297,7 @@ namespace DxnSisventas.Views
                 cliente.apellidoPaterno + " " + cliente.apellidoMaterno;
             TxtPuntos.Text = cliente.puntos.ToString();
             TxtDescuento.Text = cliente.puntos * 0.1 + "";
+            calcularTotalConDescuento();
             ScriptManager.RegisterStartupScript(this, GetType(), "", "__doPostBack('','');", true);
         }
         protected void lbBuscarClienteModal_Click(object sender, EventArgs e)
@@ -393,16 +393,25 @@ namespace DxnSisventas.Views
             }
             
             Session["lineasDeOrden"] = lineasOrden;
-            calcularLineasSinDEscuento();
+            calcularTotalConDescuento();
             llenarGridLineas();
             LimpiarCamposProducto();
         }
-        void calcularLineasSinDEscuento()
+        void calcularTotalConDescuento()
         {
             double totalSinDescuento = lineasOrden.Sum(lo => lo.subtotal);
-            //double descuento = totalSinDescuento * (Double.Parse(TxtDescuento.Text) / 100);
-            //txtTotal.Text = (totalSinDescuento - descuento).ToString("N2");
-            txtTotal.Text = totalSinDescuento.ToString("N2");
+            double descuento = double.Parse(TxtDescuento.Text);
+            double total = totalSinDescuento - descuento;
+            if (total < 0)
+            {
+                txtTotal.Text = "0.00";
+                Session["puntosSobrantes"] = (descuento - totalSinDescuento) * 10;
+            }
+            else
+            {
+                txtTotal.Text = total.ToString("N2");
+                Session["puntosSobrantes"] = 0;
+            }
         }
         private double CalcularSubtotal(int cantidad, double precioUnitario)
         {
@@ -577,6 +586,7 @@ namespace DxnSisventas.Views
                 if(res > 0)
                 {
                     actualizarStockProductos();
+                    actualizarPuntosCliente();
                 }
 
             }
@@ -601,6 +611,13 @@ namespace DxnSisventas.Views
             limpiarSesiones();
         }
 
+        private void actualizarPuntosCliente()
+        {
+            cliente cliente = ordenVenta.cliente;
+            cliente.puntos = (int)Session["puntosSobrantes"];
+            cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos);
+            apiPersonas.actualizarCliente(cliente);
+        }
         private void actualizarStockProductos()
         {
          
@@ -664,6 +681,7 @@ namespace DxnSisventas.Views
                 e.Row.Cells[2].Text = linea.cantidad.ToString();
                 e.Row.Cells[3].Text = linea.producto.precioUnitario.ToString("N2");
                 e.Row.Cells[4].Text = linea.subtotal.ToString("N2");
+                e.Row.Cells[5].Text = linea.producto.puntos.ToString();
                 Button btnEliminar = (Button)e.Row.FindControl("BtnEliminar");
                 // quiero ocultar todo acciones
                 if(accion.Equals("visualizar"))
