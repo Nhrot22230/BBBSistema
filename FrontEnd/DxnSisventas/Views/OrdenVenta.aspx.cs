@@ -11,14 +11,20 @@ namespace DxnSisventas.Views
 {
     public partial class OrdenVenta : System.Web.UI.Page
     {
+
+        // apis
         private DocumentosAPIClient documentosAPIClient;
+
+        // listas
         private BindingList<ordenVenta> Blordenes;
         private BindingList<ordenVenta> BlordenesFiltradas;
+        private BindingList<comprobante> comprobantes;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             Page.Title = "Ordenes de Venta";
             documentosAPIClient = new DocumentosAPIClient();
+           
             CargarTabla("");
         }
 
@@ -159,6 +165,15 @@ namespace DxnSisventas.Views
             return true;
         }
 
+        private void listarComprobatentes()
+        {
+            comprobante[] listaAux = documentosAPIClient.listarComprobante("");
+            if (listaAux == null)
+            {
+                return;
+            }
+            comprobantes = new BindingList<comprobante>(listaAux.ToList());
+        }
         private void MostrarMensaje(string mensaje, bool exito)
         {
             if (this.Master is Main master)
@@ -362,7 +377,7 @@ namespace DxnSisventas.Views
                 }   
                 e.Row.Cells[6].Text = "S/ " + orden.total.ToString("N2");
                 e.Row.Cells[7].Text = orden.estado.ToString();
-                e.Row.Cells[8].Text = orden.porcentajeDescuento.ToString()+"%";
+                e.Row.Cells[8].Text = "S/ " + orden.porcentajeDescuento.ToString();
                
                 LinkButton btnVisualizar = (LinkButton)e.Row.FindControl("BtnVisualizar");
                 btnVisualizar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
@@ -397,9 +412,35 @@ namespace DxnSisventas.Views
             ordenVenta orden = Blordenes.Where(x => x.idOrdenVentaNumerico == idOrdenVenta).FirstOrDefault();
             orden.estadoSpecified = true;
             orden.fechaEntregaSpecified = true;
+            bool flag = comprobarComprobanteAsociado(orden);
+            if (!flag) return;
+            
             orden.estado = estadoOrden.Cancelado;
             int res = documentosAPIClient.actualizarOrdenVenta(orden);
+            if (res > 0)
+            {
+                MostrarMensaje("Orden de venta eliminada", true);
+            }
+            else
+            {
+                MostrarMensaje("No se pudo eliminar la orden de venta", false);
+            }
             CargarTabla("");
+            
+        }
+
+        private bool comprobarComprobanteAsociado(ordenVenta orden)
+        {
+            listarComprobatentes();
+            foreach (comprobante comp in comprobantes)
+            {
+                if (comp.ordenAsociada.idOrden == orden.idOrden)
+                {
+                    MostrarMensaje("No se puede eliminar la orden de venta porque tiene un comprobante asociado", false);
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
