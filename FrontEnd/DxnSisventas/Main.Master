@@ -18,13 +18,14 @@
   <asp:ContentPlaceHolder ID="head" runat="server">
   </asp:ContentPlaceHolder>
   <link rel="stylesheet" href="/Content/all.min.css" />
-  <link rel="stylesheet" href="/Content/fontawesome.min.css"/>
+  <link rel="stylesheet" href="/Content/fontawesome.min.css" />
   <link rel="stylesheet" href="/Content/bootstrap.min.css" />
   <link rel="stylesheet" href="/CustomStyles/Master.css" />
 </head>
 <body data-bs-theme='<%= IsDarkModeEnabled() ? "dark" : "light" %>'>
   <form id="masterForm" runat="server">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #082444;">
+    <nav class="navbar navbar-expand-lg navbar-light"
+      style='<%= IsDarkModeEnabled() ? "background-color: #082444;": "background-color: #60bed1;" %>'>
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center justify-content-center" href="#" style="gap: 10px;">
           <img src="/Assets/BBB.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
@@ -37,17 +38,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">About</a>
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;">Contact</a>
+              <a class="nav-link" href="#">Contact</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false" style="color: white;">Usuario
+                aria-expanded="false">Usuario
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
@@ -71,7 +72,7 @@
       <i class="fas fa-exclamation-circle"></i>
       <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="error-message"></asp:Label>
     </asp:Panel>
-    <div class="main-view" style="overflow: scroll;">
+    <div class="main-view">
       <section class="side-container" style="min-width: 250px;">
         <ul class="sidebar-menu">
           <li class="header">MENU DE NAVEGACION</li>
@@ -80,29 +81,29 @@
               <i class="fa fa-home"></i> <span>Inicio</span>
             </asp:LinkButton>
           </li>
-          <li>
+          <li id="liProductos" runat="server" visible="false">
             <asp:LinkButton ID="LbProductos" runat="server" OnClick="LbProductos_Click">
             <i class="fa fa-shopping-basket"></i> <span>Productos</span>
             </asp:LinkButton>
           </li>
-          <li class="treeview">
+          <li class="treeview" id="liUsuarios" runat="server" visible="false">
             <a href="#">
               <i class="fa fa-users"></i><span>Usuarios</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li>
+              <li id="liUsuariosClientes" runat="server" visible="false">
                 <asp:LinkButton ID="LbUsuariosClientes" runat="server" OnClick="LbUsuariosClientes_Click">
                   <i class="fa fa-user"></i> <span>Clientes</span>
                 </asp:LinkButton>
               </li>
-              <li>
+              <li id="liUsuariosEmpleados" runat="server" visible="false">
                 <asp:LinkButton ID="LbUsuariosEmpleados" runat="server" OnClick="LbUsuariosEmpleados_Click">
                   <i class="fa fa-briefcase"></i> <span>Empleados</span>
                 </asp:LinkButton>
               </li>
             </ul>
           </li>
-          <li class="treeview">
+          <li class="treeview" id="liCuentas" runat="server" visible="false">
             <a href="#">
               <i class="fa fa-envelope"></i><span>Cuentas</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
@@ -129,12 +130,12 @@
                   <i class="fa fa-dashboard"></i><span>Ordenes</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li>
+                  <li id="liOrdenCompra" runat="server" visible="false">
                     <asp:LinkButton ID="LbOrdenCompra" runat="server" OnClick="LbOrdenCompra_Click">
                       <i class="fa fa-industry"></i> <span>Compra</span>
                     </asp:LinkButton>
                   </li>
-                  <li>
+                  <li id="liOrdenVenta" runat="server" visible="false">
                     <asp:LinkButton ID="LbOrdenVenta" runat="server" OnClick="LbOrdenVenta_Click">
                       <i class="fa fa-shopping-cart"></i> <span>Venta</span>
                     </asp:LinkButton>
@@ -148,62 +149,63 @@
               </li>
             </ul>
           </li>
-          <li class="treeview">
+          <li class="treeview" id="liReportes" runat="server" visible="false">
             <a href="#">
               <i class="fas fa-chart-line"></i><span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li>
+              <li id="liReporteAlmacen" runat="server" visible="false">
                 <asp:LinkButton ID="LbReporte" runat="server" OnClick="LbReporte_Click"><i class="fa fa-info-circle"></i>Reporte de inventario</asp:LinkButton>
               </li>
-                <li>
-                  <asp:LinkButton ID="LbReporteVenta" runat="server" OnClick="LbReporteVenta_Click"><i class="fa fa-info-circle"></i>Reporte de Venta</asp:LinkButton>
-                </li>
+              <li id="liReporteVenta" runat="server" visible="false">
+                <asp:LinkButton ID="LbReporteVenta" runat="server" OnClick="LbReporteVenta_Click"><i class="fa fa-info-circle"></i>Reporte de Venta</asp:LinkButton>
+              </li>
             </ul>
           </li>
-          <li><a href="#"><i class="fas fa-cogs"></i>Configuracion de Perfil</a></li>
+          <!-- <li><a href="#"><i class="fas fa-cogs"></i>Configuracion de Perfil</a></li> -->
         </ul>
       </section>
-      <div class="main-content">
+      <div class="main-content" style="overflow: scroll;">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
       </div>
     </div>
 
     <footer class="footer">
-      <nav class="navbar navbar-expand navbar-light bg-gradient fixed-bottom" style="background-color: #082444;">
+      <nav class="navbar navbar-expand navbar-light bg-gradient fixed-bottom"
+        style='<%= IsDarkModeEnabled() ? "background-color: #082444;": "background-color: #60bed1;" %>'>
         <ul class="navbar-nav d-flex justify-content-around w-100">
           <li class="nav-item">
-            <asp:LinkButton class="nav-link" runat="server" OnClick="LbInicio_Click"><i class="fa fa-home"></i></asp:LinkButton>
+            <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbInicio_Click"><i class="fa fa-home"></i></asp:LinkButton>
           </li>
-          <li class="nav-item">
-            <asp:LinkButton class="nav-link" runat="server" OnClick="LbProductos_Click"><i class="fa fa-shopping-basket"></i></asp:LinkButton>
+          <li class="nav-item" id="footerliProductos" runat="server" visible="false">
+            <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbProductos_Click"><i class="fa fa-shopping-basket"></i></asp:LinkButton>
           </li>
-          <li class="nav-item dropup">
+          <li class="nav-item dropup" id="footerliUsuarios" runat="server" visible="false">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa fa-users"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li class="dropdown-header">Personas</li>
-              <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbUsuariosClientes_Click"><i class="fa fa-user"></i> Clientes</asp:LinkButton>
+              <li class="dropdown-header">Usuarios</li>
+              <li class="nav-item" id="footerliUsuariosClientes" runat="server" visible="false">
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbUsuariosClientes_Click"><i class="fa fa-user"></i> Clientes</asp:LinkButton>
               </li>
-              <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbUsuariosEmpleados_Click"><i class="fa fa-briefcase"></i> Empleados</asp:LinkButton>
+              <li class="nav-item" id="footerliUsuariosEmpleados" runat="server" visible="false">
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbUsuariosEmpleados_Click"><i class="fa fa-briefcase"></i> Empleados</asp:LinkButton>
               </li>
             </ul>
           </li>
-          <li class="nav-item dropup">
+          <li class="nav-item dropup" id="footerliCuentas" runat="server" visible="false">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa fa-envelope"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li class="dropdown-header">Cuentas</li>
               <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbCuentasClientes_Click"><i class="fa fa-user"></i> Clientes</asp:LinkButton>
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbCuentasClientes_Click"><i class="fa fa-user"></i> Clientes</asp:LinkButton>
               </li>
               <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbCuentasEmpleado_Click"><i class="fa fa-briefcase"></i> Empleados</asp:LinkButton>
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbCuentasEmpleado_Click"><i class="fa fa-briefcase"></i> Empleados</asp:LinkButton>
               </li>
             </ul>
           </li>
@@ -212,22 +214,35 @@
               <i class="fas fa-folder-open"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li class="dropdown-header"> Documentos</li>
-              <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbOrdenCompra_Click"><i class="fa fa-industry"></i> Orden Compra</asp:LinkButton>
+              <li class="dropdown-header">Documentos</li>
+              <li class="nav-item" id="footerliOrdenCompra" runat="server" visible="false">
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbOrdenCompra_Click"><i class="fa fa-industry"></i> Orden Compra</asp:LinkButton>
+              </li>
+              <li class="nav-item" id="footerliOrdenVenta" runat="server" visible="false">
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbOrdenVenta_Click"><i class="fa fa-shopping-cart"></i> Orden Venta</asp:LinkButton>
               </li>
               <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbOrdenVenta_Click"><i class="fa fa-shopping-cart"></i> Orden Venta</asp:LinkButton>
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbComprobante_Click"><i class="fas fa-file"></i> Comprobantes</asp:LinkButton>
               </li>
-              <li class="nav-item">
-                <asp:LinkButton class="nav-link" runat="server" OnClick="LbComprobante_Click"><i class="fas fa-file"></i> Comprobantes</asp:LinkButton>
+            </ul>
+          </li>
+          <li class="nav-item dropup" id="footerliReportes" runat="server" visible="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-chart-line"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li class="dropdown-header">Documentos</li>
+              <li class="nav-item" id="footerliReporteVenta" runat="server" visible="false">
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbReporteVenta_Click" Text="Reporte de Venta" />
+              </li>
+              <li class="nav-item" id="footerliReporteAlmacen" runat="server" visible="false">
+                <asp:LinkButton CssClass="nav-link" runat="server" OnClick="LbReporte_Click" Text="Reporte de Inventario" />
               </li>
             </ul>
           </li>
         </ul>
       </nav>
     </footer>
-
   </form>
   <script type="text/javascript" src="/CustomScripts/Master.js"></script>
 </body>
