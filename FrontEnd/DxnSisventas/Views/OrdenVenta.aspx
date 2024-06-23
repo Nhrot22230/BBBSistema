@@ -51,7 +51,7 @@
                 <asp:DropDownList ID="Estado" runat="server" CssClass="form-select" AutoPostBack="true"
                     OnSelectedIndexChanged="Estado_SelectedIndexChanged">
                     <asp:ListItem Text="Todos" Value="Todos"></asp:ListItem>
-                    <asp:ListItem Text="Entregado" Value="Entregado"></asp:ListItem>
+                    <asp:ListItem Text="Entregado" Value="Entregado" > </asp:ListItem>
                     <asp:ListItem Text="Pendiente" Value="Pendiente"></asp:ListItem>
                     <asp:ListItem Text="Cancelado" Value="Cancelado"></asp:ListItem>
                 </asp:DropDownList>
@@ -97,7 +97,7 @@
         </div>
         <div class="container row ">
             <asp:GridView ID="GridVentas" runat="server" AutoGenerateColumns="false"
-                AllowPaging="true" PageSize="5" OnPageIndexChanging="GridVentas_PageIndexChanging"
+                AllowPaging="true" PageSize="10" OnPageIndexChanging="GridVentas_PageIndexChanging"
                 CssClass="table table-hover table-responsive table-striped" OnRowDataBound="GridVentas_RowDataBound">
                 <Columns>
                     <asp:BoundField HeaderText="Id" />
@@ -130,5 +130,11 @@
                 </Columns>
             </asp:GridView>
         </div>
+
+
+
+
+
+
     </div>
 </asp:Content>

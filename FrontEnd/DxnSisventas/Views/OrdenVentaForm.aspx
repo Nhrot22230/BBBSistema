@@ -90,19 +90,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label for="TxtDescuento" class="col-sm-2 col-form-label">Descuento (S/.) :</label>
-                                <div class="col-sm-3">
-                                    <asp:TextBox ID="TxtDescuento" runat="server"
-                                        type="number"
-                                        step="0.01"
-                                        CssClass="form-control"
-                                        value="0.00"
-                                        onkeydown="return avoidEnterKey(event);">
-                                    </asp:TextBox>
-
-                                </div>
-                            </div>
+                    
                         </div>
                     </div>
 
@@ -255,7 +243,7 @@
                                     <asp:BoundField HeaderText="Cantidad" />
                                     <asp:BoundField HeaderText="Precio" />
                                     <asp:BoundField HeaderText="Subtotal" />
-                                    <asp:BoundField HeaderText="Puntos" />
+                                    
                                     <asp:TemplateField HeaderText="Acciones">
                                         <ItemTemplate>
                                             <asp:Button ID="BtnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger"
@@ -265,7 +253,29 @@
                                 </Columns>
                             </asp:GridView>
                         </div>
-                        <div class="row align-items-center justify-content-end">
+                        <div class="row align-items-center justify-content-end mb-2">
+                            <asp:Label ID="lblTotalSinDescuento" runat="server" Text="Total sin descuento:" CssClass="col-form-label col-sm-2 text-end" />
+                            <div class="col-sm-2">
+                                <asp:TextBox ID="TxtTotalSinDescuento" CssClass="form-control col-sm-2" Enabled="false" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center justify-content-end mb-2">
+                            <asp:Label ID="lblDescuento" runat="server" Text="Descuento (S/.)" CssClass="col-form-label col-sm-2 text-end" />
+                            <div class="col-sm-2">
+                                <asp:TextBox ID="TxtDescuento" runat="server"
+                                    type="number"
+                                    step="0.01"
+                                    CssClass="form-control"
+                                    value="0.00"
+                                    onkeydown="return avoidEnterKey(event);">
+                                </asp:TextBox>
+                            </div>
+                        </div>
+
+                  
+
+                        <div class="row align-items-center justify-content-end mb-2">
                             <asp:Label ID="lblTotal" runat="server" Text="Total:" CssClass="col-form-label col-sm-2 text-end" />
                             <div class="col-sm-2">
                                 <asp:TextBox ID="txtTotal" CssClass="form-control col-sm-2" Enabled="false" runat="server"></asp:TextBox>
@@ -452,5 +462,24 @@
             </div>
         </div>
 
+
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="staticBackdropLabel">Orden de venta generada correctamente</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-5 mb-0">¿Desea generar el comprobante ahora?</p>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="BtnCancelarGenerarComprobante" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="BtnCancelarGenerarComprobante_Click"/>
+                    <asp:Button ID="BtnGenerarComprobante" runat="server" Text="Generar" CssClass="btn btn-primary" OnClick="BtnGenerarComprobante_Click"/>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </asp:Content>
