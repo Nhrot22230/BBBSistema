@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\views\\comprobantesform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\comprobantesform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\customscripts\\documentos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\customscripts\\documentos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\views\\comprobantesform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\comprobantesform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\views\\comprobantesform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\comprobantesform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\views\\comprobantes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\views\\comprobantes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\views\\comprobantes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|c:\\users\\cesar\\documents\\github\\bbbsistema\\frontend\\dxnsisventas\\customscripts\\documentos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EFA0D71F-8DE1-4B00-AA25-053C6D312A76}|DxnSisventas\\BBBSistema.csproj|solutionrelative:dxnsisventas\\customscripts\\documentos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,45 +63,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "DxnSisventas\\Login.aspx.cs",
-              "ToolTip": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Login.aspx.cs",
-              "RelativeToolTip": "DxnSisventas\\Login.aspx.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAewEEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T22:07:37.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ComprobantesForm.aspx.cs",
               "DocumentMoniker": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
               "RelativeDocumentMoniker": "DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
               "ToolTip": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
               "RelativeToolTip": "DxnSisventas\\Views\\ComprobantesForm.aspx.cs",
-              "ViewState": "AQIAAB0BAAAAAAAAAAASwCQBAAArAAAA",
+              "ViewState": "AQIAAFwBAAAAAAAAAAArwCQBAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T21:38:51.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Comprobantes.aspx.cs",
               "DocumentMoniker": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Comprobantes.aspx.cs",
               "RelativeDocumentMoniker": "DxnSisventas\\Views\\Comprobantes.aspx.cs",
               "ToolTip": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Comprobantes.aspx.cs",
               "RelativeToolTip": "DxnSisventas\\Views\\Comprobantes.aspx.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAQwMkAAAAhAAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAA7wMkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T20:50:50.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ComprobantesForm.aspx",
               "DocumentMoniker": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\ComprobantesForm.aspx",
               "RelativeDocumentMoniker": "DxnSisventas\\Views\\ComprobantesForm.aspx",
@@ -118,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Comprobantes.aspx",
               "DocumentMoniker": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\Views\\Comprobantes.aspx",
               "RelativeDocumentMoniker": "DxnSisventas\\Views\\Comprobantes.aspx",
@@ -131,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Documentos.js",
               "DocumentMoniker": "C:\\Users\\cesar\\Documents\\GitHub\\BBBSistema\\FrontEnd\\DxnSisventas\\CustomScripts\\Documentos.js",
               "RelativeDocumentMoniker": "DxnSisventas\\CustomScripts\\Documentos.js",
