@@ -3,9 +3,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CustomStyles/OrdenVenta.css" rel="stylesheet" />
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">   
     <script src="../CustomScripts/OrdenVenta.js?v5"></script>
+
+
 
     <div class="container">
         <div class="card">
@@ -86,18 +91,22 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="TxtDescuento" class="col-sm-2 col-form-label">Descuento:</label>
+                                <label for="TxtDescuento" class="col-sm-2 col-form-label">Descuento (S/.) :</label>
                                 <div class="col-sm-3">
                                     <asp:TextBox ID="TxtDescuento" runat="server"
                                         type="number"
                                         step="0.01"
                                         CssClass="form-control"
                                         value="0.00"
-                                        oninput="autoUpdate(this)"
                                         onkeydown="return avoidEnterKey(event);">
                                     </asp:TextBox>
 
                                 </div>
+                               
+                               
+
+
+
                             </div>
                         </div>
                     </div>
@@ -109,25 +118,36 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <label for="TxtIDCliente" class="col-sm-2 col-form-label">ID Cliente:</label>
-                            <div class="col-sm-2">
+                        <div class="row  mb-3">
+                           
+                            <label for="TxtIDCliente" class="col-lg-2 col-form-label mt-2">ID Cliente:</label>
+                            <div class="col-lg-3 mt-2">
                                 <asp:TextBox ID="TxtIDCliente" runat="server" Enabled="false"
                                     CssClass="form-control" required="true"></asp:TextBox>
                             </div>
-                            <label for="TxtNombreCompletoCliente" class="col-sm-2 col-form-label">
-                                Nombre
-                                    completo:</label>
-                            <div class="col-sm-4">
-                                <asp:TextBox ID="TxtNombreCompletoCliente" runat="server" Enabled="false"
+                            <label for="TxtPuntos" class="col-lg-2 col-form-label mt-2">Puntos:</label>
+                            <div class="col-lg-3 mt-2">
+                                <asp:TextBox ID="TxtPuntos" runat="server" Enabled="false"
                                     CssClass="form-control" required="true"></asp:TextBox>
                             </div>
-                            <div class="col-sm-2">
-                                <asp:LinkButton ID="lbBuscarCliente" runat="server" CssClass="btn btn-primary btn-sm"
-                                    OnClick="lbBuscarCliente_Click">Buscar
-                                </asp:LinkButton>
+                           
+                        </div>
+                        
 
-                            </div>
+                        <div class="row mb-3">
+                             <label for="TxtNombreCompletoCliente" class="col-lg-2 col-form-label mt-2">
+                                 Nombre
+                                     completo:</label>
+                             <div class="col-lg-5 mt-2">
+                                 <asp:TextBox ID="TxtNombreCompletoCliente" runat="server" Enabled="false"
+                                     CssClass="form-control" required="true"></asp:TextBox>
+                             </div>
+
+                             <div class="col-lg-2  mt-3">
+                                 <asp:LinkButton ID="lbBuscarCliente" runat="server" CssClass="btn btn-primary btn-sm"
+                                     OnClick="lbBuscarCliente_Click">Buscar
+                                 </asp:LinkButton>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -139,20 +159,24 @@
                         </div>
                         <div class="card-body">
 
-                            <div class="row">
-                                <label for="TxtIDRepartidor" class="col-sm-2 col-form-label">ID Repartidor:</label>
-                                <div class="col-sm-2">
+                            <div class="row mb-3">
+                                <label for="TxtIDRepartidor" class="col-lg-2 col-form-label">ID Repartidor:</label>
+                                <div class="col-lg-2">
                                     <asp:TextBox ID="TxtIDRepartidor" runat="server" Enabled="false"
                                         CssClass="form-control" required="true"></asp:TextBox>
                                 </div>
-                                <label for="TxtNombreCompletoRepartidor" class="col-sm-2 col-form-label">
-                                    Nombre
-                                    completo:</label>
-                                <div class="col-sm-4">
+                               
+                                
+                            </div>
+                            <div class="row mb-3">
+                                 <label for="TxtNombreCompletoRepartidor" class="col-lg-2 col-form-label">
+                                 Nombre
+                                 completo:</label>
+                                <div class="col-lg-5 mb-3">
                                     <asp:TextBox ID="TxtNombreCompletoRepartidor" runat="server" Enabled="false"
                                         CssClass="form-control" required="true"></asp:TextBox>
                                 </div>
-                                <div class="col-sm-2">
+                                <div class="col-lg-2 mb-3">
                                     <asp:LinkButton ID="lbBuscarRepartidor" runat="server" CssClass="btn btn-primary btn-sm"
                                         OnClick="lbBuscarRepartidor_Click">
                                         Buscar</asp:LinkButton>
@@ -175,11 +199,11 @@
 
                         <asp:Panel ID="panelBusquedaProducto" runat="server">
                             <div class="row mb-3">
-                                <label for="TxtIdProducto" class="col-sm-2 col-form-label">ID Producto:</label>
-                                <div class="col-sm-2">
+                                <label for="TxtIdProducto" class="col-md-2 col-form-label">ID Producto:</label>
+                                <div class="col-md-2 mb-3">
                                     <asp:TextBox ID="TxtIdProducto" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                 </div>
-                                <div class="col-sm-3">
+                                <div class="col-md-3">
                                     <asp:Button ID="btnBuscarProducto" runat="server" Text="Buscar producto"
                                         OnClick="btnBuscarProducto_Click"
                                         CssClass="btn btn-primary btn-sm" />
@@ -187,17 +211,20 @@
 
                             </div>
                             <div class="row mb-3">
-                                <label for="TxtNombreProducto" class="col-sm-2 col-form-label">Nombre producto:</label>
-                                <div class="col-sm-2">
+                                <label for="TxtNombreProducto" class="col-md-2 col-form-label mb-2">Nombre producto:</label>
+                                <div class="col-md-2 mb-3">
                                     <asp:TextBox ID="TxtNombreProducto" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                                 </div>
-                                <label for="TxtPrecio" class="col-sm-1 col-form-label">Precio:</label>
+                                <label for="TxtPrecio" class="col-sm-1 col-form-label mb-2">Precio:</label>
                                 <div class="col-sm-1">
-                                    <asp:TextBox ID="TxtPrecio" runat="server" CssClass="form-control" Enabled="false" type="number"
+                                    <asp:TextBox ID="TxtPrecio" runat="server" CssClass="form-control mb-2" Enabled="false" type="number"
                                         step="1"></asp:TextBox>
                                 </div>
-                                <label for="TxtStock" class="col-sm-1 col-form-label">Stock:</label>
-                                <div class="col-sm-1">
+                                
+                            </div>
+                            <div class="row mb-3">
+                                <label for="TxtStock" class="col-sm-2 col-form-label mb-2">Stock:</label>
+                                <div class="col-sm-2 mb-2">
                                     <asp:TextBox ID="TxtStock" runat="server" CssClass="form-control" Enabled="false" type="number"
                                         step="1"></asp:TextBox>
                                 </div>
@@ -353,6 +380,7 @@
                                                     <%# Eval("apellidoPaterno") + " " + Eval("apellidoMaterno") %>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
+                                            <asp:BoundField DataField="puntos" HeaderText="Puntos" />
                                             <asp:TemplateField>
                                                 <ItemTemplate>
                                                     <asp:LinkButton class="btn btn-outline-primary"
