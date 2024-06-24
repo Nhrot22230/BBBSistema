@@ -36,8 +36,8 @@ namespace DxnSisventas.Views
             apiDocumentos = new DocumentosAPIClient();
             apiCorreo = new CorreosAPIClient();
             apiReportes = new ReportesAPIClient();
-            if(!IsPostBack)
-                tipoOrdenCompra = true;
+            tipoOrdenCompra = true;
+            AplicarFiltro();
             CargarTabla("");
             String accion = Request.QueryString["accion"];
             if (accion != null && accion == "ver" && Session["idComprobanteSeleccionado"] != null)
@@ -167,20 +167,6 @@ namespace DxnSisventas.Views
             comprobante.fechaEmision = DateTime.Now;
             comprobante.tipoComprobanteSpecified = true;
             comprobante.tipoComprobante = (tipoComprobante)Enum.Parse(typeof(tipoComprobante), DropDownListTipoComprobante.SelectedValue);
-            comprobante.ordenAsociada.estadoSpecified = true;
-            comprobante.ordenAsociada.estado = estadoOrden.Entregado;
-            if (comprobante.ordenAsociada is ordenVenta)
-            {
-                ((ordenVenta)comprobante.ordenAsociada).fechaEntregaSpecified = true;
-                ((ordenVenta)comprobante.ordenAsociada).fechaEntrega = comprobante.fechaEmision;
-                apiDocumentos.actualizarOrdenVenta((ordenVenta)comprobante.ordenAsociada);
-            }
-            if (comprobante.ordenAsociada is ordenCompra)
-            {
-                ((ordenCompra)comprobante.ordenAsociada).fechaRecepcionSpecified = true;
-                ((ordenCompra)comprobante.ordenAsociada).fechaRecepcion = comprobante.fechaEmision;
-                apiDocumentos.actualizarOrdenCompra((ordenCompra)comprobante.ordenAsociada);
-            }
             int res = apiDocumentos.insertarComprobante(comprobante);
             string mensaje = res > 0 ? "Comprobante guardado correctamente" : "Error al guardar el comprobante";
             if (res > 0) Response.Redirect("/Views/Comprobantes.aspx");
@@ -274,6 +260,16 @@ namespace DxnSisventas.Views
             CargarModalOrdenes();
         }
 
+        private void seleccionaOrdenesSinComprobante()
+        {
+            comprobante[] listaComp = apiDocumentos.listarComprobante("");
+            foreach(comprobante comp in listaComp)
+            {
+                orden ord = listaOrdenesFiltrado.SingleOrDefault(x => x.idOrden == comp.ordenAsociada.idOrden);
+                listaOrdenesFiltrado.Remove(ord);
+            }
+        }
+
         private void AplicarFiltro()
         {
             if (tipoOrdenCompra)
@@ -285,6 +281,7 @@ namespace DxnSisventas.Views
                 listaOrdenesFiltrado = new BindingList<orden>(apiDocumentos.listarOrdenVenta(txtCodOrdenModal.Text));
             }
             listaOrdenesFiltrado = new BindingList<orden>(listaOrdenesFiltrado.Where(x => x.estado.ToString() != estadoOrden.Cancelado.ToString()).ToList());
+            seleccionaOrdenesSinComprobante();
         }
         private void GridBindOrdenes()
         {
