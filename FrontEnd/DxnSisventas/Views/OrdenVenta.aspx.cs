@@ -24,7 +24,6 @@ namespace DxnSisventas.Views
         {
             Page.Title = "Ordenes de Venta";
             documentosAPIClient = new DocumentosAPIClient();
-           
             CargarTabla("");
         }
 
@@ -155,11 +154,15 @@ namespace DxnSisventas.Views
         private bool CargarTabla(string search)
         {
             ordenVenta[] lista = documentosAPIClient.listarOrdenVenta(search);
-            if (lista == null)
+            if(lista != null)
             {
-                return false;
+                lista = lista.Where(x => x.estado != estadoOrden.Cancelado).ToArray();
+                Blordenes = new BindingList<ordenVenta>(lista.ToList());
             }
-            Blordenes = new BindingList<ordenVenta>(lista.ToList());
+            else
+            {
+                Blordenes = new BindingList<ordenVenta>();
+            }
             BlordenesFiltradas = Blordenes;
             GridBind();
             return true;
