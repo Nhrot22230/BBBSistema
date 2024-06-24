@@ -5,71 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/BBBWebService/DocumentosAPI?xsd=1" namespace="http://services.webservice.BBB.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarOrdenVenta">
-    <part name="parameters" element="tns:insertarOrdenVenta" />
-  </message>
-  <message name="insertarOrdenVentaResponse">
-    <part name="parameters" element="tns:insertarOrdenVentaResponse" />
-  </message>
-  <message name="listarOrden">
-    <part name="parameters" element="tns:listarOrden" />
-  </message>
-  <message name="listarOrdenResponse">
-    <part name="parameters" element="tns:listarOrdenResponse" />
-  </message>
   <message name="listarOrdenCompra">
     <part name="parameters" element="tns:listarOrdenCompra" />
   </message>
   <message name="listarOrdenCompraResponse">
     <part name="parameters" element="tns:listarOrdenCompraResponse" />
-  </message>
-  <message name="insertarLOV">
-    <part name="parameters" element="tns:insertarLOV" />
-  </message>
-  <message name="insertarLOVResponse">
-    <part name="parameters" element="tns:insertarLOVResponse" />
-  </message>
-  <message name="listarOrdenVenta">
-    <part name="parameters" element="tns:listarOrdenVenta" />
-  </message>
-  <message name="listarOrdenVentaResponse">
-    <part name="parameters" element="tns:listarOrdenVentaResponse" />
-  </message>
-  <message name="eliminarLOV">
-    <part name="parameters" element="tns:eliminarLOV" />
-  </message>
-  <message name="eliminarLOVResponse">
-    <part name="parameters" element="tns:eliminarLOVResponse" />
-  </message>
-  <message name="listarComprobante">
-    <part name="parameters" element="tns:listarComprobante" />
-  </message>
-  <message name="listarComprobanteResponse">
-    <part name="parameters" element="tns:listarComprobanteResponse" />
-  </message>
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
-  </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
-  </message>
-  <message name="insertarComprobante">
-    <part name="parameters" element="tns:insertarComprobante" />
-  </message>
-  <message name="insertarComprobanteResponse">
-    <part name="parameters" element="tns:insertarComprobanteResponse" />
-  </message>
-  <message name="actualizarComprobante">
-    <part name="parameters" element="tns:actualizarComprobante" />
-  </message>
-  <message name="actualizarComprobanteResponse">
-    <part name="parameters" element="tns:actualizarComprobanteResponse" />
-  </message>
-  <message name="actualizarOrdenVenta">
-    <part name="parameters" element="tns:actualizarOrdenVenta" />
-  </message>
-  <message name="actualizarOrdenVentaResponse">
-    <part name="parameters" element="tns:actualizarOrdenVentaResponse" />
   </message>
   <message name="insertarOrdenCompra">
     <part name="parameters" element="tns:insertarOrdenCompra" />
@@ -77,11 +17,59 @@
   <message name="insertarOrdenCompraResponse">
     <part name="parameters" element="tns:insertarOrdenCompraResponse" />
   </message>
-  <message name="eliminarComprobante">
-    <part name="parameters" element="tns:eliminarComprobante" />
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
   </message>
-  <message name="eliminarComprobanteResponse">
-    <part name="parameters" element="tns:eliminarComprobanteResponse" />
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="eliminarLOV">
+    <part name="parameters" element="tns:eliminarLOV" />
+  </message>
+  <message name="eliminarLOVResponse">
+    <part name="parameters" element="tns:eliminarLOVResponse" />
+  </message>
+  <message name="insertarOrdenVenta">
+    <part name="parameters" element="tns:insertarOrdenVenta" />
+  </message>
+  <message name="insertarOrdenVentaResponse">
+    <part name="parameters" element="tns:insertarOrdenVentaResponse" />
+  </message>
+  <message name="insertarLOV">
+    <part name="parameters" element="tns:insertarLOV" />
+  </message>
+  <message name="insertarLOVResponse">
+    <part name="parameters" element="tns:insertarLOVResponse" />
+  </message>
+  <message name="listarOrden">
+    <part name="parameters" element="tns:listarOrden" />
+  </message>
+  <message name="listarOrdenResponse">
+    <part name="parameters" element="tns:listarOrdenResponse" />
+  </message>
+  <message name="listarComprobante">
+    <part name="parameters" element="tns:listarComprobante" />
+  </message>
+  <message name="listarComprobanteResponse">
+    <part name="parameters" element="tns:listarComprobanteResponse" />
+  </message>
+  <message name="listarOrdenVenta">
+    <part name="parameters" element="tns:listarOrdenVenta" />
+  </message>
+  <message name="listarOrdenVentaResponse">
+    <part name="parameters" element="tns:listarOrdenVentaResponse" />
+  </message>
+  <message name="actualizarComprobante">
+    <part name="parameters" element="tns:actualizarComprobante" />
+  </message>
+  <message name="actualizarComprobanteResponse">
+    <part name="parameters" element="tns:actualizarComprobanteResponse" />
+  </message>
+  <message name="insertarComprobante">
+    <part name="parameters" element="tns:insertarComprobante" />
+  </message>
+  <message name="insertarComprobanteResponse">
+    <part name="parameters" element="tns:insertarComprobanteResponse" />
   </message>
   <message name="actualizarOrdenCompra">
     <part name="parameters" element="tns:actualizarOrdenCompra" />
@@ -89,157 +77,79 @@
   <message name="actualizarOrdenCompraResponse">
     <part name="parameters" element="tns:actualizarOrdenCompraResponse" />
   </message>
+  <message name="actualizarOrdenVenta">
+    <part name="parameters" element="tns:actualizarOrdenVenta" />
+  </message>
+  <message name="actualizarOrdenVentaResponse">
+    <part name="parameters" element="tns:actualizarOrdenVentaResponse" />
+  </message>
+  <message name="eliminarComprobante">
+    <part name="parameters" element="tns:eliminarComprobante" />
+  </message>
+  <message name="eliminarComprobanteResponse">
+    <part name="parameters" element="tns:eliminarComprobanteResponse" />
+  </message>
   <portType name="DocumentosAPI">
-    <operation name="insertarOrdenVenta">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarOrdenVentaRequest" message="tns:insertarOrdenVenta" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarOrdenVentaResponse" message="tns:insertarOrdenVentaResponse" />
-    </operation>
-    <operation name="listarOrden">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenRequest" message="tns:listarOrden" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenResponse" message="tns:listarOrdenResponse" />
-    </operation>
     <operation name="listarOrdenCompra">
       <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenCompraRequest" message="tns:listarOrdenCompra" />
       <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenCompraResponse" message="tns:listarOrdenCompraResponse" />
-    </operation>
-    <operation name="insertarLOV">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarLOVRequest" message="tns:insertarLOV" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarLOVResponse" message="tns:insertarLOVResponse" />
-    </operation>
-    <operation name="listarOrdenVenta">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenVentaRequest" message="tns:listarOrdenVenta" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenVentaResponse" message="tns:listarOrdenVentaResponse" />
-    </operation>
-    <operation name="eliminarLOV">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarLOVRequest" message="tns:eliminarLOV" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarLOVResponse" message="tns:eliminarLOVResponse" />
-    </operation>
-    <operation name="listarComprobante">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarComprobanteRequest" message="tns:listarComprobante" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarComprobanteResponse" message="tns:listarComprobanteResponse" />
-    </operation>
-    <operation name="hello">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/helloResponse" message="tns:helloResponse" />
-    </operation>
-    <operation name="insertarComprobante">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarComprobanteRequest" message="tns:insertarComprobante" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarComprobanteResponse" message="tns:insertarComprobanteResponse" />
-    </operation>
-    <operation name="actualizarComprobante">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarComprobanteRequest" message="tns:actualizarComprobante" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarComprobanteResponse" message="tns:actualizarComprobanteResponse" />
-    </operation>
-    <operation name="actualizarOrdenVenta">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarOrdenVentaRequest" message="tns:actualizarOrdenVenta" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarOrdenVentaResponse" message="tns:actualizarOrdenVentaResponse" />
     </operation>
     <operation name="insertarOrdenCompra">
       <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarOrdenCompraRequest" message="tns:insertarOrdenCompra" />
       <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarOrdenCompraResponse" message="tns:insertarOrdenCompraResponse" />
     </operation>
-    <operation name="eliminarComprobante">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarComprobanteRequest" message="tns:eliminarComprobante" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarComprobanteResponse" message="tns:eliminarComprobanteResponse" />
+    <operation name="hello">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="eliminarLOV">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarLOVRequest" message="tns:eliminarLOV" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarLOVResponse" message="tns:eliminarLOVResponse" />
+    </operation>
+    <operation name="insertarOrdenVenta">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarOrdenVentaRequest" message="tns:insertarOrdenVenta" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarOrdenVentaResponse" message="tns:insertarOrdenVentaResponse" />
+    </operation>
+    <operation name="insertarLOV">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarLOVRequest" message="tns:insertarLOV" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarLOVResponse" message="tns:insertarLOVResponse" />
+    </operation>
+    <operation name="listarOrden">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenRequest" message="tns:listarOrden" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenResponse" message="tns:listarOrdenResponse" />
+    </operation>
+    <operation name="listarComprobante">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarComprobanteRequest" message="tns:listarComprobante" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarComprobanteResponse" message="tns:listarComprobanteResponse" />
+    </operation>
+    <operation name="listarOrdenVenta">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenVentaRequest" message="tns:listarOrdenVenta" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/listarOrdenVentaResponse" message="tns:listarOrdenVentaResponse" />
+    </operation>
+    <operation name="actualizarComprobante">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarComprobanteRequest" message="tns:actualizarComprobante" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarComprobanteResponse" message="tns:actualizarComprobanteResponse" />
+    </operation>
+    <operation name="insertarComprobante">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarComprobanteRequest" message="tns:insertarComprobante" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/insertarComprobanteResponse" message="tns:insertarComprobanteResponse" />
     </operation>
     <operation name="actualizarOrdenCompra">
       <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarOrdenCompraRequest" message="tns:actualizarOrdenCompra" />
       <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarOrdenCompraResponse" message="tns:actualizarOrdenCompraResponse" />
     </operation>
+    <operation name="actualizarOrdenVenta">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarOrdenVentaRequest" message="tns:actualizarOrdenVenta" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/actualizarOrdenVentaResponse" message="tns:actualizarOrdenVentaResponse" />
+    </operation>
+    <operation name="eliminarComprobante">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarComprobanteRequest" message="tns:eliminarComprobante" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/DocumentosAPI/eliminarComprobanteResponse" message="tns:eliminarComprobanteResponse" />
+    </operation>
   </portType>
   <binding name="DocumentosAPIPortBinding" type="tns:DocumentosAPI">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarOrdenVenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarOrden">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarOrdenCompra">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarLOV">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarOrdenVenta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarLOV">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarComprobante">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="hello">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarComprobante">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarComprobante">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarOrdenVenta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -257,7 +167,79 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarComprobante">
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLOV">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarOrdenVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarLOV">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrden">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarComprobante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarComprobante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarComprobante">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -267,6 +249,24 @@
       </output>
     </operation>
     <operation name="actualizarOrdenCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarOrdenVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarComprobante">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

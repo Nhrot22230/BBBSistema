@@ -21,7 +21,7 @@
       <xs:element minOccurs="0" name="asunto" type="xs:string" />
       <xs:element minOccurs="0" name="contenido" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="ruta" type="xs:string" />
+      <xs:element minOccurs="0" name="ruta" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="enviarCorreoWebResponse">

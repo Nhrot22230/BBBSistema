@@ -9,6 +9,6 @@ package pe.edu.pucp.BBB.correo.dao;
  * @author GianLuka
  */
 public interface CorreoDAO {
-  int enviarCorreo(String asunto, String contenido, String correo,String rutaArchivo);
+  int enviarCorreo(String asunto, String contenido, String correo,byte[] pdfBytes);
   int enviarCorreo(String asunto, String contenido, String correo);
 }

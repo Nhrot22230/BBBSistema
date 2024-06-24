@@ -491,7 +491,7 @@ namespace DxnSisventas.Views
 
 
 
-            string path = armarpdf();
+            //string path = armarpdf();
             /////////////////////////tiene que terner la misma funcion que el boton de guardar////////////////////
             ///
             ordenCompra orden = new ordenCompra
@@ -543,7 +543,7 @@ namespace DxnSisventas.Views
             ordenCompra.fechaRecepcion = DateTime.Now;
             if (txtEstado.Text != "Entregado")
                 apiOrdenCompra.actualizarOrdenCompra(ordenCompra);
-            apiCorreo.enviarCorreoWeb(asunto, contenido, correo, path);
+            apiCorreo.enviarCorreoWeb(asunto, contenido, correo, GetPdfFromWebService(ordenCompra.idOrdenCompraNumerico));
             Session["correo"] = "true";
             lineasOrden.Clear();
             lineasEliminadas.Clear();

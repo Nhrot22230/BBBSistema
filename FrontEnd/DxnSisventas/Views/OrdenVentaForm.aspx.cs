@@ -36,12 +36,13 @@ namespace DxnSisventas.Views
 
         void accionDePagina()
         {
-         
             accion = Request.QueryString["accion"];
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
+                
                 lbBuscarCliente.Visible = false;
                 lbBuscarCliente.Enabled = false;
+                ddlTipoVenta.Enabled = false;
 
 
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
@@ -59,6 +60,7 @@ namespace DxnSisventas.Views
             else if (accion.Equals("new"))
             {
              
+                ddlEstado.Enabled = false;
                 ordenVenta = new ordenVenta();
                 TxtFechaCreacion.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -86,7 +88,6 @@ namespace DxnSisventas.Views
             TxtFechaCreacion.Enabled = false;
             TxtDescuento.Enabled = false;
             TxtFechaEntrega.Enabled = false;
-            ddlEstado.Enabled = false;
         }
 
         private void inicializarApis()
@@ -115,9 +116,10 @@ namespace DxnSisventas.Views
             lbBuscarRepartidor.Enabled = false;
 
             // ddl
-            ddlEstado.Enabled = false;
+            
             ddlMetodoDePago.Enabled = false;
             ddlTipoVenta.Enabled = false;
+            ddlEstado.Enabled = false;
 
             // panels
             if (ddlTipoVenta.SelectedValue.ToString().Equals("Presencial"))
@@ -620,12 +622,14 @@ namespace DxnSisventas.Views
                 if(res <= 0) mensaje = "Error al registrar la orden de venta";
                 if(res > 0)
                 {
-                    actualizarStockProductos();
-                    actualizarPuntosCliente();
-                    actualizarPuntosPatrocinador();
-                    actualizarPuntosProductos();
-                }
-
+                    if(ordenVenta.estado == estadoOrden.Entregado)
+                    {
+                        actualizarStockProductos();
+                        actualizarPuntosCliente();
+                        actualizarPuntosPatrocinador();
+                        actualizarPuntosProductos();
+                    }
+                }                
             }
             else if(accion.Equals("editar"))
             {
@@ -635,7 +639,13 @@ namespace DxnSisventas.Views
                 if(res > 0)
                 {
                     actualizarLineasOrden();
-                    actualizarStockProductos();
+                    if (ordenVenta.estado == estadoOrden.Entregado)
+                    {
+                        actualizarStockProductos();
+                        actualizarPuntosCliente();
+                        actualizarPuntosPatrocinador();
+                        actualizarPuntosProductos();
+                    }
                 }
        
             }
@@ -646,7 +656,7 @@ namespace DxnSisventas.Views
             }
  
             limpiarSesiones();
-            CallJavascript("showModalForm", "staticBackdrop");
+            Response.Redirect("OrdenVenta.aspx");
         }
 
         private void actualizarPuntosProductos()
@@ -680,7 +690,11 @@ namespace DxnSisventas.Views
                 cliente.puntos = 0;
             }
             // puntos ganados
-            cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos);
+
+            //int puntosAumentar = 0;
+            //puntosAumentar = (int)lineasOrden.Sum(lo => lo.producto.precioUnitario) * 10;
+            cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos) / 10;
+          
             apiPersonas.actualizarCliente(cliente);
         }
         private void actualizarStockProductos()
@@ -700,6 +714,7 @@ namespace DxnSisventas.Views
             Session["empleadoSeleccionado"] = null;
             Session["clienteSeleccionado"] = null;
             Session["productoSeleccionado"] = null;
+            Session["lineasOrdenAntiguas"] = null;
         }
         private void actualizarLineasOrden()
         {
@@ -707,12 +722,12 @@ namespace DxnSisventas.Views
             BindingList<lineaOrden> lineasOrdenAntiguas = (BindingList<lineaOrden>)Session["lineasOrdenAntiguas"];
             foreach (lineaOrden linea in lineasOrdenAntiguas)
             {
-                apiDocumentos.eliminarLOV(ordenVenta.idOrdenVentaNumerico, linea.producto.idProductoNumerico);
+                apiDocumentos.eliminarLOV(ordenVenta.idOrden, linea.producto.idProductoNumerico);
             }
             // actualizar las lineas de orden actuales
             foreach (lineaOrden linea in lineasOrden)
             {
-                apiDocumentos.insertarLOV(linea, ordenVenta.idOrdenVentaNumerico);
+                apiDocumentos.insertarLOV(linea, ordenVenta.idOrden);
             }
         }
 
@@ -774,12 +789,6 @@ namespace DxnSisventas.Views
         protected void BtnCancelarGenerarComprobante_Click(object sender, EventArgs e)
         {
             Response.Redirect("OrdenVenta.aspx");
-        }
-
-        protected void BtnGenerarComprobante_Click(object sender, EventArgs e)
-        {
-
-            Response.Redirect("ComprobantesForm.aspx");
         }
 
     }
