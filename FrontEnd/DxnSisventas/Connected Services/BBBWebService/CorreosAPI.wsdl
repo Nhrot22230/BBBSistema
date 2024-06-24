@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:8080/BBBWebService/CorreosAPI?xsd=1" namespace="http://services.webservice.BBB.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="enviarCorreoWebSinArchivo">
-    <part name="parameters" element="tns:enviarCorreoWebSinArchivo" />
-  </message>
-  <message name="enviarCorreoWebSinArchivoResponse">
-    <part name="parameters" element="tns:enviarCorreoWebSinArchivoResponse" />
-  </message>
   <message name="enviarCorreoWeb">
     <part name="parameters" element="tns:enviarCorreoWeb" />
   </message>
   <message name="enviarCorreoWebResponse">
     <part name="parameters" element="tns:enviarCorreoWebResponse" />
   </message>
+  <message name="enviarCorreoWebSinArchivo">
+    <part name="parameters" element="tns:enviarCorreoWebSinArchivo" />
+  </message>
+  <message name="enviarCorreoWebSinArchivoResponse">
+    <part name="parameters" element="tns:enviarCorreoWebSinArchivoResponse" />
+  </message>
   <portType name="CorreosAPI">
-    <operation name="enviarCorreoWebSinArchivo">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CorreosAPI/enviarCorreoWebSinArchivoRequest" message="tns:enviarCorreoWebSinArchivo" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CorreosAPI/enviarCorreoWebSinArchivoResponse" message="tns:enviarCorreoWebSinArchivoResponse" />
-    </operation>
     <operation name="enviarCorreoWeb">
       <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CorreosAPI/enviarCorreoWebRequest" message="tns:enviarCorreoWeb" />
       <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CorreosAPI/enviarCorreoWebResponse" message="tns:enviarCorreoWebResponse" />
     </operation>
+    <operation name="enviarCorreoWebSinArchivo">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CorreosAPI/enviarCorreoWebSinArchivoRequest" message="tns:enviarCorreoWebSinArchivo" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/CorreosAPI/enviarCorreoWebSinArchivoResponse" message="tns:enviarCorreoWebSinArchivoResponse" />
+    </operation>
   </portType>
   <binding name="CorreosAPIPortBinding" type="tns:CorreosAPI">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="enviarCorreoWebSinArchivo">
+    <operation name="enviarCorreoWeb">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="enviarCorreoWeb">
+    <operation name="enviarCorreoWebSinArchivo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

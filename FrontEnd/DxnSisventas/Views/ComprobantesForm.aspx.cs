@@ -382,11 +382,11 @@ namespace DxnSisventas.Views
             string contenido = CrearContenido();
             string correo = txtCorreo.Text.ToString();
 
-
+            int idComprobante = (int)Session["idComprobanteSeleccionado"];
             int resultado;
-            string path = armarpdf();
+            //string path = armarpdf();
 
-            resultado = apiCorreo.enviarCorreoWeb(asunto, contenido, correo, path);
+            resultado = apiCorreo.enviarCorreoWeb(asunto, contenido, correo, GetPdfFromWebService(idComprobante));
 
 
             if (resultado == 0)
