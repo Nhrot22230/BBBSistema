@@ -640,8 +640,7 @@ BEGIN
   LEFT JOIN Empleado e2 ON ov.id_repartidor = e2.id_empleado
   LEFT JOIN LineaOrden lo ON o.id_orden = lo.id_orden
   LEFT JOIN Producto p ON lo.id_producto = p.id_producto
-  WHERE (o.id_orden LIKE CONCAT('%', p_cadena, '%') OR
-         ov.id_orden_venta LIKE CONCAT('%', p_cadena, '%'));
+  WHERE ov.id_orden_venta LIKE CONCAT('%', p_cadena, '%');
 END$$
 
 -- ----------------------------------------------
@@ -688,8 +687,7 @@ BEGIN
   JOIN Orden_Compra oc ON o.id_orden = oc.id_orden
   LEFT JOIN LineaOrden lo ON o.id_orden = lo.id_orden
   LEFT JOIN Producto p ON lo.id_producto = p.id_producto
-  WHERE (o.id_orden LIKE CONCAT('%', p_cadena, '%') OR
-         oc.id_orden_compra LIKE CONCAT('%', p_cadena, '%'));
+  WHERE oc.id_orden_compra LIKE CONCAT('%', p_cadena, '%');
 END$$
 
 -- ----------------------------------------------

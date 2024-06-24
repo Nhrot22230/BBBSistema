@@ -157,6 +157,13 @@ namespace DxnSisventas.Views
 
         if (patrocinador == null) return;
 
+        if (patrocinador.idCadena == TxtId.Text)
+        {
+          MostrarMensaje("No puedes seleccionar al mismo cliente como patrocinador", false);
+          return;
+        }
+
+
         Session["patrocinadorSeleccionado"] = patrocinador;
         TxtIdPatrocinador.Text = patrocinador.idCadena;
         TxtNombrePatrocinador.Text = patrocinador.nombre + " " + patrocinador.apellidoPaterno + " " + patrocinador.apellidoMaterno;
