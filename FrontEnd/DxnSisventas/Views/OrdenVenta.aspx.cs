@@ -435,8 +435,6 @@ namespace DxnSisventas.Views
             if (res > 0)
             {
                 MostrarMensaje("Orden de venta eliminada", true);
-                //devolverYQuitarPuntosCliente(orden);
-                //devolverStokcProducto(orden);
             }
             else
             {
@@ -446,19 +444,6 @@ namespace DxnSisventas.Views
 
         }
 
-        private void devolverYQuitarPuntosCliente(ordenVenta orden)
-        {
-            cliente cliente = orden.cliente;
-            int puntosDeLaOrden = orden.lineasOrden.Sum(x => x.producto.puntos);
-            int puntosDescuento = (int)(orden.porcentajeDescuento * 10);
-            orden.cliente.puntos = cliente.puntos + puntosDescuento - puntosDeLaOrden;
-            int res = personasAPIClient.actualizarCliente(cliente);            
-        }
-        
-        private void devolverStokcProducto(ordenVenta orden)
-        {
-            
-        }
 
         private bool comprobarComprobanteAsociado(ordenVenta orden)
         {
