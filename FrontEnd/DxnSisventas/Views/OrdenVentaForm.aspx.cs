@@ -36,10 +36,14 @@ namespace DxnSisventas.Views
 
         void accionDePagina()
         {
-            ddlEstado.Enabled = false;
+         
             accion = Request.QueryString["accion"];
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
+                lbBuscarCliente.Visible = false;
+                lbBuscarCliente.Enabled = false;
+
+
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
                 mostrarDatos();
                 if (ddlTipoVenta.SelectedValue.Equals("Presencial"))
@@ -81,6 +85,8 @@ namespace DxnSisventas.Views
         {
             TxtFechaCreacion.Enabled = false;
             TxtDescuento.Enabled = false;
+            TxtFechaEntrega.Enabled = false;
+            ddlEstado.Enabled = false;
         }
 
         private void inicializarApis()
@@ -403,29 +409,28 @@ namespace DxnSisventas.Views
 
             if (!validarStockDisponible()) return;
             
-            // Buscar si el producto ya está en la lista
+           
             lineaOrden lineaExistente = lineasOrden.FirstOrDefault(lo => lo.producto.idProductoNumerico == productoSeleccionado.idProductoNumerico);
             if (lineaExistente != null)
             {
-                // verificar si la cantidad supera el stock
+              
                 if (lineaExistente.cantidad + cantidad > productoSeleccionado.stock)
                 {
                     MostrarMensaje("La cantidad supera el stock disponible", false);
                     return;
                 }
-                // Si el producto ya existe, actualiza la cantidad y subtotal
+              
                 lineaExistente.cantidad += cantidad;
                 lineaExistente.subtotal = CalcularSubtotal(lineaExistente.cantidad, lineaExistente.producto.precioUnitario);
             }
             else
             {
-                // Si el producto no existe, añade una nueva línea
+
                 lineaOrden nuevaLinea = CrearNuevaLineaOrden(productoSeleccionado, cantidad);
                 lineasOrden.Add(nuevaLinea);   
             }
             
             Session["lineasDeOrden"] = lineasOrden;
-
             calcularTotales();           
             llenarGridLineas();
             LimpiarCamposProducto();
@@ -617,6 +622,8 @@ namespace DxnSisventas.Views
                 {
                     actualizarStockProductos();
                     actualizarPuntosCliente();
+                    actualizarPuntosPatrocinador();
+                    actualizarPuntosProductos();
                 }
 
             }
@@ -642,13 +649,36 @@ namespace DxnSisventas.Views
             CallJavascript("showModalForm", "staticBackdrop");
         }
 
+        private void actualizarPuntosProductos()
+        {
+            foreach (lineaOrden linea in lineasOrden)
+            {
+                producto producto = linea.producto;
+                producto.puntos += 1;
+                apiProductos.actualizarProducto(producto);
+            }
+        }
+
+        private void actualizarPuntosPatrocinador()
+        {
+            cliente cliente = ordenVenta.cliente;
+            if(cliente.patrocinador != null)
+            {
+                cliente patrocinador = cliente.patrocinador;
+                patrocinador.puntos += lineasOrden.Sum(lo => lo.producto.puntos) / 10;
+                apiPersonas.actualizarCliente(patrocinador);
+            }
+        }
         private void actualizarPuntosCliente()
         {
             cliente cliente = ordenVenta.cliente;
             // puntos descontandos
             int puntosDescuento = (int)(double.Parse(TxtDescuento.Text) * 10);
             cliente.puntos -= puntosDescuento;
-
+            if(cliente.puntos < 0)
+            {
+                cliente.puntos = 0;
+            }
             // puntos ganados
             cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos);
             apiPersonas.actualizarCliente(cliente);
@@ -696,14 +726,16 @@ namespace DxnSisventas.Views
             if(ddlTipoVenta.SelectedValue.Equals("Delivery"))
             {
                 panelRepartidor.Visible = true;
+                ddlEstado.SelectedValue = "Pendiente";
             }
             else
             {
+                ddlEstado.SelectedValue = "Entregado";
+
                 panelRepartidor.Visible = false;
                 Session["empleadoSeleccionado"] = null;
                 TxtIDRepartidor.Text = "";
                 TxtNombreCompletoRepartidor.Text = "";
-
             }
         }
         protected void gvLineasOrdenVenta_RowDataBound(object sender, GridViewRowEventArgs e)

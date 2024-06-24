@@ -5,7 +5,7 @@
 <html lang="es-es">
 <head runat="server">
   <meta http-equiv="Content-Type" content="text/html;" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   <script type="text/javascript" src="/Scripts/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="/Scripts/jquery-3.7.1.min.js"></script>
@@ -14,7 +14,8 @@
       $(".notification-panel").fadeIn().delay(2250).fadeOut();
     }
   </script>
-  <title id="PageTitle" runat="server"></title>
+  <link rel="icon" href="/Assets/BBB.png" />
+  <title id="PageTitle" runat="server">BBBSistema</title>
   <asp:ContentPlaceHolder ID="head" runat="server">
   </asp:ContentPlaceHolder>
   <link rel="stylesheet" href="/Content/all.min.css" />
@@ -29,7 +30,7 @@
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center justify-content-center" href="#" style="gap: 10px;">
           <img src="/Assets/BBB.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-          <p class="fw-bold" style="color: white; margin: 0; padding: 0;">Bueno Barato y Bonito</p>
+          <p class="fw-bold p-0 mx-0 my-0">Bueno Barato y Bonito</p>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
