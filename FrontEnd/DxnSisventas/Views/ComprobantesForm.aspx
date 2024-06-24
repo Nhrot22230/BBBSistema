@@ -122,7 +122,7 @@
                                 <%-- Estamos enlazando de otra manera a traves del evento OnRowDataBound --%>
                                 <asp:BoundField HeaderText="ID Orden"/>
                                 <asp:BoundField HeaderText="Fecha Creacion"/>
-                                <asp:BoundField HeaderText="Hora Creacion"/>
+                                <asp:BoundField HeaderText="Total"/>
                                 <asp:TemplateField>
                                     <ItemTemplate>
                                         <asp:LinkButton class="btn btn-success" runat="server" Text="<i class='fas fa-solid fa-check ps-2'></i> Seleccionar" OnClick="BtnSeleccionarOrdenModal_Click" CommandArgument='<%# Eval("idOrden") %>' />

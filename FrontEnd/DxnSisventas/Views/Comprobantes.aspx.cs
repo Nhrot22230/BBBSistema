@@ -1,5 +1,6 @@
 ﻿using DxnSisventas.BBBWebService;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -215,6 +216,7 @@ namespace DxnSisventas.Views
                 {
                     lblOrdenVentaCompra.Text = "N/A";
                 }
+                e.Row.Cells[4].Text = "S/. " + ((Double)DataBinder.Eval(e.Row.DataItem, "ordenAsociada.total")).ToString("N2");
             }
         }
 
