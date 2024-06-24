@@ -461,25 +461,5 @@
                 </div>
             </div>
         </div>
-
-
-
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="staticBackdropLabel">Orden de venta generada correctamente</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="fs-5 mb-0">¿Desea generar el comprobante ahora?</p>
-                </div>
-                <div class="modal-footer">
-                    <asp:Button ID="BtnCancelarGenerarComprobante" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="BtnCancelarGenerarComprobante_Click"/>
-                    <asp:Button ID="BtnGenerarComprobante" runat="server" Text="Generar" CssClass="btn btn-primary" OnClick="BtnGenerarComprobante_Click"/>
-                </div>
-            </div>
-            </div>
-        </div>
     </div>
 </asp:Content>

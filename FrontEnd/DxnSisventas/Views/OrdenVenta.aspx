@@ -125,6 +125,8 @@
                                 runat="server" 
                                 Text="<i class='fas fa-solid fa-trash ps-2'></i>">
                             </asp:LinkButton>
+
+
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

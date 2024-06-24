@@ -36,14 +36,12 @@ namespace DxnSisventas.Views
 
         void accionDePagina()
         {
-            
             accion = Request.QueryString["accion"];
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
+                
                 lbBuscarCliente.Visible = false;
                 lbBuscarCliente.Enabled = false;
-
-
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
                 mostrarDatos();
                 if (ddlTipoVenta.SelectedValue.Equals("Presencial"))
@@ -59,6 +57,7 @@ namespace DxnSisventas.Views
             else if (accion.Equals("new"))
             {
              
+                ddlEstado.Enabled = false;
                 ordenVenta = new ordenVenta();
                 TxtFechaCreacion.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
@@ -114,9 +113,10 @@ namespace DxnSisventas.Views
             lbBuscarRepartidor.Enabled = false;
 
             // ddl
-            ddlEstado.Enabled = false;
+            
             ddlMetodoDePago.Enabled = false;
             ddlTipoVenta.Enabled = false;
+            ddlEstado.Enabled = false;
 
             // panels
             if (ddlTipoVenta.SelectedValue.ToString().Equals("Presencial"))
@@ -408,29 +408,28 @@ namespace DxnSisventas.Views
 
             if (!validarStockDisponible()) return;
             
-            // Buscar si el producto ya está en la lista
+           
             lineaOrden lineaExistente = lineasOrden.FirstOrDefault(lo => lo.producto.idProductoNumerico == productoSeleccionado.idProductoNumerico);
             if (lineaExistente != null)
             {
-                // verificar si la cantidad supera el stock
+              
                 if (lineaExistente.cantidad + cantidad > productoSeleccionado.stock)
                 {
                     MostrarMensaje("La cantidad supera el stock disponible", false);
                     return;
                 }
-                // Si el producto ya existe, actualiza la cantidad y subtotal
+              
                 lineaExistente.cantidad += cantidad;
                 lineaExistente.subtotal = CalcularSubtotal(lineaExistente.cantidad, lineaExistente.producto.precioUnitario);
             }
             else
             {
-                // Si el producto no existe, añade una nueva línea
+
                 lineaOrden nuevaLinea = CrearNuevaLineaOrden(productoSeleccionado, cantidad);
                 lineasOrden.Add(nuevaLinea);   
             }
             
             Session["lineasDeOrden"] = lineasOrden;
-
             calcularTotales();           
             llenarGridLineas();
             LimpiarCamposProducto();
@@ -620,12 +619,14 @@ namespace DxnSisventas.Views
                 if(res <= 0) mensaje = "Error al registrar la orden de venta";
                 if(res > 0)
                 {
-                    actualizarStockProductos();
-                    actualizarPuntosCliente();
-                    actualizarPuntosPatrocinador();
-                    actualizarPuntosProductos();
-                }
-
+                    if(ordenVenta.estado == estadoOrden.Entregado)
+                    {
+                        actualizarStockProductos();
+                        actualizarPuntosCliente();
+                        actualizarPuntosPatrocinador();
+                        actualizarPuntosProductos();
+                    }
+                }                
             }
             else if(accion.Equals("editar"))
             {
@@ -635,7 +636,13 @@ namespace DxnSisventas.Views
                 if(res > 0)
                 {
                     actualizarLineasOrden();
-                    actualizarStockProductos();
+                    if (ordenVenta.estado == estadoOrden.Entregado)
+                    {
+                        actualizarStockProductos();
+                        actualizarPuntosCliente();
+                        actualizarPuntosPatrocinador();
+                        actualizarPuntosProductos();
+                    }
                 }
        
             }
@@ -646,7 +653,7 @@ namespace DxnSisventas.Views
             }
  
             limpiarSesiones();
-            CallJavascript("showModalForm", "staticBackdrop");
+            Response.Redirect("OrdenVenta.aspx");
         }
 
         private void actualizarPuntosProductos()
@@ -680,7 +687,11 @@ namespace DxnSisventas.Views
                 cliente.puntos = 0;
             }
             // puntos ganados
-            cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos);
+
+            //int puntosAumentar = 0;
+            //puntosAumentar = (int)lineasOrden.Sum(lo => lo.producto.precioUnitario) * 10;
+            cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos) / 10;
+          
             apiPersonas.actualizarCliente(cliente);
         }
         private void actualizarStockProductos()
@@ -726,14 +737,16 @@ namespace DxnSisventas.Views
             if(ddlTipoVenta.SelectedValue.Equals("Delivery"))
             {
                 panelRepartidor.Visible = true;
+                ddlEstado.SelectedValue = "Pendiente";
             }
             else
             {
+                ddlEstado.SelectedValue = "Entregado";
+
                 panelRepartidor.Visible = false;
                 Session["empleadoSeleccionado"] = null;
                 TxtIDRepartidor.Text = "";
                 TxtNombreCompletoRepartidor.Text = "";
-
             }
         }
         protected void gvLineasOrdenVenta_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -772,12 +785,6 @@ namespace DxnSisventas.Views
         protected void BtnCancelarGenerarComprobante_Click(object sender, EventArgs e)
         {
             Response.Redirect("OrdenVenta.aspx");
-        }
-
-        protected void BtnGenerarComprobante_Click(object sender, EventArgs e)
-        {
-
-            Response.Redirect("ComprobantesForm.aspx");
         }
 
     }

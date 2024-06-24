@@ -60,6 +60,8 @@ namespace DxnSisventas.Views
             BtnGuardar.Visible = false;
             BtnEnviar.Visible = true;
             BtnEnviar.Enabled = true;
+            BtnImprimir.Enabled = true;
+            BtnImprimir.Visible = true;
         }
 
         protected void ModoAgregar()
@@ -72,6 +74,8 @@ namespace DxnSisventas.Views
             BtnGuardar.Visible = true;
             BtnEnviar.Visible = false;
             BtnEnviar.Enabled = false;
+            BtnImprimir.Enabled=false;
+            BtnImprimir.Visible=false;
         }
 
         protected void CargarDatos()
@@ -175,7 +179,7 @@ namespace DxnSisventas.Views
             {
                 ((ordenCompra)comprobante.ordenAsociada).fechaRecepcionSpecified = true;
                 ((ordenCompra)comprobante.ordenAsociada).fechaRecepcion = comprobante.fechaEmision;
-                apiDocumentos.actualizarOrdenVenta((ordenVenta)comprobante.ordenAsociada);
+                apiDocumentos.actualizarOrdenCompra((ordenCompra)comprobante.ordenAsociada);
             }
             int res = apiDocumentos.insertarComprobante(comprobante);
             string mensaje = res > 0 ? "Comprobante guardado correctamente" : "Error al guardar el comprobante";
@@ -187,6 +191,19 @@ namespace DxnSisventas.Views
         {
             string script = "window.onload = function() { showModalFormEnviar() };";
             ClientScript.RegisterStartupScript(GetType(), "", script, true);
+        }
+
+        protected void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            int idComprobante = comprobante.idComprobanteNumerico;
+            byte[] pdfBytes = GetPdfFromWebService(idComprobante);
+            
+            if (pdfBytes != null)
+            {
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-lenght", pdfBytes.Length.ToString());
+                Response.BinaryWrite(pdfBytes);
+            }
         }
 
         protected void BtnBuscar_Click(object sender, EventArgs e)
@@ -210,7 +227,6 @@ namespace DxnSisventas.Views
                 ordenCompra ordenCompraSelec = apiDocumentos.listarOrdenCompra(txtCodOrdenModal.Text).SingleOrDefault(x => x.idOrden == idOrden);
                 TxtIdOrden.Text = ordenCompraSelec.idOrdenCompraCadena;
                 ordenSeleccionada = ordenCompraSelec;
-                
             }
             Session["OrdenSeleccionada"] = ordenSeleccionada;
             TxtFechaOrden.Text = ordenSeleccionada.fechaCreacion.ToString("dd/MM/yyyy");
@@ -220,6 +236,7 @@ namespace DxnSisventas.Views
 
         protected void BtnBuscarModal_Click(object sender, EventArgs e)
         {
+            actualizaTipoOrdenListarModal();
             bool flag = CargarTabla(txtCodOrdenModal.Text);
             if (flag)
             {
@@ -238,12 +255,22 @@ namespace DxnSisventas.Views
         }
 
 
-
+        private void actualizaTipoOrdenListarModal()
+        {
+            if (DropDownListTipoOrdenModal.SelectedValue.Equals("Compra"))
+            {
+                tipoOrdenCompra = true;
+            }
+            else
+            {
+                tipoOrdenCompra = false;
+            }
+        }
         protected void gvOrdenes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvOrdenes.PageIndex = e.NewPageIndex;
-            AplicarFiltro();
-            GridBindOrdenes();
+            actualizaTipoOrdenListarModal();
+            CargarTabla(txtCodOrdenModal.Text);
             CargarModalOrdenes();
         }
 
@@ -257,6 +284,7 @@ namespace DxnSisventas.Views
             {
                 listaOrdenesFiltrado = new BindingList<orden>(apiDocumentos.listarOrdenVenta(txtCodOrdenModal.Text));
             }
+            listaOrdenesFiltrado = new BindingList<orden>(listaOrdenesFiltrado.Where(x => x.estado.ToString() != estadoOrden.Cancelado.ToString()).ToList());
         }
         private void GridBindOrdenes()
         {
@@ -270,21 +298,6 @@ namespace DxnSisventas.Views
         }
         private bool CargarTabla(string search)
         {
-            /*orden[] lista = null;
-            if (tipoOrdenCompra)
-            {
-                lista = apiDocumentos.listarOrdenCompra(search);
-            }
-            else
-            {
-                lista = apiDocumentos.listarOrdenVenta(search);
-            }
-            
-            if (lista == null)
-            {
-                return false;
-            }
-            listaOrdenes = new BindingList<orden>(lista.ToList());*/
             AplicarFiltro();
             GridBindOrdenes();
             return true;

@@ -123,6 +123,15 @@ namespace DxnSisventas.Views
         protected global::System.Web.UI.WebControls.Button BtnGuardar;
 
         /// <summary>
+        /// Control BtnImprimir.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BtnImprimir;
+
+        /// <summary>
         /// Control BtnEnviar.
         /// </summary>
         /// <remarks>
