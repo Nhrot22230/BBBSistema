@@ -362,7 +362,7 @@
                         <asp:UpdatePanel runat="server">
                             <ContentTemplate>
                                 <div class="container row pb-3 pt-3">
-                                    <div class="row align-items-center">
+                                    <asp:Panel runat="server" DefaultButton="lbBuscarClienteModal" class="row align-items-center">
                                         <div class="col-sm-8">
                                             <asp:TextBox CssClass="form-control" ID="TxtPatronBusquedaCliente"
                                                 runat="server" placeholder="Buscar"></asp:TextBox>
@@ -371,7 +371,7 @@
                                             <asp:LinkButton ID="lbBuscarClienteModal" runat="server" CssClass="btn btn-info" Text="<i class='fa-solid fa-magnifying-glass pe-2'></i> Buscar"
                                                 OnClick="lbBuscarClienteModal_Click" />
                                         </div>
-                                    </div>
+                                    </asp:Panel>
                                 </div>
                                 <div class="container row">
                                     <asp:GridView ID="gvClientes" runat="server" AllowPaging="true"
@@ -422,7 +422,7 @@
                         <asp:UpdatePanel runat="server">
                             <ContentTemplate>
                                 <div class="container row pb-3 pt-3">
-                                    <div class="row align-items-center">
+                                    <asp:Panel runat="server" DefaultButton="lbBuscarProductos" class="row align-items-center">
                                         <div class="col-sm-8">
                                             <asp:TextBox CssClass="form-control" ID="TxtPatronBusquedaProducto"
                                                 runat="server" placeholder="Buscar"></asp:TextBox>
@@ -431,7 +431,7 @@
                                             <asp:LinkButton ID="lbBuscarProductos" runat="server" CssClass="btn btn-info" Text="<i class='fa-solid fa-magnifying-glass pe-2'></i> Buscar"
                                                 OnClick="lbBuscarProductos_Click" />
                                         </div>
-                                    </div>
+                                    </asp:Panel>
                                 </div>
                                 <div class="container row">
                                     <asp:GridView ID="gvProductos" runat="server" AllowPaging="true"

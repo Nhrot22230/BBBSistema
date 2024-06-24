@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Candi\Downloads\ASP_PUBLISH</_PublishTargetUrl>
-    <History>True|2024-06-24T03:07:12.0411637Z||;</History>
+    <History>True|2024-06-24T03:46:31.1950664Z||;True|2024-06-23T22:07:12.0411637-05:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -22,10 +22,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/21/2024 17:31:04</publishTime>
     </File>
     <File Include="bin/DxnSisventas.dll">
-      <publishTime>06/23/2024 22:07:11</publishTime>
+      <publishTime>06/23/2024 22:46:30</publishTime>
     </File>
     <File Include="bin/DxnSisventas.pdb">
-      <publishTime>06/23/2024 22:07:11</publishTime>
+      <publishTime>06/23/2024 22:46:30</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>06/21/2024 17:31:05</publishTime>
@@ -139,166 +139,166 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/21/2024 21:18:20</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarComprobanteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarCuentaClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarCuentaEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarOrdenCompraResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarOrdenVentaResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.actualizarProductoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.cliente.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.comprobante.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.cuentaCliente.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.cuentaEmpleado.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarComprobanteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarCuentaClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarCuentaEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarLOVResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.eliminarProductoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.empleado.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.enviarCorreoWebResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.enviarCorreoWebSinArchivoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.generarReporteAlmacenResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.generarReporteOrdenCompraResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.helloResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.imprimirComprobanteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.iniciarSesionClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.iniciarSesionEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarComprobanteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarCuentaClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarCuentaEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarLOVResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarOrdenCompraResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarOrdenVentaResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.insertarProductoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarClientesMasCuentasResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarClientesResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarComprobanteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarCuentaClienteResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarCuentaEmpleadoResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarEmpleadosMasCuentasResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarEmpleadosResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarOrdenCompraResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarOrdenResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarOrdenVentaResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.listarProductosResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:52</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.orden.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.ordenCompra.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.ordenVenta.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.personaCuenta.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.producto.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Connected Services/BBBWebService/DxnSisventas.BBBWebService.reporteOrdenVentaPDFResponse.datasource">
-      <publishTime>06/23/2024 22:06:29</publishTime>
+      <publishTime>06/23/2024 22:45:51</publishTime>
     </File>
     <File Include="Content/all.css">
       <publishTime>06/21/2024 17:31:04</publishTime>
@@ -484,7 +484,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/23/2024 15:11:29</publishTime>
     </File>
     <File Include="Main.Master">
-      <publishTime>06/23/2024 18:54:21</publishTime>
+      <publishTime>06/23/2024 22:42:25</publishTime>
     </File>
     <File Include="Recuperar.aspx">
       <publishTime>06/23/2024 17:14:04</publishTime>
@@ -607,10 +607,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/23/2024 22:05:01</publishTime>
     </File>
     <File Include="Views/OrdenVentaForm.aspx">
-      <publishTime>06/23/2024 21:58:42</publishTime>
+      <publishTime>06/23/2024 22:33:20</publishTime>
     </File>
     <File Include="Views/PersonasClientes.aspx">
-      <publishTime>06/23/2024 18:10:26</publishTime>
+      <publishTime>06/23/2024 22:35:14</publishTime>
     </File>
     <File Include="Views/PersonasClientesForms.aspx">
       <publishTime>06/23/2024 14:35:54</publishTime>

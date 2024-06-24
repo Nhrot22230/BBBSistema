@@ -14,11 +14,11 @@
     <div class="container row">
       <div class="container row">
         <div class="col-md-6">
-          <div class="input-group mb-3">
+          <asp:Panel runat="server" DefaultButton="BtnBuscar" class="input-group mb-3">
             <asp:TextBox ID="TxtBuscar" runat="server" CssClass="form-control" placeholder="Buscar"></asp:TextBox>
             <asp:LinkButton ID="BtnBuscar" runat="server" Text="<i class='fas fa-search'> </i>"
               CssClass="btn btn-secondary" OnClick="BtnBuscar_Click" />
-          </div>
+          </asp:Panel>
         </div>
       </div>
     </div>
