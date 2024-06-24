@@ -80,6 +80,8 @@
                     CssClass="float-start btn btn-secondary" OnClick="BtnRegresar_Click" />
                 <asp:Button ID="BtnGuardar" runat="server" Text="Guardar"
                     CssClass="float-end btn btn-primary" OnClick="BtnGuardar_Click" OnClientClick="return validarFormularioComprobante();"/>
+                 <asp:LinkButton ID="BtnImprimir" runat="server" Text="<i class='fas fa-solid fa-print ps-2'> </i>" 
+                     CssClass="float-end btn btn-primary" OnClick="BtnImprimir_Click" OnClientClick="openInNewTab();"></asp:LinkButton>
                 <asp:Button ID="BtnEnviar" runat="server" Text="Enviar" CssClass="float-end btn btn-primary" OnClick="BtnEnviar_Click"/>
             </div>
         </div>
