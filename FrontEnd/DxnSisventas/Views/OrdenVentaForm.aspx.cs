@@ -42,6 +42,9 @@ namespace DxnSisventas.Views
                 
                 lbBuscarCliente.Visible = false;
                 lbBuscarCliente.Enabled = false;
+                ddlTipoVenta.Enabled = false;
+
+
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
                 mostrarDatos();
                 if (ddlTipoVenta.SelectedValue.Equals("Presencial"))
@@ -711,6 +714,7 @@ namespace DxnSisventas.Views
             Session["empleadoSeleccionado"] = null;
             Session["clienteSeleccionado"] = null;
             Session["productoSeleccionado"] = null;
+            Session["lineasOrdenAntiguas"] = null;
         }
         private void actualizarLineasOrden()
         {
@@ -718,12 +722,12 @@ namespace DxnSisventas.Views
             BindingList<lineaOrden> lineasOrdenAntiguas = (BindingList<lineaOrden>)Session["lineasOrdenAntiguas"];
             foreach (lineaOrden linea in lineasOrdenAntiguas)
             {
-                apiDocumentos.eliminarLOV(ordenVenta.idOrdenVentaNumerico, linea.producto.idProductoNumerico);
+                apiDocumentos.eliminarLOV(ordenVenta.idOrden, linea.producto.idProductoNumerico);
             }
             // actualizar las lineas de orden actuales
             foreach (lineaOrden linea in lineasOrden)
             {
-                apiDocumentos.insertarLOV(linea, ordenVenta.idOrdenVentaNumerico);
+                apiDocumentos.insertarLOV(linea, ordenVenta.idOrden);
             }
         }
 

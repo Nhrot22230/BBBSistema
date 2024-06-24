@@ -53,7 +53,6 @@
                     <asp:ListItem Text="Todos" Value="Todos"></asp:ListItem>
                     <asp:ListItem Text="Entregado" Value="Entregado" > </asp:ListItem>
                     <asp:ListItem Text="Pendiente" Value="Pendiente"></asp:ListItem>
-                    <asp:ListItem Text="Cancelado" Value="Cancelado"></asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
