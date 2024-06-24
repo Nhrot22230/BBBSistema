@@ -309,15 +309,18 @@ namespace DxnSisventas.Views
                 {
                     ordenCompra ordenCompra = (ordenCompra)e.Row.DataItem;
                     e.Row.Cells[1].Text = DataBinder.Eval(ordenCompra, "idOrdenCompraCadena").ToString();
+
                 }
                 else
                 {
                     ordenVenta ordenVenta = (ordenVenta)e.Row.DataItem;
                     e.Row.Cells[1].Text = DataBinder.Eval(ordenVenta, "idOrdenVentaCadena").ToString();
+                    //e.Row.Cells[3].Text = ordenVenta.encargadoVenta.nombre + " " + ordenVenta.encargadoVenta.apellidoPaterno;
+                    
                 }
-
+               
                 e.Row.Cells[2].Text = ((DateTime)DataBinder.Eval(e.Row.DataItem, "fechaCreacion")).ToString("dd/MM/yyyy");
-                e.Row.Cells[3].Text = ((DateTime)DataBinder.Eval(e.Row.DataItem, "fechaCreacion")).ToString("HH:mm:ss");
+                e.Row.Cells[3].Text = "S/. " + ((Double)DataBinder.Eval(e.Row.DataItem, "total")).ToString("N2");
             }
         }
 

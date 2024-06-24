@@ -76,7 +76,7 @@
                 <asp:Label ID="LblOrdenVentaCompra" runat="server" />
               </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="ordenAsociada.total" HeaderText="Total" />
+            <asp:BoundField HeaderText="Total" />
             <asp:TemplateField HeaderText="">
               <ItemTemplate>
                 <asp:LinkButton ID="BtnVisualizar" runat="server" Text="<i class='fas fa-solid fa-eye ps-2'>  </i>"
