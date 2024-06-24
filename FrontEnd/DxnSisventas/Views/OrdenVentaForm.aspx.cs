@@ -61,7 +61,9 @@ namespace DxnSisventas.Views
                 // no se puede crear una orden de venta con estado cancelado
                 ddlEstado.Items.Remove(ddlEstado.Items.FindByValue("Cancelado"));
                 TxtDescuento.Text = "0";
+                TxtTotalSinDescuento.Text = "0.00";
                 txtTotal.Text = "0.00";
+                TxtPuntos.Text = "0";
                 if (!IsPostBack)
                 {
                     limpiarSesiones();
@@ -118,6 +120,8 @@ namespace DxnSisventas.Views
             }
             panelBusquedaProducto.Visible = false;
 
+            btnGuardar.Enabled = false;
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -172,7 +176,21 @@ namespace DxnSisventas.Views
                 Session["lineasDeOrden"] = new BindingList<lineaOrden>(ordenVenta.lineasOrden.ToList());
                 Session["lineasOrdenAntiguas"] = new BindingList<lineaOrden>(ordenVenta.lineasOrden.ToList());
             }
+            TxtDescuento.Text = ordenVenta.porcentajeDescuento.ToString();
             txtTotal.Text = ordenVenta.total.ToString("N2");
+            TxtTotalSinDescuento.Text = (ordenVenta.total + ordenVenta.porcentajeDescuento).ToString("N2");
+        }
+
+        private void calcularDescuento()
+        {
+            // convertimos puntos a soles
+            double descuento = double.Parse(TxtPuntos.Text) * 0.1;
+            double totalSinDescuento = double.Parse(TxtTotalSinDescuento.Text);
+            if(descuento > totalSinDescuento)
+            {
+                descuento = totalSinDescuento;  
+            }
+            TxtDescuento.Text = descuento.ToString("N2");
         }
 
         private void llenarGridLineas()
@@ -254,7 +272,7 @@ namespace DxnSisventas.Views
             lineaOrden linea = lineasOrden.Where(lo => lo.producto.idProductoNumerico == idProducto).FirstOrDefault();
             lineasOrden.Remove(linea);
             Session["lineasDeOrden"] = lineasOrden;
-            calcularTotalConDescuento();
+            calcularTotales();
             llenarGridLineas();
         }
 
@@ -298,7 +316,7 @@ namespace DxnSisventas.Views
                 cliente.apellidoPaterno + " " + cliente.apellidoMaterno;
             TxtPuntos.Text = cliente.puntos.ToString();
             TxtDescuento.Text = cliente.puntos * 0.1 + "";
-            calcularTotalConDescuento();
+            calcularTotales();
             ScriptManager.RegisterStartupScript(this, GetType(), "", "__doPostBack('','');", true);
         }
         protected void lbBuscarClienteModal_Click(object sender, EventArgs e)
@@ -348,30 +366,43 @@ namespace DxnSisventas.Views
             llenarGridProductos("");
             CallJavascript("showModalForm", "modalFormBuscarProducto");
         }
-        protected void btnAgregarProducto_Click(object sender, EventArgs e)
-        {
-            // Verificar selección de producto
-            if (Session["productoSeleccionado"] == null)
-            {
-                MostrarMensaje("Debe seleccionar un producto", false);
-                return;
-            }
-            producto productoSeleccionado = (producto)Session["productoSeleccionado"];
 
+        private bool validarCantidadIngresada()
+        {
             // Validar cantidad ingresada
             if (!int.TryParse(TxtCantidad.Text, out int cantidad) || cantidad <= 0)
             {
                 MostrarMensaje("Ingrese una cantidad válida", false);
-                return;
+                return false;
             }
+            return true;
+        }
 
-            // Verificar stock disponible
+        private bool validarStockDisponible()
+        {
+            producto productoSeleccionado = (producto)Session["productoSeleccionado"];
+            int cantidad = int.Parse(TxtCantidad.Text);
             if (productoSeleccionado.stock < cantidad)
             {
                 MostrarMensaje("La cantidad supera el stock disponible", false);
-                return;
+                return false;
             }
+            return true;
+        }
 
+        protected void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            if (!validarSeleccionProducto()) return;
+          
+            producto productoSeleccionado = (producto)Session["productoSeleccionado"];
+
+
+            if (!validarCantidadIngresada()) return;
+
+            int cantidad = int.Parse(TxtCantidad.Text);
+
+            if (!validarStockDisponible()) return;
+            
             // Buscar si el producto ya está en la lista
             lineaOrden lineaExistente = lineasOrden.FirstOrDefault(lo => lo.producto.idProductoNumerico == productoSeleccionado.idProductoNumerico);
             if (lineaExistente != null)
@@ -394,28 +425,35 @@ namespace DxnSisventas.Views
             }
             
             Session["lineasDeOrden"] = lineasOrden;
-            calcularTotalConDescuento();
+
+            calcularTotales();           
             llenarGridLineas();
             LimpiarCamposProducto();
         }
-        void calcularTotalConDescuento()
-        {
-            double totalSinDescuento = lineasOrden.Sum(lo => lo.subtotal);
-            double descuento = double.Parse(TxtDescuento.Text);
-            double total = totalSinDescuento - descuento;
-            if (total < 0)
-            {
-                txtTotal.Text = "0.00";
-                int puntosSobrantes = (int)(descuento - totalSinDescuento) * 10;
 
-                Session["puntosSobrantes"] = puntosSobrantes;
-            }
-            else
-            {
-                txtTotal.Text = total.ToString("N2");
-                Session["puntosSobrantes"] = 0;
-            }
+        private void calcularTotales()
+        {
+            calcularTotalSinDescuento();
+            calcularDescuento();
+            txtTotal.Text = double.Parse(TxtTotalSinDescuento.Text) - double.Parse(TxtDescuento.Text) + "";
         }
+
+        private void calcularTotalSinDescuento()
+        {
+            double total = lineasOrden.Sum(lo => lo.subtotal);
+            TxtTotalSinDescuento.Text = total.ToString("N2");
+        }
+
+        private bool validarSeleccionProducto()
+        {
+            if (Session["productoSeleccionado"] == null)
+            {
+                MostrarMensaje("Debe seleccionar un producto", false);
+                return false;
+            }
+            return true;
+        }
+
         private double CalcularSubtotal(int cantidad, double precioUnitario)
         {
             return cantidad * precioUnitario;
@@ -479,23 +517,6 @@ namespace DxnSisventas.Views
             }
             return true;
         }
-        bool validarDescuentos()
-        {
-            if(TxtDescuento.Text == "")
-            {
-                TxtDescuento.Text = "0";
-            }
-            if (double.TryParse(TxtDescuento.Text, out double descuento) && descuento >= 0 && descuento <= 100)
-            {
-                ordenVenta.porcentajeDescuento = descuento;
-                return true;
-            }
-            else
-            {
-                MostrarMensaje("Ingrese un descuento válido", false);
-                return false;
-            }
-        }
         bool validarCliente()
         {
             if (Session["clienteSeleccionado"] is cliente clienteSeleccionado)
@@ -554,6 +575,9 @@ namespace DxnSisventas.Views
         }
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            
+
             ordenVenta.estadoSpecified = true;
             ordenVenta.estado = (estadoOrden)Enum.Parse(typeof(estadoOrden), 
                 ddlEstado.SelectedValue.ToString());
@@ -572,13 +596,16 @@ namespace DxnSisventas.Views
 
             ordenVenta.fechaEntregaSpecified = true;
             if (!validarFechaDeEntrega()) return;
-            if(!validarDescuentos()) return;
             if (!validarCliente()) return;
             if (!validarRepartidor()) return;
             if (!validarEncargadoVentas()) return;
             if (!validarLineasOrden()) return;
 
+            ordenVenta.porcentajeDescuento = double.Parse(TxtDescuento.Text);
             ordenVenta.total = Double.Parse(txtTotal.Text);
+
+           
+
 
             int res = 0;
             string mensaje = "";
@@ -610,14 +637,19 @@ namespace DxnSisventas.Views
                 MostrarMensaje(mensaje, false);
                 return;
             }
-            Response.Redirect("OrdenVenta.aspx");
+ 
             limpiarSesiones();
+            CallJavascript("showModalForm", "staticBackdrop");
         }
 
         private void actualizarPuntosCliente()
         {
             cliente cliente = ordenVenta.cliente;
-            cliente.puntos = (int)Session["puntosSobrantes"];
+            // puntos descontandos
+            int puntosDescuento = (int)(double.Parse(TxtDescuento.Text) * 10);
+            cliente.puntos -= puntosDescuento;
+
+            // puntos ganados
             cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos);
             apiPersonas.actualizarCliente(cliente);
         }
@@ -679,12 +711,12 @@ namespace DxnSisventas.Views
             if(e.Row.RowType == DataControlRowType.DataRow)
             {
                 lineaOrden linea = (lineaOrden)e.Row.DataItem;
+     
                 e.Row.Cells[0].Text = linea.producto.idProductoCadena;
                 e.Row.Cells[1].Text = linea.producto.nombre;
                 e.Row.Cells[2].Text = linea.cantidad.ToString();
                 e.Row.Cells[3].Text = linea.producto.precioUnitario.ToString("N2");
                 e.Row.Cells[4].Text = linea.subtotal.ToString("N2");
-                e.Row.Cells[5].Text = linea.producto.puntos.ToString();
                 Button btnEliminar = (Button)e.Row.FindControl("BtnEliminar");
                 // quiero ocultar todo acciones
                 if(accion.Equals("visualizar"))
@@ -707,6 +739,16 @@ namespace DxnSisventas.Views
             gvLineasOrdenVenta.DataBind();
         }
 
+        protected void BtnCancelarGenerarComprobante_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("OrdenVenta.aspx");
+        }
+
+        protected void BtnGenerarComprobante_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("ComprobantesForm.aspx");
+        }
 
     }
 }

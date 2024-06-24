@@ -25,6 +25,23 @@ namespace DxnSisventas.Views
     {
       Page.Title = "Productos";
       CargarTabla("");
+
+      if(Session["empleado"] == null)
+      {
+        return;
+      }
+
+      rol rolUsuario = ((empleado)Session["empleado"]).rol;
+
+      if (rolUsuario.Equals(rol.EncargadoAlmacen))
+      {
+        Response.Redirect("~/Home.aspx");
+      }
+      if (rolUsuario.Equals(rol.Repartidor))
+      {
+        BtnAgregar.Visible = false;
+        GvProductos.Columns[8].Visible = false;
+      }
     }
 
     protected void Page_Load(object sender, EventArgs e)
