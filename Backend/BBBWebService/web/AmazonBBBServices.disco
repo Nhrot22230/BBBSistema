@@ -1,8 +1,8 @@
 <discovery xmlns="http://schemas.xmlsoap.org/disco/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://3.82.221.165:8080/BBBWebService/CuentasAPI?WSDL"/>
-  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://3.82.221.165:8080/BBBWebService/DocumentosAPI?WSDL"/>
-  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://3.82.221.165:8080/BBBWebService/PersonasAPI?WSDL"/>
-  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://3.82.221.165:8080/BBBWebService/ProductosAPI?WSDL"/>
-  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://3.82.221.165:8080/BBBWebService/CorreosAPI?WSDL"/>
-  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://3.82.221.165:8080/BBBWebService/ReportesAPI?WSDL"/>
+  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://100.29.112.28:8080/BBBWebService/CuentasAPI?WSDL"/>
+  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://100.29.112.28:8080/BBBWebService/DocumentosAPI?WSDL"/>
+  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://100.29.112.28:8080/BBBWebService/PersonasAPI?WSDL"/>
+  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://100.29.112.28:8080/BBBWebService/ProductosAPI?WSDL"/>
+  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://100.29.112.28:8080/BBBWebService/CorreosAPI?WSDL"/>
+  <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://100.29.112.28:8080/BBBWebService/ReportesAPI?WSDL"/>
 </discovery>
