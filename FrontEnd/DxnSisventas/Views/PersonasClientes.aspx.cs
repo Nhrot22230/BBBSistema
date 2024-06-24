@@ -28,6 +28,25 @@ namespace DxnSisventas.Views
     protected void Page_Init(object sender, EventArgs e)
     {
       Page.Title = "Clientes";
+
+      if (Session["empleado"] == null)
+      {
+        return;
+      }
+
+      rol rolUsuario = ((empleado)Session["empleado"]).rol;
+
+      if ( rolUsuario != rol.Administrador && rolUsuario != rol.EncargadoVentas && rolUsuario != rol.Repartidor )
+      {
+        Response.Redirect("~/Home.aspx");
+      }
+
+      if (rolUsuario == rol.Repartidor)
+      {
+        BtnAgregar.Visible = false;
+        GridCliente.Columns[8].Visible = false;
+      }
+
       personasAPIClient = new PersonasAPIClient();
       CargarTabla("");
     }

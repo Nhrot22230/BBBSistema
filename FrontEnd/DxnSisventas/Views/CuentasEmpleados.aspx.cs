@@ -18,6 +18,18 @@ namespace DxnSisventas.Views
     protected void Page_Init(object sender, EventArgs e)
     {
       Page.Title = "Cuentas de Empleados";
+
+      if (Session["empleado"] == null)
+      {
+        return;
+      }
+
+      rol rolUsuario = ((empleado)Session["empleado"]).rol;
+      if (rolUsuario != rol.Administrador)
+      {
+        Response.Redirect("~/Home.aspx");
+      }
+
       CargarTabla("");
       AplicarFiltro();
       GridBind();

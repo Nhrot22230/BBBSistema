@@ -47,7 +47,7 @@
           <asp:BoundField DataField="RUC" HeaderText="RUC" />
           <asp:BoundField DataField="RazonSocial" HeaderText="RazonSocial" />
 
-          <asp:TemplateField HeaderText="">
+          <asp:TemplateField HeaderText="Opciones">
             <ItemTemplate>
               <asp:LinkButton runat="server" Text="<i class='fas fa-edit ps-2'>  </i>" OnClick="BtnEditar_Click"
                 CommandArgument='<%# Eval("idNumerico") %>' />

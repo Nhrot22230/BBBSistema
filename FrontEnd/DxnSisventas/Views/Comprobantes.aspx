@@ -61,15 +61,15 @@
             OnClick="BtnAgregar_Click" CssClass="btn btn-primary btn-sm" />
         </div>
       </div>
-      <div class="container row ">
+      <div class="row overflow-x-scroll">
         <asp:GridView ID="GridComprobantes" runat="server" AutoGenerateColumns="false"
-          AllowPaging="true" PageSize="7" OnPageIndexChanging="GridComprobantes_PageIndexChanging"
+          AllowPaging="true" PageSize="5" OnPageIndexChanging="GridComprobantes_PageIndexChanging"
           OnRowDataBound="GridComprobantes_RowDataBound"
-            CssClass="gridview-custom">
+            CssClass="table table-hover table-responsive table-striped">
           <Columns>
             <asp:BoundField DataField="idComprobanteCadena" HeaderText="ID Comprobante" />
-            <asp:BoundField DataField="fechaEmision" HeaderText="Fecha Emisión" />
-            <asp:BoundField DataField="tipoComprobante" HeaderText="Tipo de comprobante" />
+            <asp:BoundField HeaderText="Fecha Emisión" />
+            <asp:BoundField HeaderText="Tipo de comprobante" />
             <%--asp:BoundField DataField="ordenAsociada.idOrden" HeaderText="ID Orden Asociada"/> --%>
             <asp:TemplateField HeaderText="ID Orden Asociada" >
               <ItemTemplate>
@@ -79,10 +79,10 @@
             <asp:BoundField DataField="ordenAsociada.total" HeaderText="Total" />
             <asp:TemplateField HeaderText="">
               <ItemTemplate>
-                <%-- <asp:LinkButton ID="BtnEditar" runat="server" Text="<i class='fas fa-edit ps-2'>  </i>"
-                  OnClick="BtnEditar_Click" CommandArgument='<%# Eval("idComprobanteNumerico") %>' />--%>
-                <asp:LinkButton ID="BtnImprimir" runat="server" Text="<i class='fas fa-solid fa-print ps-2'>  </i>"
-                    OnClick="BtnImprimir_Click" OnClientClick="openInNewTab();" CommandArgument='<%# Eval("idComprobanteNumerico") %>' />
+                <asp:LinkButton ID="BtnVisualizar" runat="server" Text="<i class='fas fa-solid fa-eye ps-2'>  </i>"
+        OnClick="BtnVisualizar_Click" CommandArgument='<%# Eval("idComprobanteNumerico") %>' />
+                <%--<asp:LinkButton ID="BtnImprimir" runat="server" Text="<i class='fas fa-solid fa-print ps-2'>  </i>"
+                    OnClick="BtnImprimir_Click" OnClientClick="openInNewTab();" CommandArgument='<%# Eval("idComprobanteNumerico") %>' />--%>
                 <asp:LinkButton ID="BtnEliminar" runat="server" Text="<i class='fas fa-solid fa-trash ps-2'></i>"
                   OnClick="BtnEliminar_Click" CommandArgument='<%# Eval("idComprobanteNumerico") %>'
                   OnClientClick="return confirm('¿Esta seguro de eliminar este registro?');" />
