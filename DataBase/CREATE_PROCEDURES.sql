@@ -564,7 +564,12 @@ BEGIN
   DECLARE v_puntos_patrocinador INT;
   DECLARE v_fecha_entrega DATETIME;
 
-  SET v_fecha_entrega = DATE_ADD(p_fecha_creacion, INTERVAL 10 DAY);
+  -- si es delivery le sumo 10 dias a la fecha de creacion en caso contrario es hoy
+  IF p_tipo_venta = 'Delivery' THEN
+    SET v_fecha_entrega = DATE_ADD(p_fecha_creacion, INTERVAL 10 DAY);
+  ELSE
+    SET v_fecha_entrega = NOW();
+  END IF;
 
   
   
