@@ -69,6 +69,22 @@ namespace DxnSisventas.Views
             }
         }
 
+        protected void BtnVisualizar_Click(object sender, EventArgs e)
+        {
+            int idComprobante = int.Parse(((LinkButton)sender).CommandArgument);
+            Session["idComprobanteSeleccionado"] = idComprobante;
+            comprobante comp = BlComprobantes.FirstOrDefault(c => c.idComprobanteNumerico == idComprobante);
+
+            if (comp != null)
+            {
+                Response.Redirect("ComprobantesForm.aspx?accion=ver");
+            }
+            else
+            {
+                MostrarMensaje("No se encontro el comprobante", false);
+            }
+        }
+
         protected void BtnImprimir_Click(object sender, EventArgs e)
         {
             int idComprobante = int.Parse(((LinkButton)sender).CommandArgument);
@@ -99,6 +115,7 @@ namespace DxnSisventas.Views
         protected void GridComprobantes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridComprobantes.PageIndex = e.NewPageIndex;
+            AplicarFiltro();
             GridBind();
         }
 
@@ -176,7 +193,16 @@ namespace DxnSisventas.Views
 
                 // Buscar el Label en el TemplateField
                 Label lblOrdenVentaCompra = (Label)e.Row.FindControl("LblOrdenVentaCompra");
-
+                e.Row.Cells[1].Text = ((DateTime)DataBinder.Eval(e.Row.DataItem, "fechaEmision")).ToString("dd/MM/yyyy");
+                if(((tipoComprobante)DataBinder.Eval(e.Row.DataItem, "tipoComprobante"))==tipoComprobante.Factura)
+                {
+                    e.Row.Cells[2].Text = "Factura";
+                }
+                else
+                {
+                    e.Row.Cells[2].Text = "Boleta";
+                }
+               
                 if (comprobante.ordenAsociada is ordenVenta venta)
                 {
                     lblOrdenVentaCompra.Text = venta.idOrdenVentaCadena;

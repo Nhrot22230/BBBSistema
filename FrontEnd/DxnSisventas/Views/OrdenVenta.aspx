@@ -13,7 +13,7 @@
             <h1>Registro de Ordenes de Venta</h1>
         </div>
         <div class="row mb-3">
-            <div class="col-md-7">
+            <div class="col-md-4">
                 <!-- Panel de búsqueda -->
                 <div class="input-group">
                     <asp:TextBox ID="TxtBuscar" runat="server" AutoPostBack="true" 
@@ -23,9 +23,9 @@
                 </div>
             </div>
         </div>
-        <div class="search-row mb-3">
+        <div class="row mb-3">
             <!-- Filtro por Fecha -->
-            <div class="search-item col-sm-3">
+            <div class="col-sm-3">
                 <label class="col-form-label">Filtro por Fecha</label>
                 <div class="input-group">
                     <asp:TextBox ID="FechaInicio" runat="server" CssClass="form-control" type="date" AutoPostBack="true" OnTextChanged="FechaInicio_TextChanged"></asp:TextBox>
@@ -35,7 +35,7 @@
             </div>
 
             <!-- Ordenar por Fecha -->
-            <div class="search-item col-sm-3">
+            <div class="col-sm-3">
                 <label class="col-form-label">Ordenar por Fecha</label>
                 <asp:DropDownList ID="OrdenarPorFecha" runat="server" CssClass="form-select" AutoPostBack="true"
                     OnSelectedIndexChanged="OrdenarPorFecha_SelectedIndexChanged">
@@ -46,7 +46,7 @@
             </div>
 
             <!-- Estado -->
-            <div class="search-item col-sm-3">
+            <div class="col-sm-3">
                 <label class="col-form-label">Estado</label>
                 <asp:DropDownList ID="Estado" runat="server" CssClass="form-select" AutoPostBack="true"
                     OnSelectedIndexChanged="Estado_SelectedIndexChanged">
@@ -57,9 +57,9 @@
                 </asp:DropDownList>
             </div>
         </div>
-        <div class="search-row mb-3">
+        <div class="row mb-3">
             <!-- Filtro por Montos -->
-            <div class="search-item col-sm-3">
+            <div class="col-sm-3">
                 <label class="col-form-label">Filtro por Montos</label>
                 <div class="input-group">
                     <asp:TextBox runat="server" type="number" class="form-control rounded-start no-arrows" ID="TxtMontoMin" AutoPostBack="true"
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <!-- Ordenar por Monto -->
-            <div class="search-item col-sm-3">
+            <div class="col-sm-3">
                 <label class="col-form-label">Ordenar por Monto</label>
                 <asp:DropDownList ID="OrdenarPorMonto" runat="server" CssClass="form-select" AutoPostBack="true"
                     OnSelectedIndexChanged="OrdenarPorMonto_SelectedIndexChanged">
@@ -81,15 +81,15 @@
             </div>
         </div>
 
-        <div class="search-row mb-3">
+        <div class="row mb-3">
             <!-- Botón Nuevo -->
-            <div class="search-item">
+            <div class="col-sm-3">
                 <asp:LinkButton ID="BtnAgregar" runat="server" OnClick="BtnAgregar_Click" CssClass="btn btn-primary btn-sm">
                     <i class="fas fa-plus pe-2"></i> Nuevo
                 </asp:LinkButton>
             </div>
             <!-- Botón Limpiar Filtros -->
-            <div class="search-item text-end">
+            <div class="col align-self-end text-end">
                 <asp:LinkButton ID="BtnLimpiar" runat="server" OnClick="BtnLimpiar_Click" CssClass="btn btn-link text-decoration-none small" Style="color: #000;">
                     <i class="fas fa-times-circle"></i> Limpiar Filtros
                 </asp:LinkButton>

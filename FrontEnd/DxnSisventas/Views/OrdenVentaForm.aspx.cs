@@ -36,10 +36,14 @@ namespace DxnSisventas.Views
 
         void accionDePagina()
         {
-            ddlEstado.Enabled = false;
+            
             accion = Request.QueryString["accion"];
             if (accion.Equals("visualizar") || accion.Equals("editar"))
             {
+                lbBuscarCliente.Visible = false;
+                lbBuscarCliente.Enabled = false;
+
+
                 ordenVenta = (ordenVenta)Session["ordenSeleccionada"];
                 mostrarDatos();
                 if (ddlTipoVenta.SelectedValue.Equals("Presencial"))
@@ -81,6 +85,7 @@ namespace DxnSisventas.Views
         {
             TxtFechaCreacion.Enabled = false;
             TxtDescuento.Enabled = false;
+            TxtFechaEntrega.Enabled = false;
         }
 
         private void inicializarApis()
@@ -617,6 +622,8 @@ namespace DxnSisventas.Views
                 {
                     actualizarStockProductos();
                     actualizarPuntosCliente();
+                    actualizarPuntosPatrocinador();
+                    actualizarPuntosProductos();
                 }
 
             }
@@ -642,13 +649,36 @@ namespace DxnSisventas.Views
             CallJavascript("showModalForm", "staticBackdrop");
         }
 
+        private void actualizarPuntosProductos()
+        {
+            foreach (lineaOrden linea in lineasOrden)
+            {
+                producto producto = linea.producto;
+                producto.puntos += 1;
+                apiProductos.actualizarProducto(producto);
+            }
+        }
+
+        private void actualizarPuntosPatrocinador()
+        {
+            cliente cliente = ordenVenta.cliente;
+            if(cliente.patrocinador != null)
+            {
+                cliente patrocinador = cliente.patrocinador;
+                patrocinador.puntos += lineasOrden.Sum(lo => lo.producto.puntos) / 10;
+                apiPersonas.actualizarCliente(patrocinador);
+            }
+        }
         private void actualizarPuntosCliente()
         {
             cliente cliente = ordenVenta.cliente;
             // puntos descontandos
             int puntosDescuento = (int)(double.Parse(TxtDescuento.Text) * 10);
             cliente.puntos -= puntosDescuento;
-
+            if(cliente.puntos < 0)
+            {
+                cliente.puntos = 0;
+            }
             // puntos ganados
             cliente.puntos += lineasOrden.Sum(lo => lo.producto.puntos);
             apiPersonas.actualizarCliente(cliente);
