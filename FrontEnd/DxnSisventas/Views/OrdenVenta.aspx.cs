@@ -44,7 +44,16 @@ namespace DxnSisventas.Views
             {
                 return;
             }
-
+            if (!verificarFechas())
+            {
+                MostrarMensaje("Ingrese un rango de fechas correcto", verificarFechas());
+                return;
+            }
+            if (!verificarMontos())
+            {
+                MostrarMensaje("Ingrese un rango de montos correcto", verificarMontos());
+                return;
+            }
             if (TxtBuscar.Text.ToString() != "")
             {
                 CargarTabla(TxtBuscar.Text.ToString());
@@ -77,6 +86,8 @@ namespace DxnSisventas.Views
             ordenarFechaMonto();
             GridVentas.PageIndex = 0;
             GridBind();
+            MostrarMensaje("Se aplico el filtro", true);
+
         }
 
         private void ordenarFechaMonto()
@@ -129,6 +140,7 @@ namespace DxnSisventas.Views
                     {
                         BlordenesFiltradas = new BindingList<ordenVenta>(BlordenesFiltradas.OrderByDescending(x => x.fechaCreacion.Date).ToList());
                     }
+                    MostrarMensaje("Ordenes ordenadas por fecha", true);
                 }
                 else if (ordenarPorMonto)
                 {
@@ -141,6 +153,7 @@ namespace DxnSisventas.Views
                     {
                         BlordenesFiltradas = new BindingList<ordenVenta>(BlordenesFiltradas.OrderByDescending(x => x.total).ToList());
                     }
+                    MostrarMensaje("Ordenes ordenadas por monto", true);
                 }
             }
         }
@@ -218,7 +231,6 @@ namespace DxnSisventas.Views
             GridVentas.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
         }
 
         protected void FechaFin_TextChanged(object sender, EventArgs e)
@@ -231,7 +243,6 @@ namespace DxnSisventas.Views
             GridVentas.PageIndex = 0;
             AplicarFiltro();
             GridBind();
-            MostrarMensaje("Se aplico el filtro", true);
         }
 
         protected void GridVentas_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -312,13 +323,12 @@ namespace DxnSisventas.Views
         protected void OrdenarPorFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
             AplicarFiltro();
-            MostrarMensaje("Ordenes ordenadas por fecha", true);
+            
         }
 
         protected void Estado_SelectedIndexChanged(object sender, EventArgs e)
         {
             AplicarFiltro();
-            MostrarMensaje("Se aplico el filtro", true);
         }
 
         protected void TxtMontoMin_TextChanged(object sender, EventArgs e)
@@ -330,7 +340,7 @@ namespace DxnSisventas.Views
                 return;
             }
             AplicarFiltro();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void TxtMontoMax_TextChanged(object sender, EventArgs e)
@@ -342,19 +352,19 @@ namespace DxnSisventas.Views
                 return;
             }
             AplicarFiltro();
-            MostrarMensaje("Se aplico el filtro", true);
+            
         }
 
         protected void OrdenarPorMonto_SelectedIndexChanged(object sender, EventArgs e)
         {
             AplicarFiltro();
-            MostrarMensaje("Ordenes ordenadas por monto", true);
+            
         }
 
         protected void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
             AplicarFiltro();
-            MostrarMensaje("Se aplico el filtro", true);
+           
         }
 
         protected void GridVentas_RowDataBound(object sender, GridViewRowEventArgs e)
