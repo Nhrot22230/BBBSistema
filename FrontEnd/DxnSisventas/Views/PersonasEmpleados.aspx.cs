@@ -11,7 +11,7 @@ namespace DxnSisventas.Views
 {
   public partial class PersonasEmpleados : System.Web.UI.Page
   {
-    private PersonasAPIClient personasAPIClient;
+    private PersonasAPIClient personasAPIClient = new PersonasAPIClient();
     private BindingList<empleado> empleados;
     private BindingList<empleado> empleadosFiltrados;
 
@@ -19,14 +19,14 @@ namespace DxnSisventas.Views
     {
       empleado[] lista = personasAPIClient.listarEmpleados(filtro);
       if (lista == null) return false;
-      
+
       empleados = new BindingList<empleado>(lista.ToList());
       AplicarFiltro();
       GridEmpleado.DataSource = empleadosFiltrados;
       GridEmpleado.DataBind();
       return true;
     }
-    
+
     private void AplicarFiltro()
     {
       if (DropDownListRoles.SelectedValue == "Todos")
@@ -42,7 +42,18 @@ namespace DxnSisventas.Views
     protected void Page_Init(object sender, EventArgs e)
     {
       Page.Title = "Empleados";
-      personasAPIClient = new PersonasAPIClient();
+
+      if (Session["empleado"] == null)
+      {
+        return;
+      }
+
+      rol rolUsuario = ((empleado)Session["empleado"]).rol;
+      if (rolUsuario != rol.Administrador)
+      {
+        Response.Redirect("~/Home.aspx");
+      }
+
       CargarTabla("");
     }
 
@@ -80,7 +91,7 @@ namespace DxnSisventas.Views
         MostrarMensaje("No se encontraron empleados", flag);
       }
     }
-    
+
     protected void BtnEliminar_Click(object sender, EventArgs e)
     {
       int idEmpleado = Int32.Parse(((LinkButton)sender).CommandArgument);
@@ -90,25 +101,25 @@ namespace DxnSisventas.Views
 
       CargarTabla("");
     }
-    
+
     protected void GridEmpleado_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {
       GridEmpleado.PageIndex = e.NewPageIndex;
       BindGrid();
     }
-    
+
     protected void DropDownListRoles_SelectedIndexChanged(object sender, EventArgs e)
     {
       AplicarFiltro();
       BindGrid();
     }
-    
+
     private void BindGrid()
     {
       GridEmpleado.DataSource = empleadosFiltrados;
       GridEmpleado.DataBind();
     }
-    
+
     private void MostrarMensaje(string mensaje, bool exito)
     {
       if (this.Master is Main master)
