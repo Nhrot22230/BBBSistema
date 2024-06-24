@@ -186,16 +186,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEmpleadosMasCuentas">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="filtro" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEmpleadosMasCuentasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personaCuenta" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="actualizarCuentaEmpleado">
     <xs:sequence>
       <xs:element minOccurs="0" name="cuentaEmpleado" type="tns:cuentaEmpleado" />
@@ -204,6 +194,16 @@
   <xs:complexType name="actualizarCuentaEmpleadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEmpleadosMasCuentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="filtro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEmpleadosMasCuentasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personaCuenta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarCuentaEmpleado">

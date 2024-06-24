@@ -20,6 +20,7 @@ import javax.mail.internet.MimeMultipart;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
+import javax.mail.util.ByteArrayDataSource;
 import pe.edu.pucp.BBB.correo.dao.CorreoDAO;
 
 /**
@@ -38,6 +39,7 @@ public class EnvioCorreos implements CorreoDAO{
   private Properties mProperties;
   private Session mSession;
   private MimeMessage mCorreo;
+    private byte[] pdfBytes;
 
   public EnvioCorreos() {
     mProperties = new Properties();
@@ -58,10 +60,10 @@ public class EnvioCorreos implements CorreoDAO{
         return resultado;
     }
   @Override
-  public int enviarCorreo(String asunto, String contenido, String correo, String rutaArchivo) {
+  public int enviarCorreo(String asunto, String contenido, String correo, byte[] pdfBytes) {
       int  resultado=0; 
       try {
-      createEmail(asunto, contenido, correo, rutaArchivo);
+      createEmail(asunto, contenido, correo, pdfBytes);
       resultado =sendEmail();
     } catch (Exception e) {
       System.err.println(e.getMessage());
@@ -147,6 +149,52 @@ public class EnvioCorreos implements CorreoDAO{
       Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
     }
   }
+  private void createEmail(String asunto, String contenido, String correo, byte[] pdfBytes) {
+        emailTo = correo;
+        subject = asunto;
+        content = contenido;
+        this.pdfBytes = pdfBytes;
+
+        // Configuración del servidor SMTP
+        mProperties.put("mail.smtp.host", "smtp.gmail.com");
+        mProperties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        mProperties.setProperty("mail.smtp.starttls.enable", "true");
+        mProperties.setProperty("mail.smtp.port", "587");
+        mProperties.setProperty("mail.smtp.user", emailFrom);
+        mProperties.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
+        mProperties.setProperty("mail.smtp.auth", "true");
+
+        mSession = Session.getDefaultInstance(mProperties);
+
+        try {
+            mCorreo = new MimeMessage(mSession);
+            mCorreo.setFrom(new InternetAddress(emailFrom));
+            mCorreo.setRecipient(Message.RecipientType.TO, new InternetAddress(emailTo));
+            mCorreo.setSubject(subject);
+
+            // Cuerpo del correo
+            MimeBodyPart bodyPart = new MimeBodyPart();
+            bodyPart.setContent(content, "text/html; charset=utf-8");
+
+            // Archivo adjunto
+            MimeBodyPart attachmentPart = new MimeBodyPart();
+            DataSource source = new ByteArrayDataSource(pdfBytes, "application/pdf");
+            attachmentPart.setDataHandler(new DataHandler(source));
+            attachmentPart.setFileName("Comprobante.pdf");
+
+            // Agregar partes al mensaje
+            MimeMultipart multipart = new MimeMultipart();
+            multipart.addBodyPart(bodyPart);
+            multipart.addBodyPart(attachmentPart);
+
+            mCorreo.setContent(multipart);
+
+        } catch (AddressException ex) {
+            Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException ex) {
+            Logger.getLogger(EnvioCorreos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
   private int sendEmail() {
     try {
