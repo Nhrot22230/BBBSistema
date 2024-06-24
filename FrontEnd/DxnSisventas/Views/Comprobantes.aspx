@@ -63,7 +63,7 @@
       </div>
       <div class="row overflow-x-scroll">
         <asp:GridView ID="GridComprobantes" runat="server" AutoGenerateColumns="false"
-          AllowPaging="true" PageSize="7" OnPageIndexChanging="GridComprobantes_PageIndexChanging"
+          AllowPaging="true" PageSize="5" OnPageIndexChanging="GridComprobantes_PageIndexChanging"
           OnRowDataBound="GridComprobantes_RowDataBound"
             CssClass="table table-hover table-responsive table-striped">
           <Columns>

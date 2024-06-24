@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,8 +17,7 @@ namespace DxnSisventas.Views
         private DocumentosAPIClient apiDocumentos;
 
         private BindingList<orden> listaOrdenes = null;
-        private BindingList<ordenCompra> listaOrdenesCompra = null;
-        private BindingList<ordenVenta> listaOrdenesVenta = null;
+        private BindingList<orden> listaOrdenesFiltrado;
         private CorreosAPIClient apiCorreo;
         private ReportesAPIClient apiReportes;
         private orden ord;
@@ -36,7 +36,8 @@ namespace DxnSisventas.Views
             apiDocumentos = new DocumentosAPIClient();
             apiCorreo = new CorreosAPIClient();
             apiReportes = new ReportesAPIClient();
-            tipoOrdenCompra = true;
+            if(!IsPostBack)
+                tipoOrdenCompra = true;
             CargarTabla("");
             String accion = Request.QueryString["accion"];
             if (accion != null && accion == "ver" && Session["idComprobanteSeleccionado"] != null)
@@ -222,7 +223,7 @@ namespace DxnSisventas.Views
             bool flag = CargarTabla(txtCodOrdenModal.Text);
             if (flag)
             {
-                MostrarMensaje($"Se encontraron {listaOrdenes.Count} ordenes", flag);
+                MostrarMensaje($"Se encontraron {listaOrdenesFiltrado.Count} ordenes", flag);
             }
             else
             {
@@ -241,12 +242,25 @@ namespace DxnSisventas.Views
         protected void gvOrdenes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvOrdenes.PageIndex = e.NewPageIndex;
-            CargarTabla(txtCodOrdenModal.Text);
+            AplicarFiltro();
+            GridBindOrdenes();
             CargarModalOrdenes();
+        }
+
+        private void AplicarFiltro()
+        {
+            if (tipoOrdenCompra)
+            {
+                listaOrdenesFiltrado = new BindingList<orden>(apiDocumentos.listarOrdenCompra(txtCodOrdenModal.Text));
+            }
+            else
+            {
+                listaOrdenesFiltrado = new BindingList<orden>(apiDocumentos.listarOrdenVenta(txtCodOrdenModal.Text));
+            }
         }
         private void GridBindOrdenes()
         {
-            gvOrdenes.DataSource = listaOrdenes;
+            gvOrdenes.DataSource = listaOrdenesFiltrado;
             gvOrdenes.DataBind();
         }
 
@@ -256,7 +270,7 @@ namespace DxnSisventas.Views
         }
         private bool CargarTabla(string search)
         {
-            orden[] lista = null;
+            /*orden[] lista = null;
             if (tipoOrdenCompra)
             {
                 lista = apiDocumentos.listarOrdenCompra(search);
@@ -270,7 +284,8 @@ namespace DxnSisventas.Views
             {
                 return false;
             }
-            listaOrdenes = new BindingList<orden>(lista.ToList());
+            listaOrdenes = new BindingList<orden>(lista.ToList());*/
+            AplicarFiltro();
             GridBindOrdenes();
             return true;
         }

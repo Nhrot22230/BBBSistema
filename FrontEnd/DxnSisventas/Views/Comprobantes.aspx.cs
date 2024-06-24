@@ -115,6 +115,7 @@ namespace DxnSisventas.Views
         protected void GridComprobantes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridComprobantes.PageIndex = e.NewPageIndex;
+            AplicarFiltro();
             GridBind();
         }
 
