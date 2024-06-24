@@ -2,56 +2,14 @@
 <definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.webservice.BBB.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PersonasAPI" targetNamespace="http://services.webservice.BBB.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/BBBWebService/PersonasAPI?xsd=1" namespace="http://services.webservice.BBB.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://100.29.112.28:8080/BBBWebService/PersonasAPI?xsd=1" namespace="http://services.webservice.BBB.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarClientes">
-    <part name="parameters" element="tns:listarClientes" />
-  </message>
-  <message name="listarClientesResponse">
-    <part name="parameters" element="tns:listarClientesResponse" />
-  </message>
-  <message name="eliminarCliente">
-    <part name="parameters" element="tns:eliminarCliente" />
-  </message>
-  <message name="eliminarClienteResponse">
-    <part name="parameters" element="tns:eliminarClienteResponse" />
-  </message>
-  <message name="insertarCliente">
-    <part name="parameters" element="tns:insertarCliente" />
-  </message>
-  <message name="insertarClienteResponse">
-    <part name="parameters" element="tns:insertarClienteResponse" />
-  </message>
-  <message name="insertarEmpleado">
-    <part name="parameters" element="tns:insertarEmpleado" />
-  </message>
-  <message name="insertarEmpleadoResponse">
-    <part name="parameters" element="tns:insertarEmpleadoResponse" />
-  </message>
-  <message name="eliminarEmpleado">
-    <part name="parameters" element="tns:eliminarEmpleado" />
-  </message>
-  <message name="eliminarEmpleadoResponse">
-    <part name="parameters" element="tns:eliminarEmpleadoResponse" />
-  </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
-  </message>
-  <message name="actualizarCliente">
-    <part name="parameters" element="tns:actualizarCliente" />
-  </message>
-  <message name="actualizarClienteResponse">
-    <part name="parameters" element="tns:actualizarClienteResponse" />
-  </message>
-  <message name="actualizarEmpleado">
-    <part name="parameters" element="tns:actualizarEmpleado" />
-  </message>
-  <message name="actualizarEmpleadoResponse">
-    <part name="parameters" element="tns:actualizarEmpleadoResponse" />
   </message>
   <message name="listarEmpleados">
     <part name="parameters" element="tns:listarEmpleados" />
@@ -59,47 +17,89 @@
   <message name="listarEmpleadosResponse">
     <part name="parameters" element="tns:listarEmpleadosResponse" />
   </message>
+  <message name="insertarEmpleado">
+    <part name="parameters" element="tns:insertarEmpleado" />
+  </message>
+  <message name="insertarEmpleadoResponse">
+    <part name="parameters" element="tns:insertarEmpleadoResponse" />
+  </message>
+  <message name="actualizarEmpleado">
+    <part name="parameters" element="tns:actualizarEmpleado" />
+  </message>
+  <message name="actualizarEmpleadoResponse">
+    <part name="parameters" element="tns:actualizarEmpleadoResponse" />
+  </message>
+  <message name="eliminarEmpleado">
+    <part name="parameters" element="tns:eliminarEmpleado" />
+  </message>
+  <message name="eliminarEmpleadoResponse">
+    <part name="parameters" element="tns:eliminarEmpleadoResponse" />
+  </message>
+  <message name="listarClientes">
+    <part name="parameters" element="tns:listarClientes" />
+  </message>
+  <message name="listarClientesResponse">
+    <part name="parameters" element="tns:listarClientesResponse" />
+  </message>
+  <message name="insertarCliente">
+    <part name="parameters" element="tns:insertarCliente" />
+  </message>
+  <message name="insertarClienteResponse">
+    <part name="parameters" element="tns:insertarClienteResponse" />
+  </message>
+  <message name="actualizarCliente">
+    <part name="parameters" element="tns:actualizarCliente" />
+  </message>
+  <message name="actualizarClienteResponse">
+    <part name="parameters" element="tns:actualizarClienteResponse" />
+  </message>
+  <message name="eliminarCliente">
+    <part name="parameters" element="tns:eliminarCliente" />
+  </message>
+  <message name="eliminarClienteResponse">
+    <part name="parameters" element="tns:eliminarClienteResponse" />
+  </message>
   <portType name="PersonasAPI">
-    <operation name="listarClientes">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesRequest" message="tns:listarClientes" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesResponse" message="tns:listarClientesResponse" />
-    </operation>
-    <operation name="eliminarCliente">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteRequest" message="tns:eliminarCliente" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
-    </operation>
-    <operation name="insertarCliente">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteRequest" message="tns:insertarCliente" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteResponse" message="tns:insertarClienteResponse" />
-    </operation>
-    <operation name="insertarEmpleado">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarEmpleadoRequest" message="tns:insertarEmpleado" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarEmpleadoResponse" message="tns:insertarEmpleadoResponse" />
-    </operation>
-    <operation name="eliminarEmpleado">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarEmpleadoRequest" message="tns:eliminarEmpleado" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarEmpleadoResponse" message="tns:eliminarEmpleadoResponse" />
-    </operation>
     <operation name="hello">
       <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloRequest" message="tns:hello" />
       <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/helloResponse" message="tns:helloResponse" />
-    </operation>
-    <operation name="actualizarCliente">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteRequest" message="tns:actualizarCliente" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteResponse" message="tns:actualizarClienteResponse" />
-    </operation>
-    <operation name="actualizarEmpleado">
-      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarEmpleadoRequest" message="tns:actualizarEmpleado" />
-      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarEmpleadoResponse" message="tns:actualizarEmpleadoResponse" />
     </operation>
     <operation name="listarEmpleados">
       <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarEmpleadosRequest" message="tns:listarEmpleados" />
       <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarEmpleadosResponse" message="tns:listarEmpleadosResponse" />
     </operation>
+    <operation name="insertarEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarEmpleadoRequest" message="tns:insertarEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarEmpleadoResponse" message="tns:insertarEmpleadoResponse" />
+    </operation>
+    <operation name="actualizarEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarEmpleadoRequest" message="tns:actualizarEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarEmpleadoResponse" message="tns:actualizarEmpleadoResponse" />
+    </operation>
+    <operation name="eliminarEmpleado">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarEmpleadoRequest" message="tns:eliminarEmpleado" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarEmpleadoResponse" message="tns:eliminarEmpleadoResponse" />
+    </operation>
+    <operation name="listarClientes">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesRequest" message="tns:listarClientes" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/listarClientesResponse" message="tns:listarClientesResponse" />
+    </operation>
+    <operation name="insertarCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteRequest" message="tns:insertarCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/insertarClienteResponse" message="tns:insertarClienteResponse" />
+    </operation>
+    <operation name="actualizarCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteRequest" message="tns:actualizarCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/actualizarClienteResponse" message="tns:actualizarClienteResponse" />
+    </operation>
+    <operation name="eliminarCliente">
+      <input wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteRequest" message="tns:eliminarCliente" />
+      <output wsam:Action="http://services.webservice.BBB.pucp.edu.pe/PersonasAPI/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
+    </operation>
   </portType>
   <binding name="PersonasAPIPortBinding" type="tns:PersonasAPI">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarClientes">
+    <operation name="hello">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -108,16 +108,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCliente">
+    <operation name="listarEmpleados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -135,6 +126,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="actualizarEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="eliminarEmpleado">
       <soap:operation soapAction="" />
       <input>
@@ -144,7 +144,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="hello">
+    <operation name="listarClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -162,16 +171,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarEmpleado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEmpleados">
+    <operation name="eliminarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -183,7 +183,7 @@
   </binding>
   <service name="PersonasAPI">
     <port name="PersonasAPIPort" binding="tns:PersonasAPIPortBinding">
-      <soap:address location="http://localhost:8080/BBBWebService/PersonasAPI" />
+      <soap:address location="http://100.29.112.28:8080/BBBWebService/PersonasAPI" />
     </port>
   </service>
 </definitions>
