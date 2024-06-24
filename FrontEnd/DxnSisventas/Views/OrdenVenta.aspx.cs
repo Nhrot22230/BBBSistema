@@ -14,6 +14,7 @@ namespace DxnSisventas.Views
 
         // apis
         private DocumentosAPIClient documentosAPIClient;
+        private PersonasAPIClient personasAPIClient;
 
         // listas
         private BindingList<ordenVenta> Blordenes;
@@ -24,6 +25,7 @@ namespace DxnSisventas.Views
         {
             Page.Title = "Ordenes de Venta";
             documentosAPIClient = new DocumentosAPIClient();
+            personasAPIClient = new PersonasAPIClient();
             CargarTabla("");
         }
 
@@ -154,7 +156,7 @@ namespace DxnSisventas.Views
         private bool CargarTabla(string search)
         {
             ordenVenta[] lista = documentosAPIClient.listarOrdenVenta(search);
-            if(lista != null)
+            if (lista != null)
             {
                 lista = lista.Where(x => x.estado != estadoOrden.Cancelado).ToArray();
                 Blordenes = new BindingList<ordenVenta>(lista.ToList());
@@ -359,40 +361,40 @@ namespace DxnSisventas.Views
 
         protected void GridVentas_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if(e.Row.RowType == DataControlRowType.DataRow)
+            if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 ordenVenta orden = (ordenVenta)e.Row.DataItem;
                 e.Row.Cells[0].Text = orden.idOrdenVentaCadena;
                 e.Row.Cells[1].Text = orden.fechaCreacion.ToString("dd/MM/yyyy");
                 e.Row.Cells[2].Text = orden.cliente.nombre + " " + orden.cliente.apellidoPaterno;
                 e.Row.Cells[3].Text = orden.encargadoVenta.nombre + " " + orden.encargadoVenta.apellidoPaterno;
-                if(orden.repartidor != null)
+                if (orden.repartidor != null)
                 {
-                    e.Row.Cells[4].Text = orden.repartidor.nombre + " " +orden.repartidor.apellidoPaterno;
+                    e.Row.Cells[4].Text = orden.repartidor.nombre + " " + orden.repartidor.apellidoPaterno;
                 }
-        
-                if(orden.fechaEntrega.ToString("MM/yyyy") == "01/0001") { 
+
+                if (orden.fechaEntrega.ToString("MM/yyyy") == "01/0001") {
                     e.Row.Cells[5].Text = "No asignado";
                 }
                 else
                 {
                     e.Row.Cells[5].Text = orden.fechaEntrega.ToString("dd/MM/yyyy");
-                }   
+                }
                 e.Row.Cells[6].Text = "S/ " + orden.total.ToString("N2");
                 e.Row.Cells[7].Text = orden.estado.ToString();
                 e.Row.Cells[8].Text = "S/ " + orden.porcentajeDescuento.ToString();
-               
+
                 LinkButton btnVisualizar = (LinkButton)e.Row.FindControl("BtnVisualizar");
                 btnVisualizar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
 
                 LinkButton btnEditar = (LinkButton)e.Row.FindControl("BtnEditar");
                 btnEditar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
 
-                
+
                 LinkButton btnEliminar = (LinkButton)e.Row.FindControl("BtnEliminar");
                 btnEliminar.CommandArgument = orden.idOrdenVentaNumerico.ToString();
-                
-                if(orden.estado == estadoOrden.Entregado || orden.estado == estadoOrden.Cancelado)
+
+                if (orden.estado == estadoOrden.Entregado || orden.estado == estadoOrden.Cancelado)
                 {
                     btnEliminar.Visible = false;
                     btnEditar.Visible = false;
@@ -417,18 +419,34 @@ namespace DxnSisventas.Views
             orden.fechaEntregaSpecified = true;
             bool flag = comprobarComprobanteAsociado(orden);
             if (!flag) return;
-            
+
             orden.estado = estadoOrden.Cancelado;
             int res = documentosAPIClient.actualizarOrdenVenta(orden);
             if (res > 0)
             {
                 MostrarMensaje("Orden de venta eliminada", true);
+                //devolverYQuitarPuntosCliente(orden);
+                //devolverStokcProducto(orden);
             }
             else
             {
                 MostrarMensaje("No se pudo eliminar la orden de venta", false);
             }
             CargarTabla("");
+
+        }
+
+        private void devolverYQuitarPuntosCliente(ordenVenta orden)
+        {
+            cliente cliente = orden.cliente;
+            int puntosDeLaOrden = orden.lineasOrden.Sum(x => x.producto.puntos);
+            int puntosDescuento = (int)(orden.porcentajeDescuento * 10);
+            orden.cliente.puntos = cliente.puntos + puntosDescuento - puntosDeLaOrden;
+            int res = personasAPIClient.actualizarCliente(cliente);            
+        }
+        
+        private void devolverStokcProducto(ordenVenta orden)
+        {
             
         }
 
